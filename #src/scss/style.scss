@@ -1,0 +1,18 @@
+
+@import "_nullset.scss";
+@import "__variables.scss";
+@import "_mixins.scss";
+html{
+     height: auto;
+}
+body{
+     font-size: $fontSize;
+     font-family: $font-family-regular;
+     display: flex;
+     flex-direction: column;
+     min-width: $minWidth;
+}
+
+:root{
+     font-size: 16px;
+}
