@@ -9,27 +9,64 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
           integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+          integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
      <link rel="stylesheet" href="css/style.css" />
      <title>UI</title>
 </head>
 
-<body class="ui-content">
+<body class="ui-content d-flex flex-column">
      <header>
 
      </header>
 
-     <main class="d-flex flex-row">
-          <nav class="fixed-top">
+     <main class="d-flex flex-row bg-danger">
+          <nav class="">
                <ul class="list-unstyled border mt-5">
                     <li class="m-3"><a href="#1">Item</a></li>
                     <li class="m-3"><a href="#2">Item</a></li>
                     <li class="m-3"><a href="#3">Item</a></li>
                </ul>
           </nav>
+          <div class="content">
+               <section class="section w-100 d-flex flex-column">
+                    <h1 class="h1">UI Components</h1>
+               </section>
 
-          <section class="w-100 d-flex flex-column justify-content-center align-items-center">
-               <h1 class="h1">UI Components</h1>
-          </section>
+               <section class="advantages ">
+                    <div class="advantages-card">
+                         <div class="advantages-card__text">
+                              Получайте всю налоговую информацию самыми первыми
+                         </div>
+                         <div class="advantages-card__img">
+                              <div class="advantages-card__pic"></div>
+                         </div>
+                         <div class="advantages-card__sub-text">
+                              Ассоциация систематизирует и анализирует проблемные вопросы, предложения и замечания
+                              в сфере налогообложения, поступающие от членов АН.
+                         </div>
+                    </div>
+                    <div class="my-5"></div>
+                    <div class="advantages-card">
+                         <div class="advantages-card__text">
+                              Взаимодействуйте с&nbsp;государственными органами
+                         </div>
+                         <div class="advantages-card__img">
+                              <div class="advantages-card__pic"></div>
+                         </div>
+                         <div class="advantages-card__sub-text">
+                              Виды деятельности Ассоциации
+                              представление налогоплательщиков при подготовке и обсуждении нормативных правовых актов
+                              в области налогообложения
+                              поддержка соблюдения законности
+                         </div>
+                    </div>
+               </section>
+          </div>
+
 
      </main>
 
