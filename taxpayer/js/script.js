@@ -11,13 +11,13 @@ document.querySelectorAll(".advantages-card").forEach(el=> {
 
      let hover = 
      tween.to(persona, {
-          left: "-78%",
+          left: "-52%",
           top: '2%',
           duration: .5,
      }, '-=.1')
 
      tween.to(personaPic, {
-          // backgroundPosition: '-45px 28px',
+          backgroundPosition: '-45px 28px',
           ease: 'expo.inOut',
           duration: 1
      }, '-=.9')
