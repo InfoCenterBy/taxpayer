@@ -1,30 +1,75 @@
 
 
 .header{
-
      @import "./ui-components/_header-dropdown";
+
+     display: flex;
      *{
           text-transform: uppercase;
           font-weight: 500;
           font-family: "gilroy-regular";
+     }
+     &__logo{
+          min-width: 10rem;
      }
      &__content{
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          width: 100%;
           a{
                .bi{
-                    font-size: 30px;
-                    line-height: 30px;
+                    font-size: 1.875rem;
+                    line-height: 1.875rem;
                }
           }
      }
-     &__link:last-child{
+     &__icon:nth-child(5){
           .bi{
-               font-size: 20px;
-               line-height: 20px;
+               font-size: 1.25rem;
+               line-height: 1.25rem;
           }
+     }
+     
+     &__link{
+          &:not(:first-child){
+               transition: $transition-main-3;
+          }
+          &, a{
+               @extend .color-blue-accent;
+               font-family: $font-family-medium;
+          }
+          &:hover{
+               &, a{
+                    @media #{$mouse-device} {
+                         color: $color-blue-dark;
+                    }
+               }
+          }
+     }
+     &__link:not(:nth-child(5)){
+          @media #{$ui-mobile} {
+               display: none;
+          }
+     }
+     &__link:nth-child(1){
+          // *dropdown
+          margin-left: 1.25rem;
+     }
+     &__link:nth-child(2){
+          // *news
+          @include adaptiv-value("margin-left", 70, 25, 1);
+     }
+     &__link:nth-child(3){
+          // *contacts
+          @include adaptiv-value("margin-left", 70, 25, 1);
+     }
+     &__link:nth-child(4){
+          // *facebook
+          @include adaptiv-value("margin-left", 55, 10, 1);
+     }
+     &__link:nth-child(5){
+          // *serach
+          @include adaptiv-value("margin-left", 50, 5, 1);
      }
 }

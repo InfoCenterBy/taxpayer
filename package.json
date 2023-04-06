@@ -30,9 +30,7 @@
           "gulp-ttf2woff2": "^3.0.0",
           "gulp-uglify-es": "^2.0.0",
           "prettier": "2.8.7",
-          "sass": "^1.56.1",
-          "stylelint": "^15.4.0",
-          "stylelint-prettier": "^3.0.0"
+          "sass": "^1.56.1"
      },
      "dependencies": {
           "git": "^0.1.5",

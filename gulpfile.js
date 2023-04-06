@@ -75,7 +75,7 @@ function css() {
 				outputStyle: "expanded"
 			})
 		)
-		.pipe(prettier({ singleQuote: true, }))
+		// .pipe(prettier({ singleQuote: true, }))
 		.pipe(
 			group_media()
 		)

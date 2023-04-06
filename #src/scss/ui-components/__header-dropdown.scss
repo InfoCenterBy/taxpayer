@@ -1,8 +1,10 @@
 .dropdown-toggle::after{
 }
 .dropdown:hover > .dropdown-menu {
+     transition: $transition-main-3;
      display: flex;
      flex-direction: column;
+     font-family: $font-family-medium;
 }
 .dropdown:hover{
      *{
@@ -12,7 +14,7 @@
      
 }
 .dropdown {
-     border-radius: 25px 25px 0px 0px;
+     border-radius: $border-top-25;
      &:hover{
           .dropdown-chevron{
                .bi{
@@ -25,9 +27,9 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     transition: all ease-in .3s;
+     transition: $transition-main-3;
      .bi{
-     transition: all ease-in .3s;
+          transition: $transition-main-3;
      }
 }
 
@@ -38,25 +40,32 @@
 
 .dropdown-btn{
      background: transparent;
-     border-radius: 25px 25px 0px 0px;
+     border-radius: $border-top-25;
      padding: .625rem 1rem;
+     text-align: left;
      &:hover{
-          background: $color-blue-accent;
+          @media #{$mouse-device} {
+               background: $color-blue-accent;
+          }
      }
-     
      .bi{
           margin-left: .75rem;
+          @extend .color-blue-accent;
+     }
+     span{
+          @extend .color-blue-accent;
+          font-family: $font-family-medium;
      }
 }
 .dropdown-menu{
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
      border-radius: 0px 30px 30px 30px;
      background: $color-blue-accent;
-     width: 340px;
+     width: 21.25rem;
      border: none;
      padding: 0;
      // padding: 10px 0;
-     transition: all ease-in .3s;
+     transition: $transition-main-3;
      a{
           // margin: .875rem 0;
           padding: .75rem 1rem .75rem 1.375rem;
@@ -65,7 +74,9 @@
                border-radius: 0 30px 0 0;
           }
           &:hover{
-               background-color: $collor-blue-black;
+               @media #{$mouse-device}{
+                    background-color: $color-blue-black;
+               }
           }
           &:last-child{
                border-radius: 0 0 30px 30px;

@@ -1,6 +1,6 @@
 $minWidth: 320px;
 $maxWidth: 1920px;
-$maxWidthContainer: 84rem;
+$maxWidthContainer: 1344;
 $mouse-device: '(hover: hover) and (pointer: fine)';
 // $maxWidthContainerPersonal: 1830;
 
@@ -9,7 +9,8 @@ $color-background-main: #FCFCFC;
 $color-white: #FFFFFF;
 $color-blue-accent: #055687;
 $color-white-text: #FEFEFE;
-$collor-blue-black: #063958;
+$color-blue-black: #063958;
+$color-blue-dark: #041E2F;
 // *------*
 
 
@@ -23,6 +24,15 @@ $font-family-regular: 'gilroy-regular', 'Arial';
 $fontSize: 16px;
 // *!------*
 
+// *? Border*
+$border-top-25: 25px 25px 0px 0px;
+// *?------*
+
+// *! Transition *
+$transition-main-3: all ease-in .3s;
+// *!------*
+
+$mouse-device: '(hover: hover) and (pointer: fine)';
 
 //? media rules
 
