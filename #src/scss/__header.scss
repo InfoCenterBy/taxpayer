@@ -1,0 +1,30 @@
+
+
+.header{
+
+     @import "./ui-components/_header-dropdown";
+     *{
+          text-transform: uppercase;
+          font-weight: 500;
+          font-family: "gilroy-regular";
+     }
+     &__content{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          a{
+               .bi{
+                    font-size: 30px;
+                    line-height: 30px;
+               }
+          }
+     }
+     &__link:last-child{
+          .bi{
+               font-size: 20px;
+               line-height: 20px;
+          }
+     }
+}

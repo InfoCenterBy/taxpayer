@@ -1,10 +1,12 @@
-.ui-content nav {
-  max-width: 100px;
+.ui-content .content {
+  padding-left: 250px;
 }
 
 .advantages-card {
   background: #055687;
   border-radius: 1.25rem;
+  max-width: 438px;
+  width: 100%;
   width: 438px;
   height: 260px;
   display: -webkit-box;
@@ -14,7 +16,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  overflow: hidden;
 }
 
 .advantages-card:nth-child(n) {
@@ -24,22 +30,19 @@
 .advantages-card__img {
   position: relative;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
 }
 
 .advantages-card:nth-child(1) .advantages-card__pic {
-  background-image: url("/img/svg/Persona-1.svg");
+  background-image: url('/img/svg/Persona-1.svg');
   width: 221px;
   height: 229px;
-}
-
-.advantages-card:nth-child(3) {
-  outline: 1px solid red;
-}
-
-.advantages-card:nth-child(3) .advantages-card__pic {
-  background-image: url("/img/svg/Persona-3.svg");
-  width: 360px;
-  height: 219px;
 }
 
 .advantages-card__pic {
@@ -55,10 +58,8 @@
 .advantages-card__sub-text {
   display: none;
   opacity: 0;
-  position: absolute;
-  z-index: 3;
+  z-index: 4;
   max-width: 232px;
-  left: 15%;
 }
 
 .red {

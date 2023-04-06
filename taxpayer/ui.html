@@ -5,8 +5,11 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <!-- bootstrap cdn -->
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+     <!-- bootstrap cdn -->
+     <link rel="stylesheet" href="css/functional/bootstrap@5.2.3.min.css" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
           integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
@@ -19,24 +22,97 @@
 </head>
 
 <body class="ui-content d-flex flex-column">
-     <header>
+     <div class="d-flex justify-content-center">
+          <header class="header d-flex flex-row align-items-center content-container border">
+     <div class="header__logo">
+          <img src="./img/header/logo.png" alt="logo" class="">
+     </div>
+     <div class="header__content">
+          <div class="dropdown">
+               <button class="dropdown-btn d-flex flex-row" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span>Об ассоциации</span>
+                    <div class="dropdown-chevron">
+                         <i class="bi bi-chevron-down test"></i>
+                    </div>
+               </button>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="" href="#">Руководство</a>
+                    <a class="" href="#">Члены правления</a>
+                    <a class="" href="#">Учредительные документы</a>
+                    <a class="" href="#">соглашения</a>
+               </div>
+          </div>
 
-     </header>
+          <a href="#" class="header__link">новости</a>
+          <a href="#" class="header__link">Контакты</a>
 
-     <main class="d-flex flex-row bg-info">
-          <nav class="">
-               <ul class="list-unstyled border mt-5">
-                    <li class="m-3"><a href="#1">Item</a></li>
-                    <li class="m-3"><a href="#2">Item</a></li>
-                    <li class="m-3"><a href="#3">Item</a></li>
+          <a href="#" class="header__link"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="header__link"><i class="bi bi-search"></i></a>
+     </div>
+
+</header>
+     </div>
+     <main class="d-flex flex-column">
+          <nav class="position-fixed ">
+               <ul class="list-unstyled border border-3 rounded border-primary mt-5 bg-info">
+                    <li class="m-3"><a href="#top" class=" text-black fs-5">Top</a></li>
+                    <li class="m-3"><a href="#1" class=" text-black fs-5">Header</a></li>
+                    <li class="m-3"><a href="#2" class=" text-black fs-5">Advantages blocks</a></li>
+                    <li class="m-3"><a href="#3" class=" text-black fs-5">Banners</a></li>
+                    <li class="m-3"><a href="#4" class=" text-black fs-5">Slider</a></li>
+                    <li class="m-3"><a href="#5" class=" text-black fs-5">Modal</a></li>
+                    <li class="m-3"><a href="#6" class=" text-black fs-5">Buttons</a></li>
+                    <li class="m-3"><a href="#7" class=" text-black fs-5">Documents</a></li>
+                    <li class="m-3"><a href="#8" class=" text-black fs-5">News</a></li>
+                    <li class="m-3"><a href="#9" class=" text-black fs-5">Comments</a></li>
+                    <li class="m-3"><a href="#10" class=" text-black fs-5">Forum</a></li>
+                    <li class="m-3"><a href="#11" class=" text-black fs-5">404</a></li>
+                    <li class="m-3"><a href="#12" class=" text-black fs-5">Search</a></li>
+                    <li class="m-3"><a href="#13" class=" text-black fs-5">Breadcrumbs</a></li>
+                    <li class="m-3"><a href="#14" class=" text-black fs-5">Footers</a></li>
                </ul>
           </nav>
           <div class="content">
-               <section class="section w-100 d-flex flex-column">
+               <section class="section w-100 d-flex flex-column" id="top">
                     <h1 class="h1">UI Components</h1>
                </section>
 
-               <section class="advantages ">
+               <h2 class="h2 text-warning" id="1">Header(in progress)</h2>
+               <section class="content-container">
+                    <header class="header d-flex flex-row align-items-center content-container border">
+     <div class="header__logo">
+          <img src="./img/header/logo.png" alt="logo" class="">
+     </div>
+     <div class="header__content">
+          <div class="dropdown">
+               <button class="dropdown-btn d-flex flex-row" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span>Об ассоциации</span>
+                    <div class="dropdown-chevron">
+                         <i class="bi bi-chevron-down test"></i>
+                    </div>
+               </button>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="" href="#">Руководство</a>
+                    <a class="" href="#">Члены правления</a>
+                    <a class="" href="#">Учредительные документы</a>
+                    <a class="" href="#">соглашения</a>
+               </div>
+          </div>
+
+          <a href="#" class="header__link">новости</a>
+          <a href="#" class="header__link">Контакты</a>
+
+          <a href="#" class="header__link"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="header__link"><i class="bi bi-search"></i></a>
+     </div>
+
+</header>
+               </section>
+
+               <h2 class="h2 text-warning  mt-5" id="2">Advant ages blocks(in progress)</h2>
+               <section class="advantages d-flex flex-row">
                     <div class="advantages-card">
                          <div class="advantages-card__text">
                               Получайте всю налоговую информацию самыми первыми
@@ -49,8 +125,10 @@
                               в сфере налогообложения, поступающие от членов АН.
                          </div>
                     </div>
-                    <div class="my-5"></div>
-                    <div class="advantages-card">
+
+                    <div class="mx-5"></div>
+
+                    <!-- <div class="advantages-card">
                          <div class="advantages-card__text">
                               Взаимодействуйте с&nbsp;государственными органами
                          </div>
@@ -63,8 +141,73 @@
                               в области налогообложения
                               поддержка соблюдения законности
                          </div>
-                    </div>
+                    </div> -->
                </section>
+
+
+
+               <h2 class="h2 text-danger mt-5" id="3">Banners(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="4">Slider(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="5">Modal(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="6">Buttons(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="7">Documents(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="8">News(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="9">Comments(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="10"> Forum(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="11"> 404(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="12"> Search(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="13"> Breadcrumbs(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+               <h2 class="h2 text-danger mt-5" id="14"> Footer(not start)</h2>
+               <section class="content-container">
+
+               </section>
+
+
+
           </div>
 
 

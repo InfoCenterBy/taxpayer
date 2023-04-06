@@ -1,10 +1,13 @@
 
-@import "__variables.scss";
+@import "./veriables/__variables.scss";
 
 
 .ui-content{
      nav{
-          max-width: 100px;
+          // max-width: 100px;
+     }
+     .content{
+          padding-left: 250px;
      }
 }
 
@@ -14,11 +17,29 @@
 .advantages-card {
      background: #055687;
      border-radius: 1.25rem;
+     max-width: 438px;
+     width: 100%;
      width: 438px;
      height: 260px;
      display: flex;
      flex-direction: row;
+     align-items: center;
      color: $color-white;
+     overflow: hidden;
+     
+     // &:hover .advantages-card__img{
+     //      // left: -50%;
+     //      // top: 20%;
+     //      transform: translate(-80%, 12%);
+     // }
+     // &:hover .advantages-card__text{
+     //      opacity: 0;
+     //      display: none;
+     // }
+     // &:hover .advantages-card__sub-text{
+     //      opacity: 1;
+     //      display: block;
+     // }
      &:nth-child(n){
           padding: 1.875rem .8125rem .5625rem 1.875rem;
      }
@@ -26,6 +47,9 @@
           position: relative;
           z-index: 2;
           // overflow: hidden;
+          display: flex;
+          align-items: flex-end;
+          height: 100%;
      }
      &:nth-child(1){
           .advantages-card__pic{
@@ -34,15 +58,15 @@
                height: 229px;
           }
      }
-     &:nth-child(3){
-          outline: 1px solid red;
-          .advantages-card__pic{
-               background-image: url('/img/svg/Persona-3.svg');
-               width: 360px;
-               height: 219px;
+     // &:nth-child(3){
+     //      outline: 1px solid red;
+     //      .advantages-card__pic{
+     //           background-image: url('/img/svg/Persona-3.svg');
+     //           width: 360px;
+     //           height: 219px;
                
-          }
-     }
+     //      }
+     // }
      &__pic{
           
           background-repeat: no-repeat;
@@ -55,10 +79,8 @@
      &__sub-text{
           display: none;
           opacity: 0;
-          position: absolute;
-          z-index: 3;
+          z-index: 4;
           max-width: 232px;
-          left: 15%;
      }
 }
 .red{

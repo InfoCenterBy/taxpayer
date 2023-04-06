@@ -48,7 +48,8 @@ let { src, dest } = require('gulp'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	fonter = require('gulp-fonter'),
 	// deploy = require('gulp-gh-pages');
-	ghPages = require('gulp-gh-pages');
+	ghPages = require('gulp-gh-pages'),
+	prettier = require('gulp-prettier');
 
 function browserSync(done) {
 	browsersync.init({
@@ -74,6 +75,7 @@ function css() {
 				outputStyle: "expanded"
 			})
 		)
+		.pipe(prettier({ singleQuote: true, }))
 		.pipe(
 			group_media()
 		)

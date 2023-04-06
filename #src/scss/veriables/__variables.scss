@@ -1,11 +1,15 @@
 $minWidth: 320px;
 $maxWidth: 1920px;
-$maxWidthContainer: 1365px;
+$maxWidthContainer: 84rem;
+$mouse-device: '(hover: hover) and (pointer: fine)';
 // $maxWidthContainerPersonal: 1830;
 
 // *Colors*
 $color-background-main: #FCFCFC;
 $color-white: #FFFFFF;
+$color-blue-accent: #055687;
+$color-white-text: #FEFEFE;
+$collor-blue-black: #063958;
 // *------*
 
 
@@ -14,7 +18,12 @@ $font-family-bold: 'Gilroy-Bold','Arial', sans-serif;
 $font-family-heavy: 'Gilroy-Heavy','Arial', sans-serif;
 $font-family-light: 'Gilroy-Light','Arial', sans-serif;
 $font-family-medium: 'Gilroy-Medium','Arial', sans-serif;
-$font-family-regular: 'Gilroy', sans-serif;
+$font-family-regular: 'gilroy-regular', 'Arial';
 
 $fontSize: 16px;
 // *!------*
+
+
+//? media rules
+
+$ui-mobile: 'screen and (max-width: 650px)'; 
