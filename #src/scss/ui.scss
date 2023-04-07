@@ -86,3 +86,187 @@
 .red{
      border: 1px solid red;
 }
+
+@import './functional/burger.scss';
+/*  COLORS
+========================================== */
+$black: #000000;
+$white: #ffffff;
+$gray: #2a2a2a;
+$gold: #28282870;
+
+/*  FONTS
+========================================== */
+
+$raleway: 'Raleway', sans-serif;
+$spectral: 'Spectral', serif;
+
+
+/*  MIXINS
+========================================== */
+
+@mixin transform($transform) {
+-webkit-transform: $transform;
+     -moz-transform: $transform;
+          -ms-transform: $transform;
+               -o-transform: $transform;
+               transform: $transform;
+}
+
+@mixin transition($transition) {
+-webkit-transition: #{$transition};
+     -moz-transition: #{$transition};
+          -o-transition: #{$transition};
+               transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+-webkit-transition-delay: #{$transition-delay};
+     -moz-transition-delay: #{$transition-delay};
+          -o-transition-delay: #{$transition-delay};
+               transition-delay: #{$transition-delay};
+}
+
+/*  RESET
+========================================== */
+.overflow {
+     overflow: hidden;
+}
+
+
+/*  BURGER
+========================================== */
+
+.burger {
+     width: 50px;
+     height: 50px;
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     border-radius: 4px;
+     z-index: 10;
+
+     span {
+    @include burger(30px, 3px, 6px, $color-black); // gray
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin-left: -15px;
+     margin-top: -1.5px;
+}
+
+     &.clicked {
+     span {
+     @include burger-to-cross;
+     
+          &:before, &:after {
+               background-color: $color-black;
+               }
+          }
+     }
+
+     &:hover {
+     cursor: pointer;
+     }
+}
+
+
+/*  NAV
+========================================== */
+
+nav {
+     background-color: $color-background-main;
+     position: fixed;
+     z-index: 9;
+     top: 0;
+     right: 0;
+     height: 100%;
+     max-width: 19.625rem;
+     width: 100%;
+     padding: 2.25rem .75rem 2.25rem 1.125rem;
+     overflow-y: auto;
+     @include transform(translateX(100%));
+     @include transition(transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+
+     &.show {
+          @include transform(translateX(0px));
+
+          ul.main {
+          li {
+               @include transform(translateX(0px));
+               opacity: 1;
+          
+               @for $i from 1 to 10 { 
+                    &:nth-child(#{$i}) {
+                      transition-delay: $i * 0.15s;
+                    }
+                    }
+               }
+          }
+          }
+
+  @media (min-width: 667px) {
+    padding: 120px 90px 70px 90px;
+  }
+   
+  ul.main {
+    list-style-type: none;
+    
+    li {
+      margin-bottom: 20px;
+      @include transform(translateX(40px));
+      opacity: 0;
+      @include transition(all .3s ease);
+      
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      
+      a {
+        color:$color-blue-dark;
+        font-family: $font-family-regular;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        display: block;
+        letter-spacing: 5px;
+        font-weight: 600;
+        padding: 10px 0;
+        @include transition(all .3s ease);
+        
+        span {
+          color: $gold;
+        }
+        
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+  }
+  
+  
+  
+}
+
+
+/*  OVERLAY
+========================================== */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height:100%;
+  @include transition(all 0.3s ease-in-out);
+  background-color: $gold;
+  opacity: 0;
+  visibility: hidden;
+  
+  &.show {
+    opacity: 0.8;
+    visibility: visible;
+  }
+}

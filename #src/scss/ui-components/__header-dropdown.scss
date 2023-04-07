@@ -4,7 +4,7 @@
      transition: $transition-main-3;
      display: flex;
      flex-direction: column;
-     font-family: $font-family-medium;
+     font-family: $font-family-regular;
 }
 .dropdown:hover{
      *{
@@ -54,7 +54,7 @@
      }
      span{
           @extend .color-blue-accent;
-          font-family: $font-family-medium;
+          font-family: $font-family-regular;
      }
 }
 .dropdown-menu{

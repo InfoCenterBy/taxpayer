@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.advantages-card').forEach((el) => {
      let personaPic = el.getElementsByClassName('advantages-card__pic');
      let persona = el.getElementsByClassName('advantages-card__img');
@@ -59,3 +60,31 @@ document.querySelectorAll('.advantages-card').forEach((el) => {
 // btn.addEventListener('click', (evt) => {
 //      menu.classList.toggle('active');
 // });
+
+// document.addEventListener(
+//      "DOMContentLoaded", () => {
+//           const menu = new Mmenu( "#menu", {
+//                slidingSubmenus: false,
+//                language: null,
+//           }, {
+//                classNames: {
+//                     selected: "selected",
+//                },
+//                offCanvas: {
+//                          position: "right-front",
+//                          page: {
+//                                    selector: "#page"
+//                               },
+//                     }
+//           });
+//      }
+// );
+
+
+
+   $('.burger, .overlay').click(function(){
+     $('.burger').toggleClass('clicked');
+     $('.overlay').toggleClass('show');
+     $('nav').toggleClass('show');
+     $('body').toggleClass('overflow');
+   });

@@ -17,7 +17,7 @@ let path = {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/**/*.scss",
 		maincss: project_folder + "/css/style.css",
-		js: source_folder + "/js/script.js",
+		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
 		audio: source_folder + "/audio/*.mp3"
@@ -105,9 +105,9 @@ function js() {
 	return src(path.src.js)
 		.pipe(fileinclude())
 		.pipe(dest(path.build.js))
-		.pipe(
-			uglify()
-		)
+		// .pipe(
+		// 	uglify()
+		// )
 		.pipe(
 			rename({
 				extname: ".min.js"
