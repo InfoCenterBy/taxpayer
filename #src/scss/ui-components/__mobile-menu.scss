@@ -1,0 +1,134 @@
+@import "./veriables/__variables.scss";
+@import "./functional/_mixins";
+@import './functional/burger.scss';
+
+
+$black: #000000;
+$white: #ffffff;
+$gray: #2a2a2a;
+$gold: #28282870;
+
+
+.burger {
+     width: 50px;
+     height: 50px;
+     // position: fixed;
+     // top: 20px;
+     // right: 20px;
+     border-radius: 4px;
+     z-index: 10;
+     display: none;
+     place-items: center;
+     span {
+     @include burger(30px, 3px, 6px, $color-blue-accent);
+     // position: absolute;
+     // top: 50%;
+     // left: 50%;
+     // margin-left: -15px;
+     // margin-top: -1.5px;
+     }
+     @media #{$ui-tablet} {
+          display: grid;
+     }
+     &.show {
+     span {
+     @include burger-to-cross;
+     
+          &:before, &:after {
+               background-color: $color-blue-accent;
+               }
+          }
+     }
+
+     &:hover {
+     cursor: pointer;
+     }
+}
+
+nav.mobile-menu {
+     background-color: $color-background-main;
+     position: fixed;
+     z-index: $layer-ui-basic;
+     top: 0;
+     right: 0;
+     margin-top: 75px;
+     height: 100%;
+     max-width: 19.625rem;
+     width: 100%;
+     padding: 2.25rem .75rem 2.25rem 1.125rem;
+     overflow: hidden;
+     @include transform(translateX(100%));
+     @include transition(transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+     &.show {
+          @media #{$ui-tablet} {
+               @include transform(translateX(0px));
+          }
+          ul.main {
+          li {
+               @include transform(translateX(0px));
+               opacity: 1;
+          
+               @for $i from 1 to 10 { 
+                    &:nth-child(#{$i}) {
+                      transition-delay: $i * 0.15s;
+                    }
+                    }
+               }
+          }
+     }
+
+
+     ul.main {
+          list-style-type: none;
+
+          li {
+               @include transform(translateX(40px));
+               opacity: 0;
+               @include transition(all .3s ease);
+
+               &:last-of-type {
+                    margin-bottom: 0px;
+               }
+
+               a {
+                    color:$color-blue-dark;
+                    font-family: $font-family-medium;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    line-height: 1.125rem;
+                    display: block;
+                    font-weight: 500;
+                    @include transition(all .3s ease);
+                    
+               span {
+                    color: $color-blue-accent;
+               }
+               // &:hover {
+               //      @media #{$mouse-device} {
+               //           color: $gold;
+               //      }
+               // }
+               }
+          }
+     }
+}
+
+.overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: $layer-all-base;
+     width: 100%;
+     height:100%;
+     @include transition(all 0.3s ease-in-out);
+     background-color: $color-modal-back;
+     opacity: 0;
+     visibility: hidden;
+     &.show {
+          @media #{$ui-tablet} {
+               opacity: 0.8;
+               visibility: visible;
+          }
+     }
+}

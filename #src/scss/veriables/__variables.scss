@@ -12,6 +12,7 @@ $color-white-text: #FEFEFE;
 $color-blue-black: #063958;
 $color-blue-dark: #041E2F;
 $color-black: #000000;
+$color-modal-back: #28282870;
 // *------*
 
 
@@ -33,8 +34,14 @@ $border-top-25: 25px 25px 0px 0px;
 $transition-main-3: all ease-in .3s;
 // *!------*
 
+
+// *? Media rules*
 $mouse-device: '(hover: hover) and (pointer: fine)';
+$ui-mobile: 'screen and (max-width: 650px)';
+$ui-tablet: 'screen and (max-width: 768px)';
 
-//? media rules
-
-$ui-mobile: 'screen and (max-width: 650px)'; 
+// *! z-indexs* 
+$layer-all-base: 2;
+$layer-ui-basic: 3; //header, footer, menu
+$layer-modal: 4;
+// *!------*

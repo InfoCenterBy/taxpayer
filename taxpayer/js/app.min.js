@@ -82,9 +82,15 @@ document.querySelectorAll('.advantages-card').forEach((el) => {
 
 
 
-   $('.burger, .overlay').click(function(){
-     $('.burger').toggleClass('clicked');
-     $('.overlay').toggleClass('show');
-     $('nav').toggleClass('show');
-     $('body').toggleClass('overflow');
-   });
+$('.burger, .overlay').click(function(){
+     $('.burger').toggleClass('show')
+     $('.overlay').toggleClass('show')
+     $('nav').toggleClass('show')
+});
+
+
+document.querySelectorAll("collapsed").forEach(el=> {
+     el.addEventListener('click', ()=>{
+          console.log(el, "clickied")
+     })
+})

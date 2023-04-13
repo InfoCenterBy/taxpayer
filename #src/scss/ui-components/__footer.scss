@@ -1,0 +1,21 @@
+.footer {
+     background-color: $color-blue-accent;
+     &, a{
+          color: $color-white;
+     }
+}
+.footer-title {
+     @include adaptiv-value("font-size", 17, 12, 1);
+     @include adaptiv-value("line-height", 21, 15, 1);
+     font-weight: 600;
+     &, a{
+          text-transform: uppercase;
+     }
+     &:not(:first-child){
+          margin-top: 10px;
+     }
+}
+.footer-text {
+     @include adaptiv-value("font-size", 16, 12, 1);
+     @include adaptiv-value("line-height", 19, 14, 1);
+}

@@ -4,6 +4,9 @@
      @import "./ui-components/_header-dropdown";
 
      display: flex;
+     z-index: $layer-ui-basic;
+     background-color: $color-background-main;
+     height: 75px;
      *{
           text-transform: uppercase;
           font-weight: 500;
@@ -48,8 +51,13 @@
           }
      }
      &__link:not(:nth-child(5)){
-          @media #{$ui-mobile} {
+          @media #{$ui-tablet} {
                display: none;
+          }
+     }
+     &__link:nth-child(5){
+          @media #{$mouse-device} {
+               margin-right: 2rem;
           }
      }
      &__link:nth-child(1){

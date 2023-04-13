@@ -2,7 +2,7 @@
 @import "./functional/nullset";
 @import "./veriables/__fonts.scss";
 @import "./veriables/__variables.scss";
-@import "./functional/mixins";
+@import "./functional/_mixins";
 @import "./veriables/__colors.scss";
 html{
      height: auto;
@@ -14,8 +14,12 @@ body{
      min-width: $minWidth;
      display: flex;
      flex-direction: column;
-     padding: 15px 17px 0 17px;
      background: $color-background-main;
+     align-items: center;
+     min-height: 100vh;
+}
+main{
+     flex-grow: 1;
 }
 
 :root{
@@ -29,5 +33,7 @@ body{
 }
 
 //! etc. imports
-@import "__header.scss";
+@import "./ui-components/__header.scss";
+@import "./ui-components/__mobile-menu.scss";
+@import "./ui-components/_footer.scss";
 @import "ui.scss";
