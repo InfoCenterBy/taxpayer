@@ -190,6 +190,7 @@ main {
 .content-container {
   max-width: 84rem;
   width: 100%;
+  padding: 0 3rem;
 }
 
 .header {
@@ -705,6 +706,10 @@ nav.mobile-menu ul.main li a span {
 }
 
 @media screen and (max-width: 768px) {
+  .content-container {
+    padding: 0 0.875rem;
+  }
+
   .header__link:not(:nth-child(5)) {
     display: none;
   }

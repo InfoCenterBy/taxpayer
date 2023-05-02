@@ -29,7 +29,10 @@ main{
 .content-container{
      max-width: 84rem;
      width: 100%;
-     // padding: 0 48px;
+     padding: 0 3rem;
+     @media #{$ui-tablet} {
+          padding: 0 .875rem;
+     }
 }
 
 //! etc. imports
