@@ -1,0 +1,38 @@
+.banner{
+     width: 100%;
+     padding: 1.875rem;
+     @media #{$ui-tablet} {
+          padding: .875rem;
+     }
+     border-radius: $border-main;
+}
+.banner-main{
+     padding-right: 0;
+     background-color: $color-background-sky-blue;
+     picture{
+          source, img{
+               width: 100%;
+          }
+     }
+     color: $color-blue-black;
+     p{
+          font-weight: 600;
+          @include adaptiv-value("font-size", 32, 20, 1);
+          @include adaptiv-value("line-height", 32, 20, 1);
+     }
+     p ~ span{
+          @include adaptiv-value("font-size", 24, 16, 1);
+          @include adaptiv-value("line-height", 29, 19, 1);
+     }
+}
+
+.banner-numbers{
+     background-color: $color-blue-accent;
+     color: $color-background-main;
+     &__text{
+          :first-child{
+               @include adaptiv-value("font-size", 82, 45, 1);
+               @include adaptiv-value("line-height", 98, 54, 1);
+          }
+     }
+}
