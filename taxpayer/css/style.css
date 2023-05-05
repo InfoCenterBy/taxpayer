@@ -203,9 +203,9 @@ main {
 }
 
 .header .dropdown:hover > .dropdown-menu {
-  -webkit-transition: all ease-in 0.3s;
-  -o-transition: all ease-in 0.3s;
-  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,15 +240,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all ease-in 0.3s;
-  -o-transition: all ease-in 0.3s;
-  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
 .header .dropdown-chevron .bi {
-  -webkit-transition: all ease-in 0.3s;
-  -o-transition: all ease-in 0.3s;
-  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
 .header .dropdown > .dropdown-toggle:active {
@@ -278,9 +278,9 @@ main {
   width: 21.25rem;
   border: none;
   padding: 0;
-  -webkit-transition: all ease-in 0.3s;
-  -o-transition: all ease-in 0.3s;
-  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
 .header .dropdown-menu a {
@@ -332,9 +332,9 @@ main {
 }
 
 .header__link:not(:first-child) {
-  -webkit-transition: all ease-in 0.3s;
-  -o-transition: all ease-in 0.3s;
-  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
 .header__link,
@@ -641,6 +641,111 @@ nav.mobile-menu ul.main li a span {
   line-height: 98px;
 }
 
+.banner-part {
+  background-color: #055687;
+  color: #FEFEFE;
+}
+
+.banner-part__text {
+  font-size: 52px;
+  line-height: 51px;
+}
+
+.banner-part__text :first-child {
+  font-size: 120px;
+  line-height: 149px;
+}
+
+.banner-part img {
+  opacity: 0.6;
+  mix-blend-mode: luminosity;
+  cursor: pointer;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.banner-part img:hover {
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+.banner-email {
+  background-color: rgba(201, 235, 255, 0.6);
+  color: #055687;
+}
+
+.banner-email__text {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.banner-email__text :first-child {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.banner-email__input {
+  background-color: #FEFEFE;
+  max-height: 3.625rem;
+  min-width: 19.75rem;
+  padding: 1.25rem 1rem;
+  border-radius: 19px;
+}
+
+.banner-email__input,
+.banner-email__input input {
+  color: #055687;
+}
+
+.banner-email__input input {
+  background: transparent;
+}
+
+.banner-email__input ::-webkit-input-placeholder {
+  color: rgba(4, 30, 47, 0.4);
+}
+
+.banner-email__input ::-moz-placeholder {
+  color: rgba(4, 30, 47, 0.4);
+}
+
+.banner-email__input :-ms-input-placeholder {
+  color: rgba(4, 30, 47, 0.4);
+}
+
+.banner-email__input ::-ms-input-placeholder {
+  color: rgba(4, 30, 47, 0.4);
+}
+
+.banner-email__input ::placeholder {
+  color: rgba(4, 30, 47, 0.4);
+}
+
+.banner-email__input .bi {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.swiper-news {
+  max-width: 27rem;
+  min-width: 20.75rem;
+  width: 100%;
+  height: 25rem;
+}
+
+.swiper-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 227, 227, 0.4);
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
 .ui-content .content {
   padding-left: 250px;
 }
@@ -764,6 +869,38 @@ nav.mobile-menu ul.main li a span {
 
   .banner-numbers__text :first-child {
     line-height: calc(54px + 44 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-part__text :first-child {
+    font-size: calc(40px + 80 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-part__text :first-child {
+    line-height: calc(50px + 99 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-part__text {
+    font-size: calc(16px + 36 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-part__text {
+    line-height: calc(16px + 35 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-email__text :first-child {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-email__text :first-child {
+    line-height: calc(20px + 5 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-email__text {
+    font-size: calc(16px + 1 * ((100vw - 320px) / 1024));
+  }
+
+  .banner-email__text {
+    line-height: calc(19px + 1 * ((100vw - 320px) / 1024));
   }
 }
 

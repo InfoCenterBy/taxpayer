@@ -94,3 +94,22 @@ document.querySelectorAll("collapsed").forEach(el=> {
           console.log(el, "clickied")
      })
 })
+
+
+const swiper = new Swiper('.swiper-news', {
+     // Optional parameters
+     direction: 'horizontal',
+     loop: true,
+     allowTouchMove: true,
+     // If we need pagination
+     pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+     },
+     // Navigation arrows
+     navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+     },
+});
+

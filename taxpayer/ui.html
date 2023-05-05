@@ -5,17 +5,28 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- bootstrap cdn -->
      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
      <!-- bootstrap cdn -->
      <link rel="stylesheet" href="css/functional/bootstrap@5.2.3.min.css" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
           integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+     <!-- bootstrap cdn -->
+     <!-- gsap cdn -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
           integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- gsap cdn -->
+     <!-- jquery cdn -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <!-- jquery cdn -->
+     <!-- swiper cdn -->
+     <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+     />
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+     <!-- swiper cdn -->
      <link rel="stylesheet" href="css/style.css" />
      <title>UI</title>
 </head>
@@ -57,21 +68,22 @@
      <main class="d-flex flex-column">
           <nav class="position-fixed ">
                <ul class="list-unstyled border border-3 rounded border-primary mt-5 bg-info">
-                    <li class="m-3"><a href="#top" class=" text-black fs-5">Top</a></li>
-                    <li class="m-3"><a href="#1" class=" text-black fs-5">Header</a></li>
-                    <li class="m-3"><a href="#2" class=" text-black fs-5">Advantages blocks</a></li>
-                    <li class="m-3"><a href="#3" class=" text-black fs-5">Banners</a></li>
-                    <li class="m-3"><a href="#4" class=" text-black fs-5">Slider</a></li>
-                    <li class="m-3"><a href="#5" class=" text-black fs-5">Modal</a></li>
-                    <li class="m-3"><a href="#6" class=" text-black fs-5">Buttons</a></li>
-                    <li class="m-3"><a href="#7" class=" text-black fs-5">Documents</a></li>
-                    <li class="m-3"><a href="#8" class=" text-black fs-5">News</a></li>
-                    <li class="m-3"><a href="#9" class=" text-black fs-5">Comments</a></li>
-                    <li class="m-3"><a href="#10" class=" text-black fs-5">Forum</a></li>
-                    <li class="m-3"><a href="#11" class=" text-black fs-5">404</a></li>
-                    <li class="m-3"><a href="#12" class=" text-black fs-5">Search</a></li>
-                    <li class="m-3"><a href="#13" class=" text-black fs-5">Breadcrumbs</a></li>
-                    <li class="m-3"><a href="#14" class=" text-black fs-5">Footers</a></li>
+                    <li class="m-3 "><a href="./main.html" class=" text-bg-warning fs-5 p-1">Main Page</a></li>
+                    <li class="m-3 "><a href="#top" class=" text-black fs-5">Top</a></li>
+                    <li class="m-3 "><a href="#1" class=" text-black fs-5">Header</a></li>
+                    <li class="m-3 "><a href="#2" class=" text-black fs-5">Advantages blocks</a></li>
+                    <li class="m-3 "><a href="#3" class=" text-black fs-5">Banners</a></li>
+                    <li class="m-3 "><a href="#4" class=" text-black fs-5">Slider</a></li>
+                    <li class="m-3 "><a href="#5" class=" text-black fs-5">Modal</a></li>
+                    <li class="m-3 "><a href="#6" class=" text-black fs-5">Buttons</a></li>
+                    <li class="m-3 "><a href="#7" class=" text-black fs-5">Documents</a></li>
+                    <li class="m-3 "><a href="#8" class=" text-black fs-5">News</a></li>
+                    <li class="m-3 "><a href="#9" class=" text-black fs-5">Comments</a></li>
+                    <li class="m-3 "><a href="#10" class=" text-black fs-5">Forum</a></li>
+                    <li class="m-3 "><a href="#11" class=" text-black fs-5">404</a></li>
+                    <li class="m-3 "><a href="#12" class=" text-black fs-5">Search</a></li>
+                    <li class="m-3 "><a href="#13" class=" text-black fs-5">Breadcrumbs</a></li>
+                    <li class="m-3 "><a href="#14" class=" text-black fs-5">Footers</a></li>
                </ul>
           </nav>
           <div class="content">
@@ -79,7 +91,7 @@
                     <h1 class="h1">UI Components</h1>
                </section>
 
-               <h2 class="h2 text-success" id="1">Header(done)</h2>
+               <h2 class="h2 text-info" id="1">Header(in test)</h2>
                <section class="content-container">
                     <header class="header flex-row align-items-center content-container justify-content-between">
      <div class="header__logo">
@@ -147,11 +159,11 @@
                     </div> -->
                </section>
 
-               <h2 class="h2 text-warning mt-5" id="3">Banners(in progress)</h2>
+               <h2 class="h2 text-info mt-5" id="3">Banners(in test)</h2>
                <section class="content-container">
                     <div class="banner banner-main row h-100 justify-content-center my-2 my-md-0">
                          <div class="col-md-6 d-flex flex-column align-items-end justify-content-center">
-                              <p>
+                              <p class="pe-none">
                                    «В деле налогов следует принимать в соображение не то, что народ может дать, а то, что он может давать всегда»
                               </p>
                               <span>Ш. Монтескье</span>
@@ -165,7 +177,7 @@
                     <div class="banner banner-numbers row justify-content-between">
                          <div class="col-md-4 col-sm-12 d-flex flex-row flex-md-column text-md-center align-items-center row banner-numbers__text my-2 my-md-0">
                               <span class="col-6 col-md-12">7</span>
-                              <span class="col-6  my-2 my-md-0col-md-12">лет работы</span>
+                              <span class="col-6 col-md-12">лет работы</span>
                          </div>
                          <div class="col-md-4 col-sm-12 d-flex flex-row flex-md-column text-md-center align-items-center row banner-numbers__text my-2 my-md-0">
                               <span class="col-6 col-md-12">70+</span>
@@ -176,11 +188,75 @@
                               <span class="col-6 col-md-12">круглых столов и конференций с участием МНС</span>
                          </div>
                     </div>
+                    <div class="my-3"></div>
+                    <div class="banner banner-part row">
+                         <div class="col-md-12 row banner-part__text align-items-center">
+                              <span class="col-2">17</span>
+                              <span class="col-10">крупных организаций являются членами Ассоциации</span>
+                         </div>
+                         <div class="col-md-12 d-flex flex-row flex-wrap align-items-center justify-content-center">
+                              <img class="mx-4 my-2" src="./img/banners/partners/taikiri.png" alt="taikiri">
+                              <img class="mx-4 my-2" src="./img/banners/partners/finexpertiza.png" alt="finexpertiza">
+                              <img class="mx-4 my-2" src="./img/banners/partners/a1.png" alt="a1">
+                              <img class="mx-4 my-2" src="./img/banners/partners/oma.png" alt="oma">
+                              <img class="mx-4 my-2" src="./img/banners/partners/salt.png" alt="salt">
+                              <img class="mx-4 my-2" src="./img/banners/partners/kvg.png" alt="kvg">
+                              <img class="mx-4 my-2" src="./img/banners/partners/granit.png" alt="granit">
+                              <img class="mx-4 my-2" src="./img/banners/partners/pik.png" alt="pik">
+                              <img class="mx-4 my-2" src="./img/banners/partners/tabak.png" alt="tabak">
+                              <img class="mx-4 my-2" src="./img/banners/partners/sodrujestvo.png" alt="sodrujestvo">
+                              <img class="mx-4 my-2" src="./img/banners/partners/sosedi.png" alt="sosedi">
+                              <img class="mx-4 my-2" src="./img/banners/partners/evroopt.png" alt="evroopt">
+                              <img class="mx-4 my-2" src="./img/banners/partners/revera.png" alt="revera">
+                              <img class="mx-4 my-2" src="./img/banners/partners/urspektr.png" alt="urspektr">
+                              <img class="mx-4 my-2" src="./img/banners/partners/arlepta.png" alt="arlepta">
+                              <img class="mx-4 my-2" src="./img/banners/partners/finansia.png" alt="finansia">
+                         </div>
+                    </div>
+                    <div class="my-3"></div>
+                    <div class="banner banner-email row align-items-center py-md-0 justify-content-md-between justify-content-center px-4">
+                         <picture class="d-none d-md-block col-md-2 p-0">
+                              <source media="(min-width: 650px)" srcset="./img/banners/banner-email.svg">
+                              <img src="./img/banners/banner-email.png" alt="banner-email">
+                         </picture>
+                         <div class="col-12 col-md-8 d-flex row p-0 align-items-center justify-content-between my-2">
+                              <div class="banner-email__text col-md-6">
+                                   <span>Подписывайтесь на нашу рассылку</span>
+                                   <p class="mb-0 mt-1">Только полезная информация. Никакого спама</p>
+                              </div>
+                              <div class="banner-email__input col-md-6 d-flex flex-row align-items-center justify-content-between my-2">
+                                   <input type="email" id="bannerEmail" class="" placeholder="Ваш email">
+                                   <i class="bi bi-arrow-right"></i>
+                              </div>
+                         </div>
+                    </div>
                </section>
 
                <h2 class="h2 text-danger mt-5" id="4">Slider(not start)</h2>
                <section class="content-container">
+                    <div class="swiper swiper-news">
+                         <div class="swiper-wrapper">
+                              <div class="swiper-slide pb-4">
+                                   <div class="swiper-content">
+                                   </div>
+                              </div>
+                              <div class="swiper-slide pb-4">
+                                   <div class="swiper-content">
+                                   </div>
+                              </div>
+                              <div class="swiper-slide pb-4">
+                                   <div class="swiper-content">
+                                   </div>
+                              </div>
+                         </div>
 
+                         <div class="swiper-pagination"></div>
+
+                         <!-- If we need navigation buttons -->
+                         <!-- <div class="swiper-button-prev"></div>
+                         <div class="swiper-button-next"></div> -->
+                         <!-- If we need scrollbar -->
+                         </div>
                </section>
 
                <h2 class="h2 text-danger mt-5" id="5">Modal(not start)</h2>
