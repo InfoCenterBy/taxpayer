@@ -14,8 +14,13 @@
 
 .swiper-slide{
      border-radius: 20px;
+     padding-bottom: 30px;
 }
 
 .swiper-pagination{
      
+}
+
+.swiper-slide-next, .swiper-slide-active, .swiper-slide-prev{
+     border-radius: 20px;
 }
