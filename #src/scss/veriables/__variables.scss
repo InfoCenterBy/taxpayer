@@ -8,12 +8,16 @@ $mouse-device: '(hover: hover) and (pointer: fine)';
 $color-background-main: #FEFEFE;
 $color-white: #FFFFFF;
 $color-blue-accent: #055687;
+$color-blue-accent-tr-2: rgba(5, 86, 135, 0.2);
 $color-white-text: #FEFEFE;
 $color-blue-black: #063958;
 $color-blue-dark: #041E2F;
 $color-black: #000000;
 $color-modal-back: #28282870;
 $color-background-sky-blue: #c9ebff99;
+$color-text-gray: #737373;
+$color-sky-blue: #C9EBFF;
+$color-background-gray-tr-4: rgba(227, 227, 227, 0.4);
 // *------*
 
 
@@ -30,6 +34,7 @@ $fontSize: 16px;
 // *? Border*
 $border-top-25: 25px 25px 0px 0px;
 $border-main: 25px;
+$border-20: 20px;
 // *?------*
 
 // *! Transition *
@@ -40,7 +45,7 @@ $transition-main-3: all ease-out .3s;
 // *? Media rules*
 $mouse-device: '(hover: hover) and (pointer: fine)';
 $ui-mobile: 'screen and (max-width: 650px)';
-$ui-tablet: 'screen and (max-width: 768px)';
+$ui-tablet: 'screen and (max-width: 850px)';
 
 // *! z-indexs* 
 $layer-all-base: 2;

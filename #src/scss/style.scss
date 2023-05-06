@@ -4,14 +4,20 @@
 @import "./veriables/__variables.scss";
 @import "./functional/_mixins";
 @import "./veriables/__colors.scss";
+@import "./veriables/_titles.scss";
 html{
      height: auto;
      scroll-behavior: smooth;
+     width: 100%;
+}
+html,
+body {
+	min-width: $minWidth;
+     width: 100%;
 }
 body{
      font-size: $fontSize;
      font-family: $font-family-regular;
-     min-width: $minWidth;
      display: flex;
      flex-direction: column;
      background: $color-background-main;
@@ -20,6 +26,12 @@ body{
 }
 main{
      flex-grow: 1;
+     width: 100%;
+     min-width: $minWidth;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
 
 :root{
@@ -31,14 +43,36 @@ main{
      width: 100%;
      padding: 0 3rem;
      @media #{$ui-tablet} {
-          padding: 0 .875rem;
+          padding: 0 .875rem ;
+     }
+     @media #{$ui-mobile} {
+          padding: 0 .875rem ;
      }
 }
 
-//! etc. imports
+main .content-container:not(:first-child){
+     margin-top: 6.25rem;
+}
+
+main .content-container:first-child{
+     margin-top: 2.5rem;
+     @media #{$ui-tablet} {
+          margin-top: 1.25rem;
+     }
+}
+
+main .content-container.news-container{
+     padding: 0 .75rem !important;
+     @media #{$ui-tablet} {
+          padding: 0 0 !important;
+     }
+}
+
+//! components imports
 @import "./ui-components/__header.scss";
 @import "./ui-components/__mobile-menu.scss";
 @import "./ui-components/_footer.scss";
 @import "./ui-components/_banners";
 @import "./ui-components/_sliders";
+@import "./ui-components/_news";
 @import "ui.scss";

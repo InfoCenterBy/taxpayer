@@ -1,0 +1,18 @@
+
+.section-title {
+     margin: 0;
+     @include adaptiv-value("font-size", 32, 20, 1);
+          @include adaptiv-value("line-height", 39, 25, 1);
+}
+
+.block-title {
+     margin: 0;
+     @include adaptiv-value("font-size", 22, 20, 1);
+          @include adaptiv-value("line-height", 27, 25, 1);
+}
+
+.sub-title {
+     margin: 0;
+     font-size: 16px;
+     line-height: 19px;
+}

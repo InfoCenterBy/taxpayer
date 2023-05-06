@@ -3,6 +3,7 @@
      &, a{
           color: $color-white;
      }
+     margin-top: 3rem;
 }
 .footer-title {
      @include adaptiv-value("font-size", 17, 12, 1);

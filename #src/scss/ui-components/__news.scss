@@ -1,0 +1,32 @@
+.news-block {
+     display: flex;
+     flex-direction: column;
+     @include adaptiv-value("padding", 20, 15, 1);
+     border-radius: $border-20;
+     transition: $transition-main-3;
+     cursor: pointer;
+}
+.news-dark-blue {
+     background-color: $color-blue-accent-tr-2;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-sky-blue;
+          }
+     }
+}
+.news-blue {
+     background-color: $color-sky-blue;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-blue-accent-tr-2;
+          }
+     }
+}
+.news-gray {
+     background-color: $color-background-gray-tr-4;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-background-sky-blue;
+          }
+     }
+}

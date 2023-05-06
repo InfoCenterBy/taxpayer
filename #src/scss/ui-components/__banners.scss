@@ -49,13 +49,15 @@
           @include adaptiv-value("line-height", 51, 16, 1);
      }
      img{
-          opacity:  0.6;
-          mix-blend-mode: luminosity;
+          // opacity:  0.6;
+          // mix-blend-mode: luminosity;
+          filter: grayscale(100%);
           cursor: pointer;
           transition: $transition-main-3;
-          &:hover{
-               opacity:  1;
-               mix-blend-mode: normal;
+          @media #{$mouse-device} {
+               &:hover{
+                    filter: grayscale(0%);;
+               }
           }
      }
 }
@@ -77,7 +79,6 @@
           max-height: 3.625rem;
           // max-width: 26.6875rem;
           // width: 100%;
-          min-width: 19.75rem;
           padding: 1.25rem 1rem;
           border-radius: 19px;
           &,input{

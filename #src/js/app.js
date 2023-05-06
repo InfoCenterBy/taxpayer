@@ -95,22 +95,48 @@ document.querySelectorAll("collapsed").forEach(el=> {
      })
 })
 
-
-const swiper = new Swiper('.swiper-news', {
+const swiperNews = new Swiper('.swiper-news', {
      // Optional parameters
      direction: 'horizontal',
      loop: true,
-     allowTouchMove: true,
      cssMode: true,
-     // If we need pagination
+     // Pagination
      pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-news .swiper-pagination',
           clickable: true,
      },
+});
+
+const swiperEvent = new Swiper('.swiper-event', {
+     // Optional parameters
+     direction: 'horizontal',
+     // loop: true,
+     cssMode: true,
+     slidesPerView: 3,
+     spaceBetween: 18,
      // Navigation arrows
      navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
      },
+     watchOverflow: true,
+     breakpoints: {
+          // when window width is >= 320px
+          320: {
+               slidesPerView: 1,
+               spaceBetween: 0
+          },
+          // when window width is >= 480px
+          480: {
+               slidesPerView: 1,
+               spaceBetween: 0
+          },
+          // when window width is >= 640px
+          640: {
+               slidesPerView: 3,
+               spaceBetween: 18
+          }
+     }
 });
+
 
