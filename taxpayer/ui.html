@@ -12,6 +12,7 @@
      <link rel="stylesheet" href="css/functional/bootstrap@5.2.3.min.css" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
           integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
      <!-- bootstrap cdn -->
      <!-- gsap cdn -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
@@ -32,7 +33,7 @@
      <title>UI</title>
 </head>
 
-<body class="ui-content d-flex flex-column">
+<body class="ui-content d-flex flex-column h-100">
      <div class="d-flex justify-content-center">
           <header class="header flex-row align-items-center content-container justify-content-between w-100">
      <div class="header__logo">
@@ -65,10 +66,39 @@
           </div>
      </div>
 </header>
+
+<nav class="mobile-menu">
+     <ul class="mobile-list">
+          <li>
+               <a 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#menuAbout" 
+                    aria-expanded="false" 
+                    aria-controls="menuAbout">
+                         Об ассоциации 
+                         <i class="bi bi-chevron-up ms-1"></i>
+               </a>
+               <div class="collapse mt-3 ps-3" id="menuAbout">
+                    <a href="" class="mb-3"><i class="bi bi-pass me-2"></i>Руководство</a>
+                    <a href="" class="mb-3"><i class="bi bi-briefcase me-2"></i>Члены правления</a>
+                    <a href="" class="mb-3"><i class="bi bi-clipboard me-2"></i>Учредительные документы</a>
+                    <a href="" class="mb-3"><i class="bi bi-people me-2"></i>соглашения</a>
+               </div>
+          </li>
+          <li><a href="">новости</a></li>
+          <li><a href="">Контакты</a></li>
+     </ul>
+     <hr>
+     <a href="">
+          <i class="bi bi-facebook"></i>
+     </a>
+</nav>
+<div class="overlay"></div>
      </div>
-     <main class="d-flex flex-column">
-          <nav class="position-fixed ">
-               <ul class="list-unstyled border border-3 rounded border-primary mt-5 bg-info">
+     <main class="d-flex flex-row h-100 align-items-start">
+          <nav class="sticky-top d-block me-5">
+               <ul class="list-unstyled border border-3 rounded border-primary mt-5 bg-info position-sticky">
                     <li class="m-3 "><a href="./main.html" class=" text-bg-warning fs-5 p-1">Main Page</a></li>
                     <li class="m-3 "><a href="#top" class=" text-black fs-5">Top</a></li>
                     <li class="m-3 "><a href="#1" class=" text-black fs-5">Header</a></li>
@@ -86,9 +116,11 @@
                     <li class="m-3 "><a href="#12" class=" text-black fs-5">Search</a></li>
                     <li class="m-3 "><a href="#13" class=" text-black fs-5">Breadcrumbs</a></li>
                     <li class="m-3 "><a href="#14" class=" text-black fs-5">Footers</a></li>
+                    <li class="m-3 "><a href="#16" class=" text-black fs-5">Marquee</a></li>
                </ul>
           </nav>
-          <div class="content">
+          
+          <div class="content h-100">
                <section class="section w-100 d-flex flex-column" id="top">
                     <h1 class="h1">UI Components</h1>
                </section>
@@ -126,6 +158,35 @@
           </div>
      </div>
 </header>
+
+<nav class="mobile-menu">
+     <ul class="mobile-list">
+          <li>
+               <a 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#menuAbout" 
+                    aria-expanded="false" 
+                    aria-controls="menuAbout">
+                         Об ассоциации 
+                         <i class="bi bi-chevron-up ms-1"></i>
+               </a>
+               <div class="collapse mt-3 ps-3" id="menuAbout">
+                    <a href="" class="mb-3"><i class="bi bi-pass me-2"></i>Руководство</a>
+                    <a href="" class="mb-3"><i class="bi bi-briefcase me-2"></i>Члены правления</a>
+                    <a href="" class="mb-3"><i class="bi bi-clipboard me-2"></i>Учредительные документы</a>
+                    <a href="" class="mb-3"><i class="bi bi-people me-2"></i>соглашения</a>
+               </div>
+          </li>
+          <li><a href="">новости</a></li>
+          <li><a href="">Контакты</a></li>
+     </ul>
+     <hr>
+     <a href="">
+          <i class="bi bi-facebook"></i>
+     </a>
+</nav>
+<div class="overlay"></div>
                </section>
 
                <h2 class="h2 text-success mt-5" id="15">Titles and etc.(done)</h2>
@@ -496,7 +557,54 @@
 
                <h2 class="h2 text-danger mt-5" id="13"> Breadcrumbs(not start)</h2>
                <section class="content-container">
+               </section>
 
+               <h2 class="h2 text-warning mt-5" id="16"> Marquee (in progress)</h2>
+               <section class="content-container">
+                    <!-- direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="marquee-log" -->
+                    <div class="marquee-container w-100">
+                         <div class="marquee">
+                              <div class="marquee__item">
+                                   <p>Общественное объединение “Белорусский республиканский союз молодежы”</p>
+                              </div>
+                              <div class="marquee__item">
+                                   <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
+                                   <p>
+                                        Директива Президента Республики Беларусь 31 декабря 2010 г.  № 4
+                                   </p>
+                              </div>
+                              <div class="marquee__item">
+                                   <img src="./img/marquee/Belta.png" alt="Belta">
+                                   <p>
+                                        БелТа
+                                   </p>
+                              </div>
+                              <div class="marquee__item">
+                                   <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
+                                   <p>
+                                        Поддержка малого предпринимательства в Республике Беларусь
+                                   </p>
+                              </div>
+                              <div class="marquee__item">
+                                   <img src="./img/marquee/Nodo.png" alt="Nodo">
+                                   <p>
+                                        Азбука безопастности
+                                   </p>
+                              </div>
+                              <div class="marquee__item">
+                                   <img src="./img/marquee/Bird.png" alt="Bird">
+                                   <p>
+                                        Детский правовой сайт
+                                   </p>
+                              </div>
+                              <div class="marquee__item">
+                                   <img src="./img/marquee/BFFS.png" alt="BFFS">
+                                   <p>
+                                        Белорусский фонд финансовой поддержки предпринимателей
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
                </section>
 
                <h2 class="h2 text-info mt-5" id="14"> Footer(in test)</h2>
@@ -542,8 +650,6 @@
 
 
      </main>
-
-     <footer></footer>
 
      <script src="js/script.min.js"></script>
 </body>

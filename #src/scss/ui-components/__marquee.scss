@@ -1,0 +1,55 @@
+.marquee-container {
+     overflow: hidden;
+}
+.marquee {
+     display: flex;
+     flex-direction: row;
+     align-items: start;
+     justify-content: center;
+     animation: marquee 20s linear infinite;
+     &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 8.25rem;
+          cursor: pointer;
+          transition: $transition-main-3;
+          height: 100%;
+          @media #{$mouse-device} {
+               opacity: .3;
+               mix-blend-mode: luminosity;
+               &:hover{
+                    opacity: 1;
+                    mix-blend-mode: normal;
+               }
+          }
+          &:not(:last-child){
+               margin-right: 4.75rem;
+          }
+          img {
+               max-width: 100%;
+               height: auto;
+          }
+          p {
+               margin-top: 0.5rem;
+               text-align: center;
+               font-size: .75rem;
+               line-height: .8125rem;
+               margin-bottom: 0;
+          }
+     }
+}
+
+@keyframes marquee {
+     0% {
+          transform: translateX(100%);
+     }
+     100% {
+          transform: translateX(-100%);
+     }
+}
+.marquee:hover {
+     animation-play-state: paused;
+}
+
+

@@ -2,30 +2,15 @@
 @import "./functional/_mixins";
 @import './functional/burger.scss';
 
-
-$black: #000000;
-$white: #ffffff;
-$gray: #2a2a2a;
-$gold: #28282870;
-
-
 .burger {
      width: 50px;
      height: 50px;
-     // position: fixed;
-     // top: 20px;
-     // right: 20px;
      border-radius: 4px;
      z-index: 10;
      display: none;
      place-items: center;
      span {
-     @include burger(30px, 3px, 6px, $color-blue-accent);
-     // position: absolute;
-     // top: 50%;
-     // left: 50%;
-     // margin-left: -15px;
-     // margin-top: -1.5px;
+          @include burger(30px, 3px, 6px, $color-blue-accent);
      }
      @media #{$ui-tablet} {
           display: grid;
@@ -33,15 +18,13 @@ $gold: #28282870;
      &.show {
      span {
      @include burger-to-cross;
-     
           &:before, &:after {
-               background-color: $color-blue-accent;
+                    background-color: $color-blue-accent;
                }
           }
      }
-
      &:hover {
-     cursor: pointer;
+          cursor: pointer;
      }
 }
 
@@ -63,35 +46,57 @@ nav.mobile-menu {
           @media #{$ui-tablet} {
                @include transform(translateX(0px));
           }
-          ul.main {
-          li {
-               @include transform(translateX(0px));
-               opacity: 1;
-          
-               @for $i from 1 to 10 { 
-                    &:nth-child(#{$i}) {
-                      transition-delay: $i * 0.15s;
-                    }
+          ul.mobile-list {
+               li {
+                    @include transform(translateX(0px));
+                    opacity: 1;
+                    @for $i from 1 to 10 { 
+                         &:nth-child(#{$i}) {
+                                   transition-delay: $i * 0.15s;
+                              }
+                         }
+               }
+               .collapse{
+               }
+               .collapse.show{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                         color: $color-blue-dark;
+                         white-space: nowrap;
+                         .bi{
+                              font-size: 1rem;
+                              color: $color-blue-dark;
+                         }
                     }
                }
           }
+          hr{
+               border-top: 1px solid $color-blue-accent;
+          }
      }
 
-
-     ul.main {
+     ul.mobile-list {
           list-style-type: none;
-
+          padding-left: 0;
           li {
                @include transform(translateX(40px));
                opacity: 0;
                @include transition(all .3s ease);
-
+               margin-bottom: 1.5rem;
                &:last-of-type {
-                    margin-bottom: 0px;
+                    // margin-bottom: 0px;
                }
-
+               .bi{
+                    color: $color-blue-accent;
+                    transition: $transition-main-3;
+               }
+               .bi::before{
+                    transition: $transition-main-3;
+                    color: $color-blue-accent;
+               }
                a {
-                    color:$color-blue-dark;
+                    color: $color-blue-accent;
                     font-family: $font-family-medium;
                     text-decoration: none;
                     text-transform: uppercase;
@@ -100,20 +105,30 @@ nav.mobile-menu {
                     display: block;
                     font-weight: 500;
                     @include transition(all .3s ease);
-                    
-               span {
-                    color: $color-blue-accent;
+                    &:hover {
+                         @media #{$mouse-device} {
+                              
+                         }
+                    }
                }
-               // &:hover {
-               //      @media #{$mouse-device} {
-               //           color: $gold;
-               //      }
-               // }
+               a[aria-expanded="true"]{
+                    .bi::before{
+                         transform: rotate(180deg);
+                    }
                }
           }
      }
+     .bi-facebook{
+          color: $color-blue-accent;
+          font-size: 1.875rem;
+     }
 }
-
+body{
+     scrollbar-gutter: stable both-edges;
+}
+body:has(.overlay.show){
+     overflow: hidden;
+}
 .overlay {
      position: fixed;
      top: 0;
