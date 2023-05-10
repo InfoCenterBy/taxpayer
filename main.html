@@ -6,23 +6,35 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- bootstrap cdn -->
+     <meta name="format-detection" content="telephone=no" />
      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
      <!-- bootstrap cdn -->
      <link rel="stylesheet" href="css/functional/bootstrap@5.2.3.min.css" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
           integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+     <!-- bootstrap cdn -->
+     <!-- gsap cdn -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
           integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- gsap cdn -->
+     <!-- jquery cdn -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <!-- jquery cdn -->
+     <!-- swiper cdn -->
+     <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+     />
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+     <!-- swiper cdn -->
      <link rel="stylesheet" href="css/style.css" />
      <title>TaxPayer</title>
 </head>
 
 <body>
-     <header class="header flex-row align-items-center content-container justify-content-between">
+     <header class="header flex-row align-items-center content-container justify-content-between w-100">
      <div class="header__logo">
           <img src="./img/header/logo.png" alt="logo" class="w-100">
      </div>
@@ -62,7 +74,315 @@
           </ul>
      </nav>
      <div class="overlay"></div>
-     <main></main>
+     <main>
+          <section class="content-container">
+               <div class="banner banner-main row h-100 justify-content-center my-2 my-md-0 w-100 mx-0">
+                    <div class="col-md-6 d-flex flex-column align-items-end justify-content-center">
+                         <p class="pe-none">
+                              «В деле налогов следует принимать в соображение не то, что народ может дать, а то, что он может давать всегда»
+                         </p>
+                         <span>Ш. Монтескье</span>
+                    </div>
+                    <picture class="col-md-6 pe-0 my-2 my-md-0">
+                         <source media="(min-width: 650px)" srcset="./img/banners/banner-main.svg">
+                         <img src="./img/banners/banner-main.png" alt="banner-main">
+                    </picture>
+               </div>
+          </section>
+          <section class="content-container news-container row px-0 mx-0 gx-0 w-100 justify-content-center align-items-start">
+               <div class="col-md-4 row justify-content-center">
+                    <div class="col-12 row align-items-center">
+                         <div class="col-6 text-start">
+                              <h3 class="block-title color-blue-accent fw-semibold">Новости</h3>
+                         </div>
+                         <div class="col-6 text-end pe-0">
+                              <span class="sub-title color-text-gray">Все новости</span>
+                         </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                         <div class="swiper swiper-news">
+                              <div class="swiper-wrapper">
+                                   <div class="swiper-slide">
+                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                             <div class="slide-tumbnail d-flex flex-column">
+                                                  <div class="slide-tumbnail__img">
+                                                       <img src="./img/pic/slider-prev.png" alt="slider-prev">
+                                                  </div>
+                                                  <div class="slide-text">
+                                                       <p>
+                                                            Заместитель Министра по 
+                                                            налогам и сборам Владимир 
+                                                            Муквич провел встречу в 
+                                                            Ассоциации налогоплательщиков
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="slide-footer row align-items-center">
+                                                  <div class="col-6 text-start my-2">
+                                                       <span>12.08.2022</span>
+                                                  </div>
+                                                  <div class="col-6 text-end my-2">
+                                                       <span>#Прямая линия</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="swiper-slide">
+                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                             <div class="slide-tumbnail d-flex flex-column">
+                                                  <div class="slide-tumbnail__img">
+                                                       <img src="./img/pic/slider-prev.png" alt="slider-prev">
+                                                  </div>
+                                                  <div class="slide-text">
+                                                       <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing 
+                                                            elit. Dolores quae expedita ducimus optio 
+                                                            eligendi, inventore nobis repellendus rerum 
+                                                            aliquid nam vitae. Error molestias nemo 
+                                                            repellat facere deleniti atque pariatur excepturi!
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="slide-footer row">
+                                                  <div class="col-md-6 text-start">
+                                                       <span>12.08.2022</span>
+                                                  </div>
+                                                  <div class="col-md-6 text-end">
+                                                       <span>#Прямая линия</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="swiper-slide">
+                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                             <div class="slide-tumbnail d-flex flex-column">
+                                                  <div class="slide-tumbnail__img">
+                                                       <img src="./img/pic/slider-prev.png" alt="slider-prev">
+                                                  </div>
+                                                  <div class="slide-text">
+                                                       <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing 
+                                                            elit. Dolores quae expedita ducimus optio 
+                                                            eligendi, inventore nobis repellendus rerum 
+                                                            aliquid nam vitae. Error molestias nemo 
+                                                            repellat facere deleniti atque pariatur excepturi!
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="slide-footer row">
+                                                  <div class="col-md-6 text-start">
+                                                       <span>12.08.2022</span>
+                                                  </div>
+                                                  <div class="col-md-6 text-end">
+                                                       <span>#Прямая линия</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="swiper-pagination"></div>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-md-8 row h-100">
+                    <div class="d-flex flex-column col-md-6 justify-content-start my-2 ">
+                         <div class="d-flex flex-row justify-content-between align-items-center">
+                              <h3 class="block-title color-blue-accent fw-semibold text-start">Блог Ассоциации</h3>
+                              <a href="#" class="sub-title color-text-gray text-end">Смотреть больше</a>
+                         </div>
+                         <div class="news-block news-dark-blue d-flex mt-2 h-100 flex-column justify-content-between">
+                              <p>Петров-Иванов: взгляд на нововведения в налогообложении 2023 год</p>
+                              <div class="">
+                                   <span>18.02.2023</span>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="d-flex flex-column col-md-6 justify-content-start my-2 ">
+                         <div class="d-flex flex-row">
+                              <h3 class="block-title color-blue-accent fw-semibold">Анонс</h3>
+                         </div>
+                         <div class="news-block news-blue d-flex mt-2 h-100 flex-column justify-content-between">
+                              <p>Круглый стол: Изменения, внесенные в Налоговый кодекс в части НДС и ЭСЧФ с 1 января 2023 года</p>
+                              <div class="d-flex flex-row w-100 justify-content-between flex-wrap">
+                                   <span>18.02.2023</span>
+                                   <span>#Круглый стол</span>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="d-flex flex-column col-md-12 justify-content-start mt-4 ">
+                         <h3 class="block-title color-blue-accent fw-semibold">Разъяснения и комментарии</h3>
+                         <div class="news-block news-gray d-flex mt-2 h-100 flex-column justify-content-between">
+                              <p>
+                                   Разъяснение по вопросу увеличения ставок 
+                                   земельного налога и действия гарантии в 
+                                   отношении резидентов Китайско-Белорусского 
+                                   индустриального парка «Великий камень» 
+                                   (письмо МНС от 13.02.2023 № 2-3-20/00 504)
+                              </p>
+                              <div class="d-flex flex-row w-100 justify-content-between flex-wrap">
+                                   <span>18.02.2023</span>
+                                   <span>#Прямая линия</span>
+                              </div>
+                         </div>
+                         <a href="#" class="sub-title color-text-gray mt-2">Все разъяснения и комментарии</a>
+                    </div>
+               </div>
+          </section>
+          <section class="content-container">
+               <div class="banner banner-numbers row justify-content-between w-100 mx-0">
+                    <div class="col-md-4 col-sm-12 d-flex flex-row flex-md-column text-md-center align-items-center row banner-numbers__text my-2 my-md-0">
+                         <span class="col-6 col-md-12">7</span>
+                         <span class="col-6 col-md-12">лет работы</span>
+                    </div>
+                    <div class="col-md-4 col-sm-12 d-flex flex-row flex-md-column text-md-center align-items-center row banner-numbers__text my-2 my-md-0">
+                         <span class="col-6 col-md-12">70+</span>
+                         <span class="col-6 col-md-12">законодательных инициатив, поддержанных МНС</span>
+                    </div>
+                    <div class="col-md-4 col-sm-12 d-flex flex-row flex-md-column text-md-center align-items-center row banner-numbers__text my-2 my-md-0">
+                         <span class="col-6 col-md-12">140</span>
+                         <span class="col-6 col-md-12">круглых столов и конференций с участием МНС</span>
+                    </div>
+               </div>
+          </section>
+          <section class="content-container">
+               <h1 class="section-title color-blue-accent fw-semibold">Мероприятия, круглые столы, конференции</h1>
+               <div class="w-100 mt-4">
+                    <div class="swiper swiper-event">
+                         <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="slide-tumbnail d-flex flex-column">
+                                             <div class="slide-text">
+                                                  <p>
+                                                       Экономика – это нескучно. Как прошел городской конкурс финансовой грамотности среди школьников
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div class="slide-footer row">
+                                             <div class="col-md-6 text-start">
+                                                  <span>12.08.2022</span>
+                                             </div>
+                                             <div class="col-md-6 text-end">
+                                                  <span>#Прямая линия</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="slide-tumbnail d-flex flex-column">
+                                             <div class="slide-text">
+                                                  <p>
+                                                       Земельный налог, налог на недвижимость, 
+                                                       арендная плата за землю, экологический 
+                                                       налог – годовые декларации (расчеты) с учетом 2023 года
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div class="slide-footer row">
+                                             <div class="col-md-6 text-start">
+                                                  <span>12.08.2022</span>
+                                             </div>
+                                             <div class="col-md-6 text-end">
+                                                  <span>#Заседание совета</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="slide-tumbnail d-flex flex-column">
+                                             <div class="slide-text">
+                                                  <p>
+                                                       Изменения, внесенные в Налоговый кодекс в части НДС и ЭСЧФ с 1 января 2023 года
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div class="slide-footer row">
+                                             <div class="col-md-6 text-start">
+                                                  <span>12.08.2022</span>
+                                             </div>
+                                             <div class="col-md-6 text-end">
+                                                  <span>#Круглый стол</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="slide-tumbnail d-flex flex-column">
+                                             <div class="slide-text">
+                                                  <p>
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing 
+                                                       elit. Dolores quae expedita ducimus optio 
+                                                       eligendi, inventore nobis repellendus rerum 
+                                                       aliquid nam vitae. Error molestias nemo 
+                                                       repellat facere deleniti atque pariatur excepturi!
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div class="slide-footer row">
+                                             <div class="col-md-6 text-start">
+                                                  <span>12.08.2022</span>
+                                             </div>
+                                             <div class="col-md-6 text-end">
+                                                  <span>#Прямая линия</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- If we need navigation buttons -->
+                         <div class="swiper-button-prev"></div>
+                         <div class="swiper-button-next"></div>
+                         <!-- If we need scrollbar -->
+                    </div>
+               </div>
+          </section>
+          <section class="content-container">
+               <h1 class="section-title color-blue-accent fw-semibold">Преимущества членства в Ассоциации</h1>
+               <div class="banner banner-part row w-100 mx-0 mt-4">
+                    <div class="col-md-12 row banner-part__text align-items-center">
+                         <span class="col-2">17</span>
+                         <span class="col-10">крупных организаций являются членами Ассоциации</span>
+                    </div>
+                    <div class="col-md-12 row align-items-center justify-content-center">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/taikiri.png" alt="taikiri">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/finexpertiza.png" alt="finexpertiza">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/a1.png" alt="a1">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/oma.png" alt="oma">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/salt.png" alt="salt">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/kvg.png" alt="kvg">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/granit.png" alt="granit">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/pik.png" alt="pik">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/tabak.png" alt="tabak">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/sodrujestvo.png" alt="sodrujestvo">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/sosedi.png" alt="sosedi">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/evroopt.png" alt="evroopt">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/revera.png" alt="revera">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/urspektr.png" alt="urspektr">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/arlepta.png" alt="arlepta">
+                         <img class="col-3 col-sm-1" src="./img/banners/partners/finansia.png" alt="finansia">
+                    </div>
+               </div>
+               <div class="banner banner-email row align-items-center py-md-0 justify-content-md-between justify-content-center px-4 w-100 mx-0 mt-5">
+                    <picture class="d-none d-md-block col-md-2 p-0">
+                         <source media="(min-width: 650px)" srcset="./img/banners/banner-email.svg">
+                         <img src="./img/banners/banner-email.png" alt="banner-email">
+                    </picture>
+                    <div class="col-12 col-md-8 d-flex row p-0 align-items-center justify-content-between my-2">
+                         <div class="banner-email__text col-md-6">
+                              <span>Подписывайтесь на нашу рассылку</span>
+                              <p class="mb-0 mt-1">Только полезная информация. Никакого спама</p>
+                         </div>
+                         <div class="banner-email__input col-md-6 d-flex flex-row align-items-center justify-content-between my-2">
+                              <input type="email" id="bannerEmail" class="" placeholder="Ваш email">
+                              <i class="bi bi-arrow-right"></i>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
      <footer class="footer d-flex w-100 justify-content-center pt-5 pb-3">
      <div class="content-container d-flex flex-column">
           <div class="row w-100">
@@ -97,6 +417,7 @@
      </div>
 </footer>
      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> -->
+
 <script src="js/script.min.js"></script>
 </body>
 

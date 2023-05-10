@@ -2,6 +2,10 @@
   padding-left: 250px;
 }
 
+.ui-content .content-container {
+  margin-top: 0 !important;
+}
+
 .advantages-card {
   background: #055687;
   border-radius: 1.25rem;
