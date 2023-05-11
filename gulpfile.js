@@ -11,7 +11,8 @@ let path = {
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts/",
-		audio: project_folder + "/audio/"
+		audio: project_folder + "/audio/",
+		fonstIcon: project_folder + "/fonts-icon/"
 	},
 	src: {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -20,7 +21,8 @@ let path = {
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
-		audio: source_folder + "/audio/*.mp3"
+		audio: source_folder + "/audio/*.mp3",
+		fonstIcon : source_folder + "/fonts-icon/*",
 	},
 	watch: {
 		html: source_folder + "/**/*.html",
@@ -146,6 +148,13 @@ function fonts() {
 		.pipe(dest(path.build.fonts));
 };
 
+function fonstIcon() {
+	src(path.src.fonstIcon)
+		.pipe(dest(path.build.fonstIcon));
+	return src(path.src.fonstIcon)
+		.pipe(dest(path.build.fonstIcon));
+};
+
 gulp.task('otf2ttf', function () {
 	return src([source_folder + '/fonts/*.otf'])
 		.pipe(fonter({
@@ -186,7 +195,7 @@ function clean(params) {
 }
 
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, audio), cssmin );
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, audio, fonstIcon), cssmin );
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;

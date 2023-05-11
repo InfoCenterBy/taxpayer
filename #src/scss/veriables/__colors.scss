@@ -1,34 +1,48 @@
 .color-background-main{
-     color: #FCFCFC;
+     color: $color-background-main;
 }
 .color-white{
-     color: #FFFFFF;
+     color: $color-white;
 }
 
 .color-blue-accent{
-     color: #055687;
+     color: $color-blue-accent;
 }
 
 .color-white-text{
-     color: #FEFEFE;
+     color: $color-white-text;
 }
 
 .color-blue-black{
-     color: #063958;
+     color: $color-blue-black;
 }
 
 .color-blue-dark{
-     color: #041E2F;
+     color: $color-blue-dark;
 }
 
 .color-black{
-     color: #000000;
+     color: $color-black;
 }
 
 .color-background-sky-blue{
-     color: #c9ebff99;
+     color: $color-background-sky-blue;
 }
 
 .color-text-gray{
-     color: #737373;
+     color: $color-text-gray;
+}
+
+.color-bg-accent{
+     background-color: $color-blue-accent;
+}
+
+.color-bg-sky-blue-light{
+     background-color: $color-background-sky-blue-light;
+}
+
+.color-blue-black.icon-star{
+     &::before{
+          color: $color-blue-black;
+     }
 }

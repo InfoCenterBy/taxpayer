@@ -20,7 +20,7 @@
           align-items: center;
           justify-content: space-between;
           a{
-               .bi{
+               .bi-facebook{
                     font-size: 1.875rem;
                     line-height: 1.875rem;
                }
@@ -34,19 +34,25 @@
      }
      
      &__link{
+          
           &:not(:first-child){
                transition: $transition-main-3;
+          }
+          &:nth-child(2), &:nth-child(3){
+               border-radius: 30px;
+               padding: .625rem .9375rem;
+               &:hover{
+                    &, a{
+                         @media #{$mouse-device} {
+                              color: $color-background-main;
+                              background-color: $color-blue-accent;
+                         }
+                    }
+               }
           }
           &, a{
                @extend .color-blue-accent;
                font-family: $font-family-regular;
-          }
-          &:hover{
-               &, a{
-                    @media #{$mouse-device} {
-                         color: $color-blue-dark;
-                    }
-               }
           }
      }
      &__link:not(:nth-child(5)){
@@ -55,7 +61,7 @@
           }
      }
      &__link:nth-child(5){
-          @media #{$mouse-device} {
+          @media #{$ui-tablet} {
                margin-right: 2rem;
           }
      }
@@ -65,18 +71,18 @@
      }
      &__link:nth-child(2){
           // *news
-          @include adaptiv-value("margin-left", 70, 25, 1);
+          @include adaptiv-value("margin-left", 40, 15, 1);
      }
      &__link:nth-child(3){
           // *contacts
-          @include adaptiv-value("margin-left", 70, 25, 1);
+          @include adaptiv-value("margin-left", 40, 15, 1);
      }
      &__link:nth-child(4){
           // *facebook
-          @include adaptiv-value("margin-left", 55, 10, 1);
+          @include adaptiv-value("margin-left", 40, 10, 1);
      }
      &__link:nth-child(5){
           // *serach
-          @include adaptiv-value("margin-left", 50, 5, 1);
+          @include adaptiv-value("margin-left", 40, 5, 1);
      }
 }

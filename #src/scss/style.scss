@@ -5,6 +5,8 @@
 @import "./functional/_mixins";
 @import "./veriables/__colors.scss";
 @import "./veriables/_titles.scss";
+@import "./veriables/_fonts-size";
+@import "./veriables/_borders";
 html{
      height: auto;
      scroll-behavior: smooth;
@@ -30,7 +32,6 @@ main{
      min-width: $minWidth;
      display: flex;
      flex-direction: column;
-     justify-content: center;
      align-items: center;
 }
 
@@ -77,3 +78,4 @@ main .content-container.news-container{
 @import "./ui-components/_news";
 @import "./ui-components/_marquee";
 @import "ui.scss";
+@import "./pages/about.scss";
