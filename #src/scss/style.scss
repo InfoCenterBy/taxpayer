@@ -69,6 +69,10 @@ main .content-container.news-container{
      }
 }
 
+a:hover{
+     color: $color-blue-accent;
+}
+
 //! components imports
 @import "./ui-components/__header.scss";
 @import "./ui-components/__mobile-menu.scss";

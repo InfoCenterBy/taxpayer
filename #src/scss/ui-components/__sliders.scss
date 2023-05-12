@@ -28,6 +28,12 @@
      }
 }
 
+.swiper-content.swiper-content-img{
+     background-image: url('../../img/pic/star-bg.png');
+     background-position: center;
+     background-repeat: no-repeat;
+}
+
 .swiper-content:has(img){
      background-color: #e3e3e366;
      img{
@@ -98,5 +104,6 @@
      font-size: 1.5rem;
      color: $color-blue-accent;
      font-weight: bold;
+     margin-bottom: 30px;
 }
 

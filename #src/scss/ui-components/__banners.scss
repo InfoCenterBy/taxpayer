@@ -48,14 +48,16 @@
           @include adaptiv-value("line-height", 51, 16, 1);
      }
      img{
-          // opacity:  0.6;
-          // mix-blend-mode: luminosity;
-          filter: grayscale(100%);
+          opacity:  0.6;
+          mix-blend-mode:multiply;
+          // filter: grayscale(100%);
           cursor: pointer;
           transition: $transition-main-3;
           @media #{$mouse-device} {
                &:hover{
-                    filter: grayscale(0%);;
+                    // filter: grayscale(0%);
+                    opacity:  1;
+                    mix-blend-mode: normal;
                }
           }
      }

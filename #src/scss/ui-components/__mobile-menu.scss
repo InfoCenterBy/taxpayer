@@ -10,7 +10,7 @@
      display: none;
      place-items: center;
      span {
-          @include burger(30px, 3px, 6px, $color-blue-accent);
+          @include burger(30px, 2px, 6px, $color-blue-accent);
      }
      @media #{$ui-tablet} {
           display: grid;
@@ -124,10 +124,11 @@ nav.mobile-menu {
      }
 }
 body{
-     scrollbar-gutter: stable both-edges;
+     scrollbar-gutter: stable;
 }
 body:has(.overlay.show){
      overflow: hidden;
+     scrollbar-gutter: stable;
 }
 .overlay {
      position: fixed;

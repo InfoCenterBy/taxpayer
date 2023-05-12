@@ -8,6 +8,7 @@
 .footer-title {
      @include adaptiv-value("font-size", 17, 12, 1);
      @include adaptiv-value("line-height", 21, 15, 1);
+     font-family: $font-family-light;
      font-weight: 600;
      &, a{
           text-transform: uppercase;

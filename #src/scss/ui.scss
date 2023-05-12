@@ -89,3 +89,21 @@
 .red{
      border: 1px solid red;
 }
+
+.breadcrumbs{
+     margin-bottom: 1.875rem;
+     a{
+          color: $color-blue-accent;
+          font-size: 1rem;
+          line-height: 1.1875rem;
+          font-weight: 400;
+          &:not(:last-child){
+               &::after{
+                    content: " /";
+               }
+          }
+          &:last-child{
+               color: $color-text-gray;
+          }
+     }
+}
