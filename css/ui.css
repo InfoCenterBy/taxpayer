@@ -65,3 +65,22 @@
 .red {
   border: 1px solid red;
 }
+
+.breadcrumbs {
+  margin-bottom: 1.875rem;
+}
+
+.breadcrumbs a {
+  color: #055687;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  font-weight: 400;
+}
+
+.breadcrumbs a:not(:last-child)::after {
+  content: " /";
+}
+
+.breadcrumbs a:last-child {
+  color: #737373;
+}

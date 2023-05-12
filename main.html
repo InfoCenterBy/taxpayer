@@ -51,7 +51,7 @@
                     </div>
                </a>
                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="" href="#">Руководство</a>
+                    <a class="" href="./management.html">Руководство</a>
                     <a class="" href="#">Члены правления</a>
                     <a class="" href="#">Учредительные документы</a>
                     <a class="" href="#">соглашения</a>
@@ -73,17 +73,17 @@
      <ul class="mobile-list">
           <li>
                <!-- href="./about-main.html" -->
+               <!-- data-bs-target="#menuAbout"
+               aria-controls="menuAbout"
+               data-bs-toggle="collapse"   -->
                <a 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#menuAbout" 
-                    aria-expanded="false" 
-                    aria-controls="menuAbout">
+                    aria-expanded="true" 
+                    href="./about-main.html">
                          Об ассоциации 
-                         <i class="bi bi-chevron-up ms-1"></i>
+                         <i class="bi bi-chevron-down ms-1"></i>
                </a>
-               <div class="collapse mt-3 ps-3" id="menuAbout">
-                    <a href="" class="mb-3"><i class="bi bi-pass me-2"></i>Руководство</a>
+               <div class="collapse show mt-3 ps-3" id="menuAbout">
+                    <a href="./management.html" class="mb-3"><i class="bi bi-pass me-2"></i>Руководство</a>
                     <a href="" class="mb-3"><i class="bi bi-briefcase me-2"></i>Члены правления</a>
                     <a href="" class="mb-3"><i class="bi bi-clipboard me-2"></i>Учредительные документы</a>
                     <a href="" class="mb-3"><i class="bi bi-people me-2"></i>соглашения</a>
@@ -120,7 +120,7 @@
                               <h3 class="block-title color-blue-accent fw-semibold">Новости</h3>
                          </div>
                          <div class="col-6 text-end pe-0">
-                              <span class="sub-title color-text-gray">Все новости</span>
+                              <a href="#" class="sub-title color-text-gray">Все новости</a>
                          </div>
                     </div>
                     <div class="col-12 mt-3">
@@ -274,7 +274,7 @@
                     <div class="swiper swiper-event">
                          <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                   <div class="swiper-content swiper-content-img d-flex flex-column justify-content-between pb-3">
                                         <div class="slide-tumbnail d-flex flex-column">
                                              <div class="slide-text">
                                                   <p>
@@ -293,7 +293,7 @@
                                    </div>
                               </div>
                               <div class="swiper-slide">
-                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                   <div class="swiper-content swiper-content-img d-flex flex-column justify-content-between pb-3">
                                         <div class="slide-tumbnail d-flex flex-column">
                                              <div class="slide-text">
                                                   <p>
@@ -314,7 +314,7 @@
                                    </div>
                               </div>
                               <div class="swiper-slide">
-                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                   <div class="swiper-content swiper-content-img d-flex flex-column justify-content-between pb-3">
                                         <div class="slide-tumbnail d-flex flex-column">
                                              <div class="slide-text">
                                                   <p>
@@ -333,7 +333,7 @@
                                    </div>
                               </div>
                               <div class="swiper-slide">
-                                   <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                   <div class="swiper-content swiper-content-img d-flex flex-column justify-content-between pb-3">
                                         <div class="slide-tumbnail d-flex flex-column">
                                              <div class="slide-text">
                                                   <p>
