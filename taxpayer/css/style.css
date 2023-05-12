@@ -1120,6 +1120,10 @@ body:has(.overlay.show) {
           animation-play-state: paused;
 }
 
+.management-img {
+  max-width: 20.875rem;
+}
+
 .ui-content .content-container {
   margin-top: 0 !important;
 }
@@ -1207,8 +1211,46 @@ body:has(.overlay.show) {
   color: #737373;
 }
 
-.management-img {
-  max-width: 20.875rem;
+.documents-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.documents-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+  padding: 1rem 0.625rem;
+}
+
+.documents-item p {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 26px;
+}
+
+.documents-item .bi {
+  font-size: 40px;
 }
 
 @media (max-width: 1344px) {
@@ -1323,6 +1365,22 @@ body:has(.overlay.show) {
   .news-block {
     padding: calc(15px + 5 * ((100vw - 320px) / 1024));
   }
+
+  .documents-item p {
+    font-size: calc(15px + 3 * ((100vw - 320px) / 1024));
+  }
+
+  .documents-item p {
+    line-height: calc(18px + 4 * ((100vw - 320px) / 1024));
+  }
+
+  .documents-item p {
+    margin-left: calc(13px + 13 * ((100vw - 320px) / 1024));
+  }
+
+  .documents-item .bi {
+    font-size: calc(24px + 16 * ((100vw - 320px) / 1024));
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -1372,6 +1430,16 @@ body:has(.overlay.show) {
 
   .banner {
     padding: 0.875rem;
+  }
+
+  .documents-item {
+    background-color: rgba(227, 227, 227, 0.4);
+    border-radius: 0.625rem;
+    margin: 5px 0;
+  }
+
+  .documents-item:first-child {
+    margin-top: 0;
   }
 }
 

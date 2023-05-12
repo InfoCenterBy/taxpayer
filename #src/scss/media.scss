@@ -1,0 +1,19 @@
+@media screen and (min-width: 600px) { // setting default row and cols values for non mobile screens
+     .row {
+          margin-left: -15px;
+          margin-right: -15px;
+     }
+
+     .row [class*='col']{
+          padding-left: 15px;
+          padding-right: 15px;
+     }
+}
+.row {  // setting rows margin and cols padding to 0 for mobile screens
+     margin-left: 0;
+     margin-right: 0;
+}
+.row [class*='col']{
+     padding-left: 0;
+     padding-right: 0;
+}
