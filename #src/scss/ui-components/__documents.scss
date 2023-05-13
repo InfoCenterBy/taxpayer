@@ -1,15 +1,15 @@
 .documents-block{
      display: flex;
      flex-direction: column;
-     align-items: start;
 }
 
 .documents-item{
      display: flex;
      flex-direction: row;
-     align-items: center;
-     justify-content: center;
+     align-items: start;
+     justify-content: flex-start;
      color: $color-black;
+     cursor: pointer;
      padding: 1rem .625rem;
      @media #{$ui-tablet} {
           background-color: $color-background-gray-tr-4;

@@ -107,3 +107,101 @@
           }
      }
 }
+
+.user-header{
+     background-color: rgba(201, 235, 255, 0.6);
+     border-bottom: 1px solid rgba(5, 86, 135, 0.2);
+     padding: 1rem 3.125rem;
+     color: $color-blue-accent;
+     span{
+          cursor: pointer;
+     }
+}
+
+.btn-approved{
+     padding: 1rem 2rem;
+     font-family: $font-family-bold;
+     transition: $transition-main-3;
+     cursor: pointer;
+     @media #{$mouse-device} {
+          &:not(.btn-approved-checked):hover{
+               background-color: $color-blue-accent;
+               color: $color-white-main;
+          }
+     }
+}
+
+.btn-approved.btn-approved-checked{
+     background-color: $color-bg-gray;
+     color: $color-blue-accent;
+}
+
+.btn-approved-checked::before{
+     content: '\F272';
+     font-family: "bootstrap-icons";
+     display: inline-block;
+     margin-right: 0.25rem;
+     font-style: normal;
+     text-transform: none;
+     line-height: 1;
+     vertical-align: -.125em;
+     font-weight: 600;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-rating{
+     background: $color-background-sky-blue;
+     padding: .625rem 1rem;
+     font-family: $font-family-bold;
+     transition: $transition-main-3;
+     color: $color-blue-accent;
+     cursor: pointer;
+     border-radius: 20px;
+     @media #{$mouse-device} {
+          &:not(.btn-rating-checked):hover{
+               background-color: $color-background-blue-tr-2;
+          }
+     }
+}
+
+.btn-rating-checked{
+     background-color: $color-background-blue-tr-2;
+}
+
+.btn-like, .btn-like-checked, .btn-dislike, .btn-dislike-checked{
+     &::after{
+          font-family: "bootstrap-icons";
+          display: inline-block;
+          margin-right: 0.25rem;
+          font-style: normal;
+          text-transform: none;
+          line-height: 1;
+          vertical-align: -.125em;
+          font-weight: 700;
+     }
+}
+
+.btn-like{
+     &::after{
+          content: '\F407';
+     }
+}
+
+.btn-dislike{
+     &::after{
+          content: '\F405';
+     }
+}
+
+.btn-like-checked{
+     &::after{
+          content: '\F406';
+     }
+}
+
+.btn-dislike-checked{
+     &::after{
+          content: '\F404';
+     }
+}

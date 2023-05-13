@@ -33,10 +33,17 @@
      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
      <!-- swiper cdn -->
      <link rel="stylesheet" href="css/style.css" />
-     <title>Руководство</title>
+     <title>Учредительные документы</title>
 </head>
 
 <body>
+     <div class="user-header d-flex align-items-center justify-content-between w-100 fs-18">
+          <div>
+               <i class="bi bi-person me-2"></i>
+               <span>Иванов Иван</span>
+          </div>
+          <span>Выйти</span>
+     </div>
      <header class="header flex-row align-items-center content-container justify-content-between w-100">
      <a class="header__logo" href="main.html">
           <img src="./img/header/logo.png" alt="logo" class="w-100">
@@ -102,27 +109,83 @@
           <section class="content-container">
                <div class="breadcrumbs">
                     <a href="./main.html">Главная</a>
-                    <a href="./about-main.html">Об Ассоциации</a>
-                    <a href="./management.html">Руководство</a>
+                    <a href="./forum.html">Форум</a>
                </div>
-               <h1 class="section-title color-blue-accent fw-semibold">Руководство</h1>
-               <div class="row mt-4 mx-0 px-0">
-                    <div class="col-md-3 my-2">
-                         <img src="./img/pic/management-img.png" alt="Руководство картинка" class="border-20 w-100 management-img">
+               <h1 class="section-title color-blue-accent fw-semibold">Форум</h1>
+               <div class="forum-content row">
+                    <div class="col-12 d-flex justify-content-end">
+                         <div id="sort-btn" class="color-text-gray">
+                              <i class="bi bi-sort-numeric-down-alt"></i>
+                              <span>Сортировка по дате</span>
+                         </div>
                     </div>
-                    <div class="col-md-8 my-2">
-                         <h3 class="block-title color-blue-accent fw-semibold">Миронюк Любовь Петровна </h3>
-                         <p class="mt-3">
-                              председатель Ассоциации налогоплательщиков
-                              Финансовый директор группы компаний. 
-                              Стаж работы главным бухгалтером и финансовым 
-                              директором свыше 40 лет, АССА DipIFR (ДипИФР), 
-                              член консультативного совета при Министерстве по 
-                              налогам и сборам Республики Беларусь, член совета 
-                              по налоговой политике при Министерстве финансов 
-                              Республики Беларусь, член Межведомственного совета 
-                              по государственной статистике Национального 
-                              статистического комитета Республики Беларусь.</p>
+                    <div class="col-md-4 my-3 d-flex">
+                         <a class="blog-item blog-unread">
+                              <p>
+                                   Указ Президента Республики Беларусь 
+                                   от 16.02.2004 № 88 «О реструктуризации 
+                                   задолженности по платежам в республиканский 
+                                   и местные бюджеты, по кредитным договорам и прощении долга»
+                              </p>
+                              <span>
+                                   18.02.2023
+                              </span>
+                         </a>
+                         
+                    </div>
+                    <div class="col-md-4 my-3 d-flex">
+                         <a class="blog-item blog-unread">
+                              <p>
+                                   Указ № 36 от 13 февраля 2023 г. 
+                                   Об изменении Указа Президента 
+                                   Республики Беларусь (корректируется Указ № 13 от 16 января 2020 г.) 
+                              </p>
+                              <span>14.02.2023</span>
+                         </a>
+                    </div>
+                    <div class="col-md-4 my-3 d-flex">
+                         <a class="blog-item ">
+                              <p>
+                                   Указ № 35 от 13 февраля 2023 г. Об изменении указов Президента Республики Беларусь 
+                              </p>
+                              <span>
+                                   12.02.2023
+                              </span>
+                         </a>
+                    </div>
+                    <div class="col-md-4 my-3 d-flex">
+                         <a class="blog-item ">
+                              <p>
+                                   Указ № 32 от 10 февраля 2023 г. 
+                                   Об изменении Указа Президента 
+                                   Республики Беларусь (корректируется Указ № 381 от 5 октября 2021 г.)
+                              </p>
+                              <span>
+                                   11.02.2023
+                              </span>
+                         </a>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                         <nav aria-label="Page navigation example">
+                              <ul class="pagination">
+                                   <li class="page-item">
+                                        <a class="page-link color-bg-accent color-white-text" href="#" aria-label="Previous">
+                                             <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                   </li>
+                                   <li class="page-item">
+                                        <a class="page-link color-bg-accent color-white-text" href="#">1</a></li>
+                                   <li class="page-item">
+                                        <a class="page-link color-bg-accent color-white-text" href="#">2</a></li>
+                                   <li class="page-item">
+                                        <a class="page-link color-bg-accent color-white-text" href="#">3</a></li>
+                                   <li class="page-item">
+                                        <a class="page-link color-bg-accent color-white-text" href="#" aria-label="Next">
+                                             <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                   </li>
+                              </ul>
+                         </nav>
                     </div>
                </div>
           </section>

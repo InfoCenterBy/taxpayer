@@ -1,0 +1,50 @@
+.forum-content {
+}
+.blog-item {
+     padding: 1.25rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     background-color: $color-bg-gray;
+     border-radius: 10px;
+     color: $color-black;
+     transition: $transition-main-3;
+     p, span{
+          cursor: default;
+     }
+     
+}
+
+.blog-item.blog-unread{
+     background-color: $color-background-sky-blue-light;
+}
+
+.blog-item, .blog-item.blog-unread{
+     @media #{$mouse-device} {
+          &:hover{
+               color: $color-black;
+               background-color: rgba(5, 86, 135, 0.3);
+          }
+     }
+}
+
+#sort-btn{
+     cursor: pointer;
+     font-size: 1.125rem;
+     line-height: 1.375rem;
+     transition: $transition-main-3;
+     user-select: none;
+     @media #{$ui-tablet} {
+          font-size: .875rem;
+          line-height: 1.0625rem;
+     }
+     @media #{$mouse-device} {
+          &:hover{
+               color: $color-blue-accent;
+          }
+     }
+}
+
+.forum-discussion{
+
+}

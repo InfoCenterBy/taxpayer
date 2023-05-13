@@ -1,5 +1,5 @@
 .color-background-main{
-     color: $color-background-main;
+     color: $color-white-main;
 }
 .color-white{
      color: $color-white;
@@ -10,11 +10,15 @@
 }
 
 .color-white-text{
-     color: $color-white-text;
+     color: $color-white-main;
 }
 
 .color-blue-black{
      color: $color-blue-black;
+}
+
+.color-bg-blue-black{
+     background-color: $color-blue-black;
 }
 
 .color-blue-dark{
@@ -39,6 +43,10 @@
 
 .color-bg-sky-blue-light{
      background-color: $color-background-sky-blue-light;
+}
+
+.color-bg-sky-blue{
+     background-color: $color-sky-blue;
 }
 
 .color-blue-black.icon-star{

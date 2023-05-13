@@ -4,7 +4,7 @@
      @import "./ui-components/_header-dropdown";
      display: flex;
      z-index: $layer-ui-basic;
-     background-color: $color-background-main;
+     background-color: $color-white-main;
      height: 75px;
      padding-top: 1rem;
      *{
@@ -52,7 +52,7 @@
                &:hover{
                     &, a{
                          @media #{$mouse-device} {
-                              color: $color-background-main;
+                              color: $color-white-main;
                               background-color: $color-blue-accent;
                          }
                     }

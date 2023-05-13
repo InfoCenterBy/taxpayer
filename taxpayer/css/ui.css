@@ -84,3 +84,99 @@
 .breadcrumbs a:last-child {
   color: #737373;
 }
+
+.user-header {
+  background-color: rgba(201, 235, 255, 0.6);
+  border-bottom: 1px solid rgba(5, 86, 135, 0.2);
+  padding: 1rem 3.125rem;
+  color: #055687;
+}
+
+.user-header span {
+  cursor: pointer;
+}
+
+.btn-approved {
+  padding: 1rem 2rem;
+  font-family: "Gilroy-Bold", "Arial", sans-serif;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  cursor: pointer;
+}
+
+.btn-approved.btn-approved-checked {
+  background-color: #E3E3E3;
+  color: #055687;
+}
+
+.btn-approved-checked::before {
+  content: "\f272";
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-rating {
+  background: rgba(201, 235, 255, 0.6);
+  padding: 0.625rem 1rem;
+  font-family: "Gilroy-Bold", "Arial", sans-serif;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  color: #055687;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn-rating-checked {
+  background-color: rgba(6, 57, 88, 0.2);
+}
+
+.btn-like::after,
+.btn-like-checked::after,
+.btn-dislike::after,
+.btn-dislike-checked::after {
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  font-weight: 700;
+}
+
+.btn-like::after {
+  content: "\f407";
+}
+
+.btn-dislike::after {
+  content: "\f405";
+}
+
+.btn-like-checked::after {
+  content: "\f406";
+}
+
+.btn-dislike-checked::after {
+  content: "\f404";
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-approved:not(.btn-approved-checked):hover {
+    background-color: #055687;
+    color: #FEFEFE;
+  }
+
+  .btn-rating:not(.btn-rating-checked):hover {
+    background-color: rgba(6, 57, 88, 0.2);
+  }
+}

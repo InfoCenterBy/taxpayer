@@ -16,13 +16,14 @@ html,
 body {
 	min-width: $minWidth;
      width: 100%;
+     color: $color-blue-dark;
 }
 body{
      font-size: $fontSize;
      font-family: $font-family-regular;
      display: flex;
      flex-direction: column;
-     background: $color-background-main;
+     background: $color-white-main;
      align-items: center;
      min-height: 100vh;
 }
@@ -74,6 +75,7 @@ a:hover{
 }
 
 //! components imports
+@import "ui.scss";
 @import "./ui-components/__header.scss";
 @import "./ui-components/__mobile-menu.scss";
 @import "./ui-components/_footer.scss";
@@ -82,6 +84,7 @@ a:hover{
 @import "./ui-components/_news";
 @import "./ui-components/_marquee";
 @import "./pages/about.scss";
-@import "ui.scss";
 @import "./ui-components/_documents";
+@import "./ui-components/__forum.scss";
+@import "./ui-components/__comments.scss"
 // @import "media.scss";

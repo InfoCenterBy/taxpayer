@@ -1,0 +1,37 @@
+.comments-block {
+}
+.comment-avatar {
+     @include adaptiv-value("width", 64, 40, 1);
+     @include adaptiv-value("height", 60, 36, 1);
+     display: grid;
+     place-items: center;
+     color: $color-white-main;
+     @include adaptiv-value("font-size", 21, 16, 1);
+     @include adaptiv-value("line-height", 25, 19, 1);
+     margin-right: .625rem;
+}
+.comment-content-block {
+     border: 1px solid $color-bg-gray;
+     border-radius: 0px 15px 15px 15px;
+     background-color: $color-bg-gray-light;
+}
+.comments-leave-block {
+}
+.comments-leave-input {
+     textarea{
+          border: 1px solid $color-bg-gray;
+          border-radius: 0px 10px 10px 10px;
+          background: transparent;
+          padding: 1rem;
+          height: 7.5rem;
+          // max-height: 10rem;
+          resize: none;
+          &::placeholder, &{
+               color: $color-text-gray;
+          }
+     }
+}
+
+.comment-container{
+     max-width: 63.75rem;
+}
