@@ -420,11 +420,12 @@ a:hover {
 
 .btn-approved {
   padding: 1rem 2rem;
-  font-family: "Gilroy-Bold", "Arial", sans-serif;
+  font-family: "Gilroy-Regular", "Arial";
   -webkit-transition: all ease-out 0.3s;
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn-approved.btn-approved-checked {
@@ -1391,6 +1392,10 @@ body:has(.overlay.show) {
           user-select: none;
 }
 
+.comments-block:not(:first-child) {
+  margin-top: 1.375rem;
+}
+
 .comment-avatar {
   width: 64px;
   height: 60px;
@@ -1406,6 +1411,10 @@ body:has(.overlay.show) {
   border: 1px solid #E3E3E3;
   border-radius: 0px 15px 15px 15px;
   background-color: #F3F3F3;
+}
+
+.comments-leave-block {
+  margin-top: 2.5rem;
 }
 
 .comments-leave-input textarea {

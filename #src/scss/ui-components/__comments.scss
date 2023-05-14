@@ -1,4 +1,7 @@
 .comments-block {
+     &:not(:first-child){
+          margin-top: 1.375rem;
+     }
 }
 .comment-avatar {
      @include adaptiv-value("width", 64, 40, 1);
@@ -16,6 +19,7 @@
      background-color: $color-bg-gray-light;
 }
 .comments-leave-block {
+     margin-top: 2.5rem;
 }
 .comments-leave-input {
      textarea{

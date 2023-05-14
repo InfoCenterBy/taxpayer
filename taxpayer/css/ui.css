@@ -98,11 +98,12 @@
 
 .btn-approved {
   padding: 1rem 2rem;
-  font-family: "Gilroy-Bold", "Arial", sans-serif;
+  font-family: "Gilroy-Regular", "Arial";
   -webkit-transition: all ease-out 0.3s;
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn-approved.btn-approved-checked {

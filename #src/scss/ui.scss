@@ -120,9 +120,10 @@
 
 .btn-approved{
      padding: 1rem 2rem;
-     font-family: $font-family-bold;
+     font-family: $font-family-regular;
      transition: $transition-main-3;
      cursor: pointer;
+     text-align: center;
      @media #{$mouse-device} {
           &:not(.btn-approved-checked):hover{
                background-color: $color-blue-accent;
