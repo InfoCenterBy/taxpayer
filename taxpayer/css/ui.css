@@ -68,6 +68,15 @@
 
 .breadcrumbs {
   margin-bottom: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .breadcrumbs a {
@@ -85,11 +94,23 @@
   color: #737373;
 }
 
+.breadcrumbs .news-breadcrumbs {
+  max-width: 290px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
 .user-header {
   background-color: rgba(201, 235, 255, 0.6);
   border-bottom: 1px solid rgba(5, 86, 135, 0.2);
   padding: 1rem 3.125rem;
   color: #055687;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .user-header span {
@@ -169,6 +190,27 @@
 
 .btn-dislike-checked::after {
   content: "\f404";
+}
+
+.news-content p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media (max-width: 1344px) {
+  .news-content p {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1024));
+  }
+
+  .news-content p {
+    line-height: calc(19px + 5 * ((100vw - 320px) / 1024));
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .user-header {
+    display: none;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {

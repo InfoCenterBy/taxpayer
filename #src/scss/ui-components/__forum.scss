@@ -9,10 +9,9 @@
      border-radius: 10px;
      color: $color-black;
      transition: $transition-main-3;
+     cursor: pointer;
      p, span{
-          cursor: default;
      }
-     
 }
 
 .blog-item.blog-unread{

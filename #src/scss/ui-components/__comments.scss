@@ -4,13 +4,21 @@
      }
 }
 .comment-avatar {
-     @include adaptiv-value("width", 64, 40, 1);
-     @include adaptiv-value("height", 60, 36, 1);
+     width: 64px;
+     height: 64px;
+     min-width: 64px;
+     min-height: 64px;
+     @media #{$ui-tablet} {
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+     }
      display: grid;
      place-items: center;
      color: $color-white-main;
-     @include adaptiv-value("font-size", 21, 16, 1);
-     @include adaptiv-value("line-height", 25, 19, 1);
+     @include adaptiv-value("font-size", 21, 14, 1);
+     @include adaptiv-value("line-height", 25, 17, 1);
      margin-right: .625rem;
 }
 .comment-content-block {
