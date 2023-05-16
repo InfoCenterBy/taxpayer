@@ -192,11 +192,6 @@
   content: "\f404";
 }
 
-.news-content p {
-  font-size: 20px;
-  line-height: 24px;
-}
-
 .btn-tr {
   font-size: 18px;
   line-height: 22px;
@@ -212,14 +207,6 @@
 }
 
 @media (max-width: 1344px) {
-  .news-content p {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 1024));
-  }
-
-  .news-content p {
-    line-height: calc(19px + 5 * ((100vw - 320px) / 1024));
-  }
-
   .btn-tr {
     font-size: calc(15px + 3 * ((100vw - 320px) / 1024));
   }

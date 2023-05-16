@@ -140,7 +140,6 @@ const swiperEvent = new Swiper('.swiper-event', {
 });
 
 let sortBtn = document.querySelector("#sort-btn")
-
 if(sortBtn){
      sortBtn.addEventListener("click", function(){
           let sortIcon = document.querySelector("#sort-btn .bi")
@@ -148,3 +147,17 @@ if(sortBtn){
           sortIcon.classList.toggle("bi-sort-numeric-up-alt")
      })
 }
+
+const swiperNewsContent = new Swiper('.swiper-news-content', {
+     // Optional parameters
+     direction: 'horizontal',
+     // loop: true,
+     cssMode: true,
+     slidesPerView: 1,
+     // Navigation arrows
+     navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+     },
+     watchOverflow: true,
+});
