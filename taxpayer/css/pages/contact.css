@@ -1,0 +1,16 @@
+@media (hover: hover) and (pointer: fine) {
+  .contact-links a.color-bg-blue-black:hover {
+    background-color: #051620;
+    color: #FEFEFE;
+  }
+
+  .contact-links a.color-bg-sky-blue-light:hover {
+    background-color: #055687;
+    color: #FEFEFE;
+  }
+
+  .contact-links a.color-bg-accent.color-background-main:hover {
+    background-color: #041E2F;
+    color: #FEFEFE;
+  }
+}

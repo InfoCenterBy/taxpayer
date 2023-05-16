@@ -47,9 +47,6 @@ main{
      @media #{$ui-tablet} {
           padding: 0 .875rem ;
      }
-     @media #{$ui-mobile} {
-          padding: 0 .875rem ;
-     }
 }
 
 main .content-container:not(:first-child){
@@ -72,6 +69,7 @@ main .content-container.news-container{
 
 a:hover{
      color: $color-blue-accent;
+     transition: $transition-main-3;
 }
 
 //! components imports
@@ -88,4 +86,5 @@ a:hover{
 @import "./ui-components/__forum.scss";
 @import "./ui-components/__comments.scss";
 @import "./pages/contact.scss";
+@import "./pages/search.scss";
 // @import "media.scss";

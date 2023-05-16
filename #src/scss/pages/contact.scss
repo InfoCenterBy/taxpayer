@@ -1,3 +1,30 @@
+@import "../veriables/_variables";
 .contact-links{
-     
+     a.color-bg-blue-black{
+          @media #{$mouse-device} {
+               &:hover{
+                    background-color: $color-bg-contact-link;
+                    color: $color-white-main;
+               }
+          }
+          
+     }
+     a.color-bg-sky-blue-light{
+          @media #{$mouse-device} {
+               &:hover{
+                    background-color: $color-blue-accent;
+                    color: $color-white-main;
+               }
+          }
+          
+     }
+     a.color-bg-accent.color-background-main{
+          @media #{$mouse-device} {
+               &:hover{
+                    background-color: $color-black;
+                    color: $color-white-main;
+               }
+          }
+          
+     }
 }

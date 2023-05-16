@@ -1,0 +1,51 @@
+@import "../veriables/_variables";
+
+.search-bar {
+     border-radius: $border-main;
+     display: flex;
+     flex-direction: row;
+     overflow: hidden;
+     background-color: $color-bg-gray-light;
+     border: 1px solid #D2D1D1;
+}
+.search-input {
+     background-color: $color-bg-gray-light;
+     padding: 1rem 1.25rem;
+     @media #{$ui-tablet} {
+          padding: .75rem .9375rem;
+     }
+     width: 100%;
+}
+.search-btn {
+     border-radius: $border-main;
+     padding: .875rem 3rem;
+     background-color: $color-blue-accent;
+     color: $color-white-main;
+}
+.search-output {
+     display: block;
+     border-bottom: 1px solid #EEEEEE;
+     padding-bottom: 1rem;
+     &:not(:first-child){
+          margin-top: 1.625rem;
+     }
+	&__path {
+          font-size: .875rem;
+          line-height: 1.0625rem;
+          margin-top: .5rem;
+          color: $color-text-gray;
+          span:not(:last-child){
+               &::after{
+                    content: " >";
+               }
+          }
+	}
+     transition: $transition-main-3;
+     @media #{$mouse-device} {
+          &:hover{
+               strong{
+                    color: $color-blue-accent;
+               }
+          }
+     }
+}

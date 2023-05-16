@@ -1,4 +1,4 @@
-.swiper {
+.swiper:not(.swiper-news-content) {
      min-width: 100%;
      width: 100%;
      max-width: 100%;
@@ -9,7 +9,7 @@
      height: 14.5rem;
 }
 
-.swiper-wrapper{
+.swiper:not(.swiper-news-content) .swiper-wrapper{
      border-radius: 20px;
 }
 
@@ -48,7 +48,7 @@
      }
 }
 
-.swiper-slide{
+.swiper:not(.swiper-news-content) .swiper-slide{
      border-radius: 20px;
      padding-bottom: 30px;
 }
@@ -59,7 +59,7 @@
      }
 }
 
-.swiper-slide-next, .swiper-slide-active, .swiper-slide-prev{
+.swiper:not(.swiper-news-content) .swiper-slide-next, .swiper-slide-active, .swiper-slide-prev{
      border-radius: 20px;
 }
 

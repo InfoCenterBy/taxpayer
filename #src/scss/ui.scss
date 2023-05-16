@@ -222,9 +222,23 @@
      }
 }
 
-.news-content{
-     p{
-          @include adaptiv-value("font-size", 20, 16, 1);
-          @include adaptiv-value("line-height", 24, 19, 1);
+.btn-tr{
+     @include adaptiv-value("font-size", 18, 15, 1);
+     @include adaptiv-value("line-height", 22, 18, 1);
+     padding: 1rem 2.5rem;
+     border-radius: 30px;
+     border: 2px solid $color-blue-accent;
+     color: $color-blue-accent;
+     transition: $transition-main-3;
+     font-weight: 600;
+     font-family: $font-family-regular;
+     @media #{$ui-tablet} {
+          padding: .75rem 2.5rem;
+     }
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-blue-accent;
+               color: $color-white-main;
+          }
      }
 }

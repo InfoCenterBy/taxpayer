@@ -51,7 +51,8 @@ let { src, dest } = require('gulp'),
 	fonter = require('gulp-fonter'),
 	// deploy = require('gulp-gh-pages');
 	ghPages = require('gulp-gh-pages'),
-	prettier = require('gulp-prettier');
+	prettier = require('gulp-prettier'),
+	purgecss = require('gulp-purgecss');
 
 function browserSync(done) {
 	browsersync.init({
@@ -177,6 +178,15 @@ gulp.task('svgSprite', function () {
 		.pipe(dest(path.build.img))
 })
 
+gulp.task('purgecss', () => {
+	return src(path.src.maincss)
+		.pipe(purgecss({
+				conetnt: [src.build.html]
+			}))
+		.pipe(dest(path.build.css))
+})
+
+
 // gulp.task('deploy', function() {
 //   return gulp.src('demo/**/*')
 //     .pipe(ghPages());
@@ -195,7 +205,7 @@ function clean(params) {
 }
 
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, audio, fonstIcon), cssmin );
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, audio, fonstIcon, purgecss), cssmin );
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;

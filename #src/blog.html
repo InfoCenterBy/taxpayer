@@ -3,31 +3,19 @@
 
 
 @@include('_head.html',{
-"title":"Форум"
+"title":"Блог Ассоциации"
 })
 
 <body>
-     <div class="user-header align-items-center justify-content-between w-100 fs-18">
-          <div>
-               <i class="bi bi-person me-2"></i>
-               <span>Иванов Иван</span>
-          </div>
-          <span>Выйти</span>
-     </div>
      @@include('_header.html')
      <main>
           <section class="content-container">
-               <div class="breadcrumbs">
-                    <a href="./main.html">Главная</a>
-                    <a href="./forum.html">Форум</a>
-               </div>
-               
-               <div class="forum-content row">
-                    <div class="col-12 d-flex align-items-center justify-content-between">
-                         <div class="d-flex justify-content-start">
-                              <h1 class="section-title color-blue-accent fw-semibold">Форум</h1>
+               <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+                         <div class="d-flex justify-content-start my-1">
+                              <h1 class="section-title color-blue-accent fw-semibold">Блог Ассоциации</h1>
                          </div>
-                         <div class="d-flex justify-content-end">
+                         <div class="d-flex justify-content-end my-1">
                               <div id="sort-btn" class="color-text-gray">
                                    <i class="bi bi-sort-numeric-down-alt"></i>
                                    <span>Сортировка по дате</span>
@@ -35,7 +23,7 @@
                          </div>
                     </div>
                     <div class="col-md-4 my-3 d-flex">
-                         <a class="blog-item blog-unread" href="./forum-content.html">
+                         <a class="blog-item blog-unread" >
                               <p>
                                    Указ Президента Республики Беларусь 
                                    от 16.02.2004 № 88 «О реструктуризации 
@@ -49,7 +37,7 @@
                          
                     </div>
                     <div class="col-md-4 my-3 d-flex">
-                         <a class="blog-item blog-unread" href="./forum-content.html">
+                         <a class="blog-item blog-unread" >
                               <p>
                                    Указ № 36 от 13 февраля 2023 г. 
                                    Об изменении Указа Президента 
@@ -59,7 +47,7 @@
                          </a>
                     </div>
                     <div class="col-md-4 my-3 d-flex">
-                         <a class="blog-item " href="./forum-content.html">
+                         <a class="blog-item " >
                               <p>
                                    Указ № 35 от 13 февраля 2023 г. Об изменении указов Президента Республики Беларусь 
                               </p>
@@ -69,7 +57,7 @@
                          </a>
                     </div>
                     <div class="col-md-4 my-3 d-flex">
-                         <a class="blog-item " href="./forum-content.html">
+                         <a class="blog-item " >
                               <p>
                                    Указ № 32 от 10 февраля 2023 г. 
                                    Об изменении Указа Президента 
@@ -105,8 +93,8 @@
                </div>
           </section>
      </main>
-     @@include('_footer.html')
-     @@include('_script.html')
+@@include('_footer.html')
+@@include('_script.html')
 </body>
 
 </html>
