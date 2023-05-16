@@ -68,6 +68,15 @@
 
 .breadcrumbs {
   margin-bottom: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .breadcrumbs a {
@@ -83,4 +92,165 @@
 
 .breadcrumbs a:last-child {
   color: #737373;
+}
+
+.breadcrumbs .news-breadcrumbs {
+  max-width: 290px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.user-header {
+  background-color: rgba(201, 235, 255, 0.6);
+  border-bottom: 1px solid rgba(5, 86, 135, 0.2);
+  padding: 1rem 3.125rem;
+  color: #055687;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-header span {
+  cursor: pointer;
+}
+
+.btn-approved {
+  padding: 1rem 2rem;
+  font-family: "Gilroy-Regular", "Arial";
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-approved.btn-approved-checked {
+  background-color: #E3E3E3;
+  color: #055687;
+}
+
+.btn-approved-checked::before {
+  content: "\f272";
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-rating {
+  background: rgba(201, 235, 255, 0.6);
+  padding: 0.625rem 1rem;
+  font-family: "Gilroy-Bold", "Arial", sans-serif;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  color: #055687;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn-rating-checked {
+  background-color: rgba(6, 57, 88, 0.2);
+}
+
+.btn-like::after,
+.btn-like-checked::after,
+.btn-dislike::after,
+.btn-dislike-checked::after {
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  font-weight: 700;
+}
+
+.btn-like::after {
+  content: "\f407";
+}
+
+.btn-dislike::after {
+  content: "\f405";
+}
+
+.btn-like-checked::after {
+  content: "\f406";
+}
+
+.btn-dislike-checked::after {
+  content: "\f404";
+}
+
+.news-content p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.btn-tr {
+  font-size: 18px;
+  line-height: 22px;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  border: 2px solid #055687;
+  color: #055687;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  font-weight: 600;
+  font-family: "Gilroy-Regular", "Arial";
+}
+
+@media (max-width: 1344px) {
+  .news-content p {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1024));
+  }
+
+  .news-content p {
+    line-height: calc(19px + 5 * ((100vw - 320px) / 1024));
+  }
+
+  .btn-tr {
+    font-size: calc(15px + 3 * ((100vw - 320px) / 1024));
+  }
+
+  .btn-tr {
+    line-height: calc(18px + 4 * ((100vw - 320px) / 1024));
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .user-header {
+    display: none;
+  }
+
+  .btn-tr {
+    padding: 0.75rem 2.5rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-approved:not(.btn-approved-checked):hover {
+    background-color: #055687;
+    color: #FEFEFE;
+  }
+
+  .btn-rating:not(.btn-rating-checked):hover {
+    background-color: rgba(6, 57, 88, 0.2);
+  }
+
+  .btn-tr:hover {
+    background-color: #055687;
+    color: #FEFEFE;
+  }
 }

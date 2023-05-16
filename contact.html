@@ -33,7 +33,7 @@
      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
      <!-- swiper cdn -->
      <link rel="stylesheet" href="css/style.css" />
-     <title>Учредительные документы</title>
+     <title>Контакты</title>
 </head>
 
 <body>
@@ -102,29 +102,55 @@
           <section class="content-container">
                <div class="breadcrumbs">
                     <a href="./main.html">Главная</a>
-                    <a href="./about-main.html">Об Ассоциации</a>
-                    <a href="./documents.html">Учредительные документы</a>
+                    <a href="./contact.html">Контакты</a>
                </div>
-               <h1 class="section-title color-blue-accent fw-semibold">Учредительные документы</h1>
-               <div class="documents-block mt-3">
-                    <a class="documents-item">
-                         <i class="bi bi-filetype-pdf"></i>
-                         <p>
-                              Меморандум о сотрудничестве и взаимопонимании между Министерством по налогам и сборам Республики Беларусь и Ассоциацией налогоплательщиков
-                         </p>
-                    </a>
-                    <a class="documents-item">
-                         <i class="bi bi-filetype-doc"></i>
-                         <p>
-                              Устав Ассоциации налогоплательщиков
-                         </p>
-                    </a>
-                    <a class="documents-item">
-                         <i class="bi bi-filetype-png"></i>
-                         <p>
-                              Изменения к Уставу Ассоциации налогоплательщиков
-                         </p>
-                    </a>
+               <h1 class="section-title color-blue-accent fw-semibold">Контакты</h1>
+               <div class="row w-100 contact-links mt-3 px-0 mx-0">
+                    <div class="col-md-6 my-2">
+                         <a href="" class="color-bg-blue-black color-white border-20 
+                                             w-100 d-flex justify-content-start align-items-start 
+                                             py-3 py-xl-4 px-2 px-xl-4">
+                              <i class="bi bi-geo-alt"></i>
+                              <span class="ms-3">г. Минск, пер. Кольцова 4-й, д. 51, каб. 103</span>
+                         </a>
+                    </div>
+                    <div class="col-md-6 row px-0 mx-0">
+                         <div class="col-md-6 my-2">
+                              <a href="tel:+375293234568" class="color-bg-sky-blue-light color-blue-dark border-20 
+                                                  w-100 d-flex justify-content-start align-items-start 
+                                                  py-3 py-xl-4 px-2 px-xl-4">
+                                   <i class="bi bi-telephone"></i>
+                                   <span class="ms-3">+375 29 323 45 68</span>
+                              </a>
+                         </div>
+                         <div class="col-md-6 my-2">
+                              <a href="mailto:info@taxpayer.by" class="color-bg-accent color-background-main border-20 
+                                                  w-100 d-flex justify-content-start align-items-start 
+                                                  py-3 py-xl-4 px-2 px-xl-4">
+                                   <i class="bi bi-envelope"></i>
+                                   <span class="ms-3">info@taxpayer.by</span>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+               <div class="map border-20 overflow-hidden mt-5">
+                    <img src="./img/pic/map.png" alt="map" class="w-100">
+               </div>
+               <div class="banner banner-email row align-items-center py-md-0 justify-content-md-between justify-content-center px-4 w-100 mx-0  mt-5">
+                    <picture class="d-none d-md-block col-md-2 p-0">
+                         <source media="(min-width: 650px)" srcset="./img/banners/banner-email.svg">
+                         <img src="./img/banners/banner-email.png" alt="banner-email">
+                    </picture>
+                    <div class="col-12 col-md-8 d-flex row p-0 align-items-center justify-content-between my-2">
+                         <div class="banner-email__text col-md-6">
+                              <span>Подписывайтесь на нашу рассылку</span>
+                              <p class="mb-0 mt-1">Только полезная информация. Никакого спама</p>
+                         </div>
+                         <div class="banner-email__input col-md-6 d-flex flex-row align-items-center justify-content-between my-2">
+                              <input type="email" id="bannerEmail" class="" placeholder="Ваш email">
+                              <i class="bi bi-arrow-right"></i>
+                         </div>
+                    </div>
                </div>
           </section>
      </main>

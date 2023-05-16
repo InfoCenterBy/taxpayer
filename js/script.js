@@ -139,4 +139,12 @@ const swiperEvent = new Swiper('.swiper-event', {
      }
 });
 
+let sortBtn = document.querySelector("#sort-btn")
 
+if(sortBtn){
+     sortBtn.addEventListener("click", function(){
+          let sortIcon = document.querySelector("#sort-btn .bi")
+          sortIcon.classList.toggle("bi-sort-numeric-down-alt")
+          sortIcon.classList.toggle("bi-sort-numeric-up-alt")
+     })
+}
