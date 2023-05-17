@@ -74,6 +74,10 @@
   content: " /";
 }
 
+.breadcrumbs a::after {
+  margin-right: 4px;
+}
+
 .breadcrumbs a:last-child {
   color: #737373;
 }
