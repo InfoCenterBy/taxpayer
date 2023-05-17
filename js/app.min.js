@@ -116,12 +116,15 @@ const swiperNews = new Swiper('.swiper-news', {
           el: '.swiper-news .swiper-pagination',
           clickable: true,
      },
+     autoplay: {
+          delay: 3000,
+     },
 });
 
 const swiperEvent = new Swiper('.swiper-event', {
      // Optional parameters
      direction: 'horizontal',
-     // loop: true,
+     loop: true,
      cssMode: true,
      slidesPerView: 3,
      spaceBetween: 18,
@@ -147,7 +150,10 @@ const swiperEvent = new Swiper('.swiper-event', {
                slidesPerView: 3,
                spaceBetween: 18
           }
-     }
+     },
+     autoplay: {
+          delay: 3000,
+     },
 });
 
 let sortBtn = document.querySelector("#sort-btn")
