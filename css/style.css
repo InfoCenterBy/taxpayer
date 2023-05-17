@@ -332,9 +332,7 @@ a:hover {
 }
 
 .advantages-card {
-  background: #055687;
   border-radius: 1.25rem;
-  max-width: 438px;
   width: 100%;
   height: 260px;
   display: -webkit-box;
@@ -344,9 +342,9 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #FFFFFF;
   overflow: hidden;
   cursor: pointer;
@@ -359,14 +357,57 @@ a:hover {
   transition: all ease-out 0.3s;
 }
 
-.advantages-card:nth-child(1) {
-  padding: 1.875rem 0.8125rem 0.5625rem 1.875rem;
+.advantages-card__pic {
+  width: 100%;
 }
 
-.advantages-card:nth-child(1) .advantages-card__pic {
-  background-image: url("/img/svg/Persona-1.svg");
-  width: 221px;
-  height: 229px;
+.advantages-card.adv-card-1 {
+  padding: 1.875rem 0.8125rem 0.5625rem 1.875rem;
+  background-color: #055687;
+}
+
+.advantages-card.adv-card-1 .advantages-card__pic {
+  max-width: 221px;
+}
+
+.advantages-card.adv-card-2 {
+  padding: 2rem 2rem 0 2rem;
+  background-color: #E3E3E3;
+  color: #041E2F;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.advantages-card.adv-card-2 .advantages-card__pic {
+  max-width: 364px;
+}
+
+.advantages-card.adv-card-3 {
+  background-color: #055687;
+}
+
+.advantages-card.adv-card-3 .advantages-card__pic {
+  max-width: 359px;
+}
+
+.advantages-card.adv-card-4 {
+  background-color: #063958;
+  color: #FFFFFF;
+}
+
+.advantages-card.adv-card-4 .advantages-card__pic {
+  max-width: 193px;
+}
+
+.advantages-card.adv-card-5 {
+  background-color: rgba(201, 235, 255, 0.6);
+  color: #055687;
+}
+
+.advantages-card.adv-card-5 .advantages-card__pic {
+  max-width: 326px;
 }
 
 .advantages-card__pic {
@@ -567,6 +608,20 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.btn-adv-enter {
+  color: #041E2F;
+  background-color: rgba(227, 227, 227, 0.4);
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.btn-adv-enter :nth-child(1) {
+  font-size: 90px;
+  line-height: 110px;
+  color: #055687;
 }
 
 .header {
@@ -1914,6 +1969,14 @@ body:has(.overlay.show) {
 
   .btn-tr:hover {
     background-color: #055687;
+    color: #FEFEFE;
+  }
+
+  .btn-adv-enter:hover {
+    background-color: #055687;
+  }
+
+  .btn-adv-enter:hover span {
     color: #FEFEFE;
   }
 
