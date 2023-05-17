@@ -153,6 +153,7 @@ i {
 .icon-star:before {
   content: "򐀁";
   color: #fefefe;
+  font-size: 25px;
 }
 
 .color-background-main {
@@ -1065,6 +1066,10 @@ body:has(.overlay.show) {
   line-height: 21px;
   font-family: "Gilroy-Light", "Arial", sans-serif;
   font-weight: 600;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  margin-top: 10px;
 }
 
 .footer-title,
@@ -1072,13 +1077,19 @@ body:has(.overlay.show) {
   text-transform: uppercase;
 }
 
-.footer-title:not(:first-child) {
-  margin-top: 10px;
-}
-
 .footer-text {
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer-text a {
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .banner {
@@ -1103,7 +1114,7 @@ body:has(.overlay.show) {
   line-height: 32px;
 }
 
-.banner-main p ~ span {
+.banner-main p ~ em {
   font-size: 24px;
   line-height: 29px;
 }
@@ -1736,11 +1747,11 @@ body:has(.overlay.show) {
     line-height: calc(20px + 12 * ((100vw - 320px) / 1024));
   }
 
-  .banner-main p ~ span {
+  .banner-main p ~ em {
     font-size: calc(16px + 8 * ((100vw - 320px) / 1024));
   }
 
-  .banner-main p ~ span {
+  .banner-main p ~ em {
     line-height: calc(19px + 10 * ((100vw - 320px) / 1024));
   }
 
@@ -1882,6 +1893,10 @@ body:has(.overlay.show) {
     visibility: visible;
   }
 
+  .footer-contact {
+    display: none;
+  }
+
   .banner {
     padding: 0.875rem;
   }
@@ -1964,6 +1979,10 @@ body:has(.overlay.show) {
   :has(.bi-facebook)):hover a {
     color: #FEFEFE;
     background-color: #055687;
+  }
+
+  .footer-title a:hover {
+    color: #C9EBFF;
   }
 
   .banner-part img:hover {

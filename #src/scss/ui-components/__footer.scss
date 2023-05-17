@@ -13,11 +13,25 @@
      &, a{
           text-transform: uppercase;
      }
-     &:not(:first-child){
-          margin-top: 10px;
+     transition: $transition-main-3;
+     @media #{$mouse-device} {
+          a:hover{
+               color: $color-background-sky-blue-light;
+          }
      }
+     margin-top: 10px;
 }
 .footer-text {
      @include adaptiv-value("font-size", 16, 12, 1);
      @include adaptiv-value("line-height", 19, 14, 1);
+     a{
+          margin-bottom: 1rem;
+     }
+}
+
+.footer-contact{
+     display: flex;
+     @media #{$ui-tablet} {
+          display: none;
+     }
 }
