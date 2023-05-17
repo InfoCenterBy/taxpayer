@@ -153,6 +153,7 @@ i {
 .icon-star:before {
   content: "򐀁";
   color: #fefefe;
+  font-size: 25px;
 }
 
 .color-background-main {
@@ -751,6 +752,8 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  margin-left: 130px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -761,7 +764,7 @@ a:hover {
   line-height: 1.875rem;
 }
 
-.header__icon:nth-child(5) .bi {
+.header__icon:has(.bi-search) .bi {
   font-size: 1.25rem;
   line-height: 1.25rem;
 }
@@ -772,8 +775,8 @@ a:hover {
   transition: all ease-out 0.3s;
 }
 
-.header__link:nth-child(2),
-.header__link:nth-child(3) {
+.header__link:not(.dropdown,
+:has(.bi-facebook)) {
   border-radius: 30px;
   padding: 0.625rem 0.9375rem;
 }
@@ -782,26 +785,6 @@ a:hover {
 .header__link a {
   font-family: "Gilroy-Light", "Arial", sans-serif;
   font-weight: 600;
-}
-
-.header__link:nth-child(1) {
-  margin-left: 1.25rem;
-}
-
-.header__link:nth-child(2) {
-  margin-left: 40px;
-}
-
-.header__link:nth-child(3) {
-  margin-left: 40px;
-}
-
-.header__link:nth-child(4) {
-  margin-left: 40px;
-}
-
-.header__link:nth-child(5) {
-  margin-left: 40px;
 }
 
 .burger {
@@ -1083,6 +1066,10 @@ body:has(.overlay.show) {
   line-height: 21px;
   font-family: "Gilroy-Light", "Arial", sans-serif;
   font-weight: 600;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  margin-top: 10px;
 }
 
 .footer-title,
@@ -1090,13 +1077,19 @@ body:has(.overlay.show) {
   text-transform: uppercase;
 }
 
-.footer-title:not(:first-child) {
-  margin-top: 10px;
-}
-
 .footer-text {
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer-text a {
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .banner {
@@ -1121,7 +1114,7 @@ body:has(.overlay.show) {
   line-height: 32px;
 }
 
-.banner-main p ~ span {
+.banner-main p ~ em {
   font-size: 24px;
   line-height: 29px;
 }
@@ -1726,20 +1719,8 @@ body:has(.overlay.show) {
     line-height: calc(18px + 4 * ((100vw - 320px) / 1024));
   }
 
-  .header__link:nth-child(2) {
-    margin-left: calc(15px + 25 * ((100vw - 320px) / 1024));
-  }
-
-  .header__link:nth-child(3) {
-    margin-left: calc(15px + 25 * ((100vw - 320px) / 1024));
-  }
-
-  .header__link:nth-child(4) {
-    margin-left: calc(10px + 30 * ((100vw - 320px) / 1024));
-  }
-
-  .header__link:nth-child(5) {
-    margin-left: calc(5px + 35 * ((100vw - 320px) / 1024));
+  .header__content {
+    margin-left: calc(10px + 120 * ((100vw - 320px) / 1024));
   }
 
   .footer-title {
@@ -1766,11 +1747,11 @@ body:has(.overlay.show) {
     line-height: calc(20px + 12 * ((100vw - 320px) / 1024));
   }
 
-  .banner-main p ~ span {
+  .banner-main p ~ em {
     font-size: calc(16px + 8 * ((100vw - 320px) / 1024));
   }
 
-  .banner-main p ~ span {
+  .banner-main p ~ em {
     line-height: calc(19px + 10 * ((100vw - 320px) / 1024));
   }
 
@@ -1859,7 +1840,7 @@ body:has(.overlay.show) {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 910px) {
   .content-container {
     padding: 0 0.875rem;
   }
@@ -1884,17 +1865,17 @@ body:has(.overlay.show) {
     max-width: 12.625rem;
   }
 
-  .header__icon:nth-child(5) .bi {
+  .header__content {
+    width: auto;
+  }
+
+  .header__icon:has(.bi-search) .bi {
     font-size: 1.5625rem;
     line-height: 1.5625rem;
   }
 
-  .header__link:not(:nth-child(5)) {
+  .header__link:not(:has(.bi-search)) {
     display: none;
-  }
-
-  .header__link:nth-child(5) {
-    margin-right: 2rem;
   }
 
   .burger {
@@ -1910,6 +1891,10 @@ body:has(.overlay.show) {
   .overlay.show {
     opacity: 0.8;
     visibility: visible;
+  }
+
+  .footer-contact {
+    display: none;
   }
 
   .banner {
@@ -1988,12 +1973,16 @@ body:has(.overlay.show) {
     background-color: #063958;
   }
 
-  .header__link:nth-child(2):hover,
-  .header__link:nth-child(2):hover a,
-  .header__link:nth-child(3):hover,
-  .header__link:nth-child(3):hover a {
+  .header__link:not(.dropdown,
+  :has(.bi-facebook)):hover,
+  .header__link:not(.dropdown,
+  :has(.bi-facebook)):hover a {
     color: #FEFEFE;
     background-color: #055687;
+  }
+
+  .footer-title a:hover {
+    color: #C9EBFF;
   }
 
   .banner-part img:hover {
