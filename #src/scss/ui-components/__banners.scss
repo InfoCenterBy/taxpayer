@@ -1,13 +1,17 @@
 .banner{
      padding: 1.875rem;
      @media #{$ui-tablet} {
-          padding: .875rem;
+          padding: 1.125rem;
      }
      border-radius: $border-main;
 }
 .banner-main{
      padding-right: 0;
      background-color: $color-background-sky-blue;
+     padding: 2.5rem 1rem;
+     @media #{$ui-tablet} {
+          padding: 2.5rem .5rem;
+     }
      picture{
           source, img{
                width: 100%;
