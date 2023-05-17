@@ -19,76 +19,75 @@
 }
 
 .advantages-card {
-     background: #055687;
      border-radius: 1.25rem;
-     max-width: 438px;
+     // max-width: 438px;
      width: 100%;
-     width: 438px;
      height: 260px;
      display: flex;
      flex-direction: row;
-     align-items: center;
+     align-items: flex-start;
      color: $color-white;
      overflow: hidden;
-     
-     // &:hover .advantages-card__img{
-     //      // left: -50%;
-     //      // top: 20%;
-     //      transform: translate(-80%, 12%);
-     // }
-     // &:hover .advantages-card__text{
-     //      opacity: 0;
-     //      display: none;
-     // }
-     // &:hover .advantages-card__sub-text{
-     //      opacity: 1;
-     //      display: block;
-     // }
-     &:nth-child(n){
-          padding: 1.875rem .8125rem .5625rem 1.875rem;
+     cursor: pointer;
+     &, & *{
+          transition: $transition-main-3;
      }
      &__img{
-          position: relative;
-          z-index: 2;
-          // overflow: hidden;
-          display: flex;
-          align-items: flex-end;
-          height: 100%;
+          
      }
-     &:nth-child(1){
+     &__pic{
+          width: 100%;
+     }
+     &.adv-card-1{
+          padding: 1.875rem .8125rem .5625rem 1.875rem;
+          background-color: $color-blue-accent;
           .advantages-card__pic{
-               background-image: url('/img/svg/Persona-1.svg');
-               width: 221px;
-               height: 229px;
+               // background-image: url('/img/svg/Persona-1.svg');
+               // width: 221px;
+               // height: 229px;
+               max-width: 221px;
           }
      }
-     // &:nth-child(3){
-     //      outline: 1px solid red;
-     //      .advantages-card__pic{
-     //           background-image: url('/img/svg/Persona-3.svg');
-     //           width: 360px;
-     //           height: 219px;
-               
-     //      }
-     // }
+     &.adv-card-2{
+          padding: 2rem 2rem 0 2rem;
+          background-color: $color-bg-gray;
+          color: $color-black;
+          flex-direction: column;
+          .advantages-card__pic{
+               max-width: 364px;
+          }
+     }
+     &.adv-card-3{
+          background-color: $color-blue-accent;
+          .advantages-card__pic{
+               max-width: 359px;
+          }
+     }
+     &.adv-card-4{
+          background-color: $color-blue-black;
+          color: $color-white;
+          .advantages-card__pic{
+               max-width: 193px;
+          }
+     }
+     &.adv-card-5{
+          background-color: $color-background-sky-blue;
+          color: $color-blue-accent;
+          .advantages-card__pic{
+               max-width: 326px;
+          }
+     }
      &__pic{
-          
+          height: 100%;
           background-repeat: no-repeat;
           background-size: contain;
      }
 	&__text {
-          position: relative;
-          z-index: 2;
+          // width: 232px;
      }
      &__sub-text{
           display: none;
-          opacity: 0;
-          z-index: 4;
-          max-width: 232px;
      }
-}
-.red{
-     border: 1px solid red;
 }
 
 .breadcrumbs{
@@ -105,6 +104,9 @@
                &::after{
                     content: " /";
                }
+          }
+          &::after{
+               margin-right: 4px;
           }
           &:last-child{
                color: $color-text-gray;
@@ -239,6 +241,65 @@
           &:hover{
                background-color: $color-blue-accent;
                color: $color-white-main;
+          }
+     }
+}
+
+.btn-close {
+     opacity: 1;
+     background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23055687'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+.btn-close:focus{
+     box-shadow: none;
+}
+
+.search-header.modal-header {
+     align-items: center;
+     justify-content: space-between;
+     border-bottom: none;
+}
+
+.modal-content {
+     width: 100%;
+     color: var(--bs-modal-color);
+     background-color: $color-white-main;
+     border: none;
+     font-family: $font-family-regular;
+}
+
+.modal-fullscreen .modal-content{
+     height: auto;
+}
+
+.modal-dialog:has(.search-header){
+     max-width: 100%;
+     max-height: 6.875rem;
+}
+
+.modal.fade.show{
+     .modal-dialog:has(.search-header){
+          display: flex;
+          align-items: center;
+     }
+     
+}
+
+.btn-adv-enter{
+     :nth-child(1){
+          font-size: 90px;
+          line-height: 110px;
+          color: $color-blue-accent;
+     }
+     color: $color-black;
+     background-color: $color-background-gray-tr-4;
+     transition: $transition-main-3;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-blue-accent;
+               span{
+                    color: $color-white-main;
+               }
           }
      }
 }

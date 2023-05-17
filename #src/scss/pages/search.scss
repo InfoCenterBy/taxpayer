@@ -21,6 +21,13 @@
      padding: .875rem 3rem;
      background-color: $color-blue-accent;
      color: $color-white-main;
+     transition: $transition-main-3;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-black;
+               color: $color-white-main;
+          }
+     }
 }
 .search-output {
      display: block;

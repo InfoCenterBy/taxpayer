@@ -12,7 +12,7 @@ $color-white-main: #FEFEFE;
 $color-blue-black: #063958;
 $color-blue-dark: #041E2F;
 $color-black: #041E2F;
-$color-modal-back: #28282870;
+$color-modal-back: rgba(40, 40, 40, 0.439);
 $color-background-sky-blue: #c9ebff99;
 $color-background-sky-blue-light: #C9EBFF;
 $color-text-gray: #737373;
@@ -49,7 +49,7 @@ $transition-main-3: all ease-out .3s;
 // *? Media rules*
 $mouse-device: '(hover: hover) and (pointer: fine)';
 $ui-mobile: 'screen and (max-width: 650px)';
-$ui-tablet: 'screen and (max-width: 850px)';
+$ui-tablet: 'screen and (max-width: 910px)';
 
 // *! z-indexs* 
 $layer-all-base: 2;

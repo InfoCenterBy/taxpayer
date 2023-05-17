@@ -51,18 +51,20 @@
                     </div>
                </a>
                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="" href="./management.html">Руководство</a>
-                    <a class="" href="./members.html">Члены правления</a>
-                    <a class="" href="./documents.html">Учредительные документы</a>
-                    <a class="" href="./agreements.html">соглашения</a>
+                    <a class="" href="./management.html"><i class="bi bi-people me-2"></i>Руководство</a>
+                    <a class="" href="./members.html"><i class="bi bi-briefcase me-2"></i>Члены правления</a>
+                    <a class="" href="./documents.html"><i class="bi bi-clipboard me-2"></i>Учредительные документы</a>
+                    <a class="" href="./agreements.html"><i class="bi bi-pass me-2"></i>соглашения</a>
                </div>
           </div>
 
           <a href="./news.html" class="header__link">новости</a>
           <a href="./contact.html" class="header__link">Контакты</a>
+          <a href="./contact.html" class="header__link">Форум</a>
 
-          <a href="#" class="header__link header__icon"><i class="bi bi-facebook"></i></a>
-          <a href="./search.html" class="header__link header__icon"><i class="bi bi-search"></i></a>
+          <a href="https://www.facebook.com/groups/1080010765442829/about/" target="_blank" class="header__link header__icon"><i class="bi bi-facebook"></i></a>
+          <!-- data-bs-toggle="modal" data-bs-target="#searchModal" type="button" -->
+          <a class="header__link header__icon" href="./search.html"><i class="bi bi-search"></i></a>
           <div class="burger">
                <span></span>
           </div>
@@ -80,20 +82,19 @@
                     aria-expanded="true" 
                     href="./about-main.html">
                          Об ассоциации 
-                         <i class="bi bi-chevron-down ms-1"></i>
                </a>
                <div class="collapse show mt-3 ps-3" id="menuAbout">
-                    <a href="./management.html" class="mb-3"><i class="bi bi-pass me-2"></i>Руководство</a>
+                    <a href="./management.html" class="mb-3"><i class="bi bi-people me-2"></i>Руководство</a>
                     <a href="./members.html" class="mb-3"><i class="bi bi-briefcase me-2"></i>Члены правления</a>
                     <a href="./documents.html" class="mb-3"><i class="bi bi-clipboard me-2"></i>Учредительные документы</a>
-                    <a href="./agreements.html" class="mb-3"><i class="bi bi-people me-2"></i>соглашения</a>
+                    <a href="./agreements.html" class="mb-3"><i class="bi bi-pass me-2"></i>соглашения</a>
                </div>
           </li>
           <li><a href="./news.html">новости</a></li>
           <li><a href="./contact.html">Контакты</a></li>
      </ul>
      <hr>
-     <a href="">
+     <a href="https://www.facebook.com/groups/1080010765442829/about/" target="_blank">
           <i class="bi bi-facebook"></i>
      </a>
 </nav>
@@ -101,13 +102,13 @@
      <main>
           <section class="content-container">
                <div class="banner banner-main row h-100 justify-content-center my-2 my-md-0 w-100 mx-0">
-                    <div class="col-md-6 d-flex flex-column align-items-end justify-content-center">
+                    <div class="col-md-5 d-flex flex-column align-items-end justify-content-center">
                          <p class="pe-none">
                               «В деле налогов следует принимать в соображение не то, что народ может дать, а то, что он может давать всегда»
                          </p>
                          <span>Ш. Монтескье</span>
                     </div>
-                    <picture class="col-md-6 pe-0 my-2 my-md-0">
+                    <picture class="col-md-7 pe-0 my-2 my-md-0">
                          <source media="(min-width: 650px)" srcset="./img/banners/banner-main.svg">
                          <img src="./img/banners/banner-main.png" alt="banner-main">
                     </picture>
@@ -116,7 +117,7 @@
           <section class="content-container news-container row px-0 mx-0 gx-0 w-100 justify-content-center align-items-start">
                <div class="col-md-4 row justify-content-center">
                     <div class="col-12 row align-items-center">
-                         <div class="col-6 text-start">
+                         <div class="col-6 text-start px-0 mx-0">
                               <h3 class="block-title color-blue-accent fw-semibold">Новости</h3>
                          </div>
                          <div class="col-6 text-end pe-0">
@@ -208,7 +209,7 @@
                          </div>
                     </div>
                </div>
-               <div class="col-md-8 row h-100">
+               <div class="col-md-8 row">
                     <div class="d-flex flex-column col-md-6 justify-content-start my-2 ">
                          <div class="d-flex flex-row justify-content-between align-items-center">
                               <h3 class="block-title color-blue-accent fw-semibold text-start">Блог Ассоциации</h3>
@@ -365,7 +366,25 @@
           </section>
           <section class="content-container">
                <h1 class="section-title color-blue-accent fw-semibold">Преимущества членства в Ассоциации</h1>
-               <div class="banner banner-part row w-100 mx-0 mt-4">
+               <div class="advantages row w-100 mt-4">
+                    <div class="col-md-6 my-2">
+                         <div class="advantages-card adv-card-1">
+                              <div class="advantages-card__text">
+                                   Получайте всю налоговую информацию самыми первыми
+                              </div>
+                              <img src="./img/svg/Persona-1.svg" alt=""  class="advantages-card__pic">
+                              
+                         </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                         <div class="btn-adv-enter 
+                                   d-flex flex-column align-items-center justify-content-center flex-wrap px-4 text-center py-4 h-100 border-20" role="button">
+                              <span>+</span>
+                              <span>Вступить в Ассоциацию</span>
+                         </div>
+                    </div>
+               </div>
+               <div class="banner banner-part row w-100 mx-0 mt-5">
                     <div class="col-md-12 row banner-part__text align-items-center">
                          <span class="col-2">17</span>
                          <span class="col-10">крупных организаций являются членами Ассоциации</span>
@@ -405,7 +424,7 @@
                          </div>
                     </div>
                </div>
-          </section>
+          </div>
           <div class="content-container">
                <div class="marquee-container w-100">
                     <div class="marquee">

@@ -44,8 +44,8 @@
      border-radius: $border-top-25;
      padding: .625rem 1rem;
      text-align: left;
-     &:hover{
-          @media #{$mouse-device} {
+     @media #{$mouse-device} {
+          &:hover{
                background: $color-blue-accent;
           }
      }

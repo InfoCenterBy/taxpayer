@@ -8,43 +8,54 @@ document.querySelectorAll('.advantages-card').forEach((el) => {
      const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
      // const tweenClick = gsap.timeline({repeat: 0, repeatDelay: 1, reversed: true})
 
-     let hover = tween.to(
-          persona,
+     let hover = 
+     tween.to(
+          personaPic,
           {
-               left: '-65%',
-               top: '12%',
+               duration: 0.5, 
+               xPercent: -110,
+               yPercent: 20,
                ease: 'expo.inOut',
-               duration: 0.8,
           },
-          '-=1'
-     );
-
-     // tween.to(personaPic, {
-     //      // backgroundPosition: '-45px 28px',
-     //      ease: 'expo.inOut',
-     //      duration: 1
-     // }, '-=.9')
-
+     )
      tween.to(
           text,
           {
-               opacity: '0',
-               duration: 0.2,
+               duration: 0.5, 
+               xPercent: 100,
+               ease: 'expo.Out',
+               width: '211px',
+               onStart: () => {
+                    // text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.Out',
+                              opacity: 0,
+                         },
+                         '-=.7'
+                    )
+               },
+               onComplete: () => {
+                    text[0].textContent = 
+                    ' Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.in',
+                              opacity: 1,
+                         },
+                         // '-=.6'
+                    )
+               },
+               onReverseComplete: () => {
+                    text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
+               },
           },
-          '-=1.2'
-     );
-
-     tween.to(
-          subText,
-          {
-               display: 'block',
-               position: 'absolute',
-               opacity: '1',
-               duration: 0.5,
-               left: '35%',
-          },
-          '-=.4'
-     );
+          '-=.5'
+     )
 
      $(el).hover(makeHover, makeHover);
 
@@ -105,12 +116,15 @@ const swiperNews = new Swiper('.swiper-news', {
           el: '.swiper-news .swiper-pagination',
           clickable: true,
      },
+     autoplay: {
+          delay: 3000,
+     },
 });
 
 const swiperEvent = new Swiper('.swiper-event', {
      // Optional parameters
      direction: 'horizontal',
-     // loop: true,
+     loop: true,
      cssMode: true,
      slidesPerView: 3,
      spaceBetween: 18,
@@ -136,7 +150,10 @@ const swiperEvent = new Swiper('.swiper-event', {
                slidesPerView: 3,
                spaceBetween: 18
           }
-     }
+     },
+     autoplay: {
+          delay: 3000,
+     },
 });
 
 let sortBtn = document.querySelector("#sort-btn")
