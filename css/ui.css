@@ -218,6 +218,24 @@
   font-family: "Gilroy-Regular", "Arial";
 }
 
+.modal-fullscreen .modal-content {
+  height: auto;
+}
+
+.modal-dialog:has(.search-header) {
+  max-width: 100%;
+  max-height: 6.875rem;
+}
+
+.modal.fade.show .modal-dialog:has(.search-header) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 1344px) {
   .btn-tr {
     font-size: calc(15px + 3 * ((100vw - 320px) / 1024));

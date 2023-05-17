@@ -27,10 +27,28 @@ document.querySelectorAll('.advantages-card').forEach((el) => {
                width: '211px',
                onStart: () => {
                     // text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.Out',
+                              opacity: 0,
+                         },
+                         '-=.7'
+                    )
                },
                onComplete: () => {
                     text[0].textContent = 
                     ' Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.in',
+                              opacity: 1,
+                         },
+                         // '-=.6'
+                    )
                },
                onReverseComplete: () => {
                     text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
