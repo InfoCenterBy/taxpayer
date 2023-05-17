@@ -7,7 +7,6 @@
   border-radius: 1.25rem;
   max-width: 438px;
   width: 100%;
-  width: 438px;
   height: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,22 +20,18 @@
           align-items: center;
   color: #FFFFFF;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.advantages-card:nth-child(n) {
+.advantages-card,
+.advantages-card * {
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.advantages-card:nth-child(1) {
   padding: 1.875rem 0.8125rem 0.5625rem 1.875rem;
-}
-
-.advantages-card__img {
-  position: relative;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 100%;
 }
 
 .advantages-card:nth-child(1) .advantages-card__pic {
@@ -46,24 +41,13 @@
 }
 
 .advantages-card__pic {
+  height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.advantages-card__text {
-  position: relative;
-  z-index: 2;
-}
-
 .advantages-card__sub-text {
   display: none;
-  opacity: 0;
-  z-index: 4;
-  max-width: 232px;
-}
-
-.red {
-  border: 1px solid red;
 }
 
 .breadcrumbs {
@@ -203,6 +187,34 @@
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   font-weight: 600;
+  font-family: "Gilroy-Regular", "Arial";
+}
+
+.btn-close {
+  opacity: 1;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23055687'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+.btn-close:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.search-header.modal-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: none;
+}
+
+.modal-content {
+  width: 100%;
+  color: var(--bs-modal-color);
+  background-color: #FEFEFE;
+  border: none;
   font-family: "Gilroy-Regular", "Arial";
 }
 

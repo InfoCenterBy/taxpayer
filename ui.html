@@ -62,13 +62,26 @@
           <a href="./contact.html" class="header__link">Контакты</a>
 
           <a href="#" class="header__link header__icon"><i class="bi bi-facebook"></i></a>
-          <a href="./search.html" class="header__link header__icon"><i class="bi bi-search"></i></a>
+          <a class="header__link header__icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button"><i class="bi bi-search"></i></a>
           <div class="burger">
                <span></span>
           </div>
      </div>
 </header>
-
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+               <div class="modal-header search-header py-0">
+                    <div class="d-flex flex-row justify-content-between w-100 px-4  py-3">
+                         <input type="text" name="" id="" class="search-header__input w-100 pe-2" placeholder="Начните писать |">
+                         <button class="search-btn">Поиск</button>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               
+          </div>
+     </div>
+</div>
 <nav class="mobile-menu">
      <ul class="mobile-list">
           <li>
@@ -157,13 +170,26 @@
           <a href="./contact.html" class="header__link">Контакты</a>
 
           <a href="#" class="header__link header__icon"><i class="bi bi-facebook"></i></a>
-          <a href="./search.html" class="header__link header__icon"><i class="bi bi-search"></i></a>
+          <a class="header__link header__icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button"><i class="bi bi-search"></i></a>
           <div class="burger">
                <span></span>
           </div>
      </div>
 </header>
-
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+               <div class="modal-header search-header py-0">
+                    <div class="d-flex flex-row justify-content-between w-100 px-4  py-3">
+                         <input type="text" name="" id="" class="search-header__input w-100 pe-2" placeholder="Начните писать |">
+                         <button class="search-btn">Поиск</button>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               
+          </div>
+     </div>
+</div>
 <nav class="mobile-menu">
      <ul class="mobile-list">
           <li>
@@ -219,17 +245,19 @@
 
                <h2 class="h2 text-warning  mt-5" id="2">Advant ages blocks(in progress)</h2>
                <section class="advantages d-flex flex-row">
-                    <div class="advantages-card">
+                    <div class="advantages-card col-md-4">
                          <div class="advantages-card__text">
                               Получайте всю налоговую информацию самыми первыми
                          </div>
                          <div class="advantages-card__img">
                               <div class="advantages-card__pic"></div>
                          </div>
-                         <div class="advantages-card__sub-text">
-                              Ассоциация систематизирует и анализирует проблемные вопросы, предложения и замечания
-                              в сфере налогообложения, поступающие от членов АН.
-                         </div>
+                         <!-- <div class="advantages-card__sub-text">
+                              Министерство по налогам и сборам Республики Беларусь 
+                              привлекает членов Ассоциации к разработке актов 
+                              налогового законодательства и включает в рабочие 
+                              группы для их обсуждения.
+                         </div> -->
                     </div>
 
                     <div class="mx-5"></div>
@@ -253,13 +281,13 @@
                <h2 class="h2 text-success mt-5" id="3">Banners(done)</h2>
                <section class="content-container">
                     <div class="banner banner-main row h-100 justify-content-center my-2 my-md-0 w-100 mx-0">
-                         <div class="col-md-6 d-flex flex-column align-items-end justify-content-center">
+                         <div class="col-md-5 d-flex flex-column align-items-end justify-content-center">
                               <p class="pe-none">
                                    «В деле налогов следует принимать в соображение не то, что народ может дать, а то, что он может давать всегда»
                               </p>
                               <span>Ш. Монтескье</span>
                          </div>
-                         <picture class="col-md-6 pe-0 my-2 my-md-0">
+                         <picture class="col-md-7 pe-0 my-2 my-md-0">
                               <source media="(min-width: 650px)" srcset="./img/banners/banner-main.svg">
                               <img src="./img/banners/banner-main.png" alt="banner-main">
                          </picture>
@@ -483,7 +511,23 @@
 
                <h2 class="h2 text-danger mt-5" id="5">Modal(not start)</h2>
                <section class="content-container">
-
+                    <button type="button" class="btn border-1 border-info" data-bs-toggle="modal" data-bs-target="#searchModal">
+                         search bar
+                    </button>
+                    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                         <div class="modal-dialog modal-xl">
+                              <div class="modal-content">
+                                   <div class="modal-header search-header py-0">
+                                        <div class="d-flex flex-row justify-content-between w-100 px-4  py-3">
+                                             <input type="text" name="" id="" class="search-header__input w-100 pe-2" placeholder="Начните писать |">
+                                             <button class="search-btn">Поиск</button>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                   </div>
+                                   
+                              </div>
+                         </div>
+                    </div>
                </section>
 
                <h2 class="h2 text-warning mt-5" id="6">Buttons(in progress)</h2>

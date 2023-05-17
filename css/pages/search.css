@@ -23,6 +23,9 @@
   padding: 0.875rem 3rem;
   background-color: #055687;
   color: #FEFEFE;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
 .search-output {
@@ -56,6 +59,11 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .search-btn:hover {
+    background-color: #041E2F;
+    color: #FEFEFE;
+  }
+
   .search-output:hover strong {
     color: #055687;
   }

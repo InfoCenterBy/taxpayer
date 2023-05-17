@@ -37,7 +37,7 @@
 </head>
 
 <body>
-     <div class="user-header align-items-center justify-content-between w-100 fs-18">
+     <div class="user-header content-container align-items-center justify-content-between w-100 fs-18">
           <div>
                <i class="bi bi-person me-2"></i>
                <span>Иванов Иван</span>
@@ -69,13 +69,26 @@
           <a href="./contact.html" class="header__link">Контакты</a>
 
           <a href="#" class="header__link header__icon"><i class="bi bi-facebook"></i></a>
-          <a href="./search.html" class="header__link header__icon"><i class="bi bi-search"></i></a>
+          <a class="header__link header__icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button"><i class="bi bi-search"></i></a>
           <div class="burger">
                <span></span>
           </div>
      </div>
 </header>
-
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+               <div class="modal-header search-header py-0">
+                    <div class="d-flex flex-row justify-content-between w-100 px-4  py-3">
+                         <input type="text" name="" id="" class="search-header__input w-100 pe-2" placeholder="Начните писать |">
+                         <button class="search-btn">Поиск</button>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               
+          </div>
+     </div>
+</div>
 <nav class="mobile-menu">
      <ul class="mobile-list">
           <li>
