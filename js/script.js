@@ -156,7 +156,7 @@ const swiperEvent = new Swiper('.swiper-event', {
      },
 });
 
-let sortBtn = document.querySelector("#sort-btn")
+const sortBtn = document.querySelector("#sort-btn")
 if(sortBtn){
      sortBtn.addEventListener("click", function(){
           let sortIcon = document.querySelector("#sort-btn .bi")
@@ -177,4 +177,9 @@ const swiperNewsContent = new Swiper('.swiper-news-content', {
           prevEl: '.swiper-button-prev',
      },
      watchOverflow: true,
+});
+
+let phoneMask = IMask(
+     document.getElementById('tel'), {
+          mask: '+{375}(00)000 00 00'
 });
