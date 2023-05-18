@@ -1,3 +1,15 @@
+.fs-14{
+     font-size: .875rem;
+}
+
+.fs-16{
+     @include adaptiv-value("font-size", 16, 13, 1);
+}
+
 .fs-18{
      @include adaptiv-value("font-size", 18, 16, 1);
+}
+
+.fs-24{
+     @include adaptiv-value("font-size", 24, 18, 1);
 }

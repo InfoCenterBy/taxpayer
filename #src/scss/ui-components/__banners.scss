@@ -37,6 +37,8 @@
                @include adaptiv-value("font-size", 82, 45, 1);
                @include adaptiv-value("line-height", 98, 54, 1);
           }
+          @include adaptiv-value("font-size", 20, 16, 1);
+          @include adaptiv-value("line-height", 24, 28, 1);
      }
 }
 

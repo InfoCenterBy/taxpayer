@@ -6,7 +6,7 @@
      flex-direction: row;
      align-items: start;
      justify-content: center;
-     animation: marquee 20s linear infinite alternate;
+     animation: marquee 20s linear infinite;
      &__item {
           display: flex;
           flex-direction: column;

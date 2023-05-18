@@ -71,7 +71,14 @@
           margin-top: 1rem;
           max-height: 6rem;
           p{
-               max-height: 6rem;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               display: -webkit-box;
+               -webkit-line-clamp: 6;
+               -webkit-box-orient: vertical;
+               @media #{$ui-tablet} {
+                    -webkit-line-clamp: 4;
+               }
           }
      }
 }
@@ -89,6 +96,12 @@
           p{
                overflow: hidden;
                text-overflow: ellipsis;
+               display: -webkit-box;
+               -webkit-line-clamp: 6;
+               -webkit-box-orient: vertical;
+               @media #{$ui-tablet} {
+                    -webkit-line-clamp: 4;
+               }
           }
      }
 }

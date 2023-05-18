@@ -234,6 +234,7 @@
      transition: $transition-main-3;
      font-weight: 600;
      font-family: $font-family-regular;
+     background: transparent;
      @media #{$ui-tablet} {
           padding: .75rem 2.5rem;
      }
@@ -300,6 +301,55 @@
                span{
                     color: $color-white-main;
                }
+          }
+     }
+}
+
+.explanation-item{
+     transition: $transition-main-3;
+     cursor: pointer;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-blue-accent-tr-2;
+          }
+     }
+}
+
+.text-clamp-6{
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 6;
+     -webkit-box-orient: vertical;
+     @media #{$ui-tablet} {
+          -webkit-line-clamp: 4;
+     }
+}
+
+#enterForm{
+     .modal-header{
+          border-bottom: none;
+     }
+     .modal-body{
+          padding-bottom: 1.875rem;
+          input:not([type='checkbox']){
+               width: 100%;
+               padding: .8125rem .625rem;
+               color: $color-black;
+               border: 1px solid #BABABA;
+               border-radius: 5px;
+               margin-top: .375rem;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+          }
+          input[type=number] {
+               -moz-appearance: textfield;
+          }
+
+          ::placeholder{
+               color: #BABABA;
           }
      }
 }
