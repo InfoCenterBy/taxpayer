@@ -206,7 +206,7 @@ i {
 }
 
 .color-bg-sky-blue-light {
-  background-color: #C9EBFF;
+  background-color: #c9ebff;
 }
 
 .color-bg-sky-blue {
@@ -1634,7 +1634,7 @@ body:has(.overlay.show) {
 }
 
 .blog-item.blog-unread {
-  background-color: #C9EBFF;
+  background-color: #c9ebff;
 }
 
 .blog-item.full-blog {
@@ -2097,7 +2097,7 @@ body:has(.overlay.show) {
   }
 
   .footer-title a:hover {
-    color: #C9EBFF;
+    color: #c9ebff;
   }
 
   .banner-part img:hover {
