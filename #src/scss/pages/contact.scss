@@ -1,5 +1,10 @@
 @import "../veriables/_variables";
 .contact-links{
+     a{
+          font-family: $font-family-light;
+          font-weight: 600;
+          color: $color-blue-accent;
+     }
      a.color-bg-blue-black{
           @media #{$mouse-device} {
                &:hover{

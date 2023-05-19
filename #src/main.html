@@ -23,9 +23,9 @@
                     </picture>
                </div>
           </section>
-          <section class="content-container news-container row px-0 mx-0 gx-0 w-100 justify-content-center align-items-start">
-               <div class="col-md-5 row justify-content-center">
-                    <div class="col-12 row align-items-center mx-0">
+          <section class="content-container news-container w-100 d-flex flex-row row justify-content-between">
+               <div class="col-md-4 row justify-content-start">
+                    <div class="col-12 row align-items-center mx-0 ps-0">
                          <div class="col-6 text-start px-0 mx-0">
                               <h3 class="block-title color-blue-accent fw-semibold">Новости</h3>
                          </div>
@@ -33,11 +33,11 @@
                               <a href="./news.html" class="sub-title color-text-gray">Все новости</a>
                          </div>
                     </div>
-                    <div class="col-12 mt-3">
-                         <div class="swiper swiper-news">
+                    <div class="col-12 mt-3 ps-0">
+                         <div class="swiper swiper-news swiper-with-img">
                               <div class="swiper-wrapper">
                                    <div class="swiper-slide">
-                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3" onclick="location.href='./news-content.html';">
                                              <div class="slide-tumbnail d-flex flex-column">
                                                   <div class="slide-tumbnail__img">
                                                        <img src="./img/pic/slider-prev.png" alt="slider-prev">
@@ -62,7 +62,7 @@
                                         </div>
                                    </div>
                                    <div class="swiper-slide">
-                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3" onclick="location.href='./news-content.html';">
                                              <div class="slide-tumbnail d-flex flex-column">
                                                   <div class="slide-tumbnail__img">
                                                        <img src="./img/pic/slider-prev.png" alt="slider-prev">
@@ -93,7 +93,7 @@
                                         </div>
                                    </div>
                                    <div class="swiper-slide">
-                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3">
+                                        <div class="swiper-content d-flex flex-column justify-content-between pb-3" onclick="location.href='./news-content.html';">
                                              <div class="slide-tumbnail d-flex flex-column">
                                                   <div class="slide-tumbnail__img">
                                                        <img src="./img/pic/slider-prev.png" alt="slider-prev">
@@ -123,47 +123,51 @@
                          </div>
                     </div>
                </div>
-               <div class="col-md-7 row h-100">
-                    <div class="d-flex flex-column col-md-6 justify-content-start my-2 ">
-                         <div class="d-flex flex-row justify-content-between flex-wrap align-items-center text-nowrap">
-                              <h3 class="block-title color-blue-accent fw-semibold text-start">Блог Ассоциации</h3>
-                              <a href="./blog.html" class="sub-title color-text-gray text-end">Смотреть больше</a>
+               <div class="col-md-8 d-flex flex-column justify-content-between mb-4">
+                    <div class="d-flex flex-row row">
+                         <div class="d-flex flex-column col-md-6 justify-content-start my-md-0 my-2">
+                              <div class="d-flex flex-row justify-content-between flex-wrap align-items-center text-nowrap">
+                                   <h3 class="block-title color-blue-accent fw-semibold text-start">Блог Ассоциации</h3>
+                                   <a href="./blog.html" class="sub-title color-text-gray text-end">Смотреть больше</a>
+                              </div>
+                              <div class="news-block news-dark-blue d-flex mt-2 h-100 flex-column justify-content-between">
+                                   <p>Петров-Иванов: взгляд на нововведения в налогообложении 2023 год</p>
+                                   <div class="">
+                                        <span>18.02.2023</span>
+                                   </div>
+                              </div>
                          </div>
-                         <div class="news-block news-dark-blue d-flex mt-2 h-100 flex-column justify-content-between">
-                              <p>Петров-Иванов: взгляд на нововведения в налогообложении 2023 год</p>
-                              <div class="">
-                                   <span>18.02.2023</span>
+                         <div class="d-flex flex-column col-md-6 justify-content-start my-md-0 my-2">
+                              <div class="d-flex flex-row">
+                                   <h3 class="block-title color-blue-accent fw-semibold">Анонс</h3>
+                              </div>
+                              <div class="news-block news-blue d-flex mt-2 h-100 flex-column justify-content-between">
+                                   <p>Круглый стол: Изменения, внесенные в Налоговый кодекс в части НДС и ЭСЧФ с 1 января 2023 года</p>
+                                   <div class="d-flex flex-row w-100 justify-content-between flex-wrap">
+                                        <span>18.02.2023</span>
+                                        <span>#Круглый стол</span>
+                                   </div>
                               </div>
                          </div>
                     </div>
-                    <div class="d-flex flex-column col-md-6 justify-content-start my-2 ">
-                         <div class="d-flex flex-row">
-                              <h3 class="block-title color-blue-accent fw-semibold">Анонс</h3>
-                         </div>
-                         <div class="news-block news-blue d-flex mt-2 h-100 flex-column justify-content-between">
-                              <p>Круглый стол: Изменения, внесенные в Налоговый кодекс в части НДС и ЭСЧФ с 1 января 2023 года</p>
-                              <div class="d-flex flex-row w-100 justify-content-between flex-wrap">
-                                   <span>18.02.2023</span>
-                                   <span>#Круглый стол</span>
+                    <div class="">
+                         <div class="d-flex flex-column col-md-12 justify-content-start ">
+                              <h3 class="block-title color-blue-accent fw-semibold">Разъяснения и комментарии</h3>
+                              <div class="news-block news-gray d-flex mt-2 h-100 flex-column justify-content-between">
+                                   <p>
+                                        Разъяснение по вопросу увеличения ставок 
+                                        земельного налога и действия гарантии в 
+                                        отношении резидентов Китайско-Белорусского 
+                                        индустриального парка «Великий камень» 
+                                        (письмо МНС от 13.02.2023 № 2-3-20/00 504)
+                                   </p>
+                                   <div class="d-flex flex-row w-100 justify-content-between flex-wrap">
+                                        <span>18.02.2023</span>
+                                        <span>#Прямая линия</span>
+                                   </div>
                               </div>
+                              <a href="./explanations.html" class="sub-title color-text-gray mt-2">Все разъяснения и комментарии</a>
                          </div>
-                    </div>
-                    <div class="d-flex flex-column col-md-12 justify-content-start mt-auto ">
-                         <h3 class="block-title color-blue-accent fw-semibold">Разъяснения и комментарии</h3>
-                         <div class="news-block news-gray d-flex mt-2 h-100 flex-column justify-content-between">
-                              <p>
-                                   Разъяснение по вопросу увеличения ставок 
-                                   земельного налога и действия гарантии в 
-                                   отношении резидентов Китайско-Белорусского 
-                                   индустриального парка «Великий камень» 
-                                   (письмо МНС от 13.02.2023 № 2-3-20/00 504)
-                              </p>
-                              <div class="d-flex flex-row w-100 justify-content-between flex-wrap">
-                                   <span>18.02.2023</span>
-                                   <span>#Прямая линия</span>
-                              </div>
-                         </div>
-                         <a href="./explanations.html" class="sub-title color-text-gray mt-2">Все разъяснения и комментарии</a>
                     </div>
                </div>
           </section>
@@ -280,8 +284,8 @@
           </section>
           <section class="content-container">
                <span class="section-title color-blue-accent fw-semibold fs-1">Преимущества членства в Ассоциации</span>
-               <div class="advantages row w-100 mt-4">
-                    <div class="col-md-6 my-2">
+               <div class="advantages row w-100 mt-4 mx-0 px-0">
+                    <div class="col-md-6 my-2 px-2 ps-md-0">
                          <div class="advantages-card adv-card-1">
                               <div class="advantages-card__text">
                                    Получайте всю налоговую информацию самыми первыми
@@ -290,7 +294,7 @@
                               
                          </div>
                     </div>
-                    <div class="col-md-6 my-2">
+                    <div class="col-md-6 my-2 px-2 pe-md-0">
                          <div class="btn-adv-enter 
                                    d-flex flex-column align-items-center justify-content-center flex-wrap px-4 text-center py-4 h-100 border-20" 
                                    role="button"
@@ -302,27 +306,27 @@
                </div>
                @@include('_enter-form.html')
                <div class="banner banner-part row w-100 mx-0 mt-5">
-                    <div class="col-md-12 row banner-part__text align-items-center">
+                    <div class="col-md-12 row banner-part__text align-items-center fw-bold">
                          <span class="col-2">17</span>
-                         <span class="col-10">крупных организаций являются членами Ассоциации</span>
+                         <span class="col-10 d-flex justify-content-start align-items-center">крупных организаций <br> являются членами Ассоциации</span>
                     </div>
-                    <div class="col-md-12 row align-items-center justify-content-center">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/taikiri.png" alt="taikiri" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/finexpertiza.png" alt="finexpertiza" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/a1.png" alt="a1" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/oma.png" alt="oma" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/salt.png" alt="salt" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/kvg.png" alt="kvg" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/granit.png" alt="granit" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/pik.png" alt="pik" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/tabak.png" alt="tabak" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/sodrujestvo.png" alt="sodrujestvo" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/sosedi.png" alt="sosedi" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/evroopt.png" alt="evroopt" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/revera.png" alt="revera" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/urspektr.png" alt="urspektr" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/arlepta.png" alt="arlepta" loading="lazy">
-                         <img class="col-3 col-sm-1" src="./img/banners/partners/finansia.png" alt="finansia" loading="lazy">
+                    <div class="col-md-12 row justify-content-between mt-3">
+                         <img class="col-2" src="./img/banners/partners/taikiri.png" alt="taikiri" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/finexpertiza.png" alt="finexpertiza" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/a1.png" alt="a1" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/oma.png" alt="oma" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/salt.png" alt="salt" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/kvg.png" alt="kvg" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/granit.png" alt="granit" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/pik.png" alt="pik" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/tabak.png" alt="tabak" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/sodrujestvo.png" alt="sodrujestvo" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/sosedi.png" alt="sosedi" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/evroopt.png" alt="evroopt" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/revera.png" alt="revera" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/urspektr.png" alt="urspektr" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/arlepta.png" alt="arlepta" loading="lazy">
+                         <img class="col-2" src="./img/banners/partners/finansia.png" alt="finansia" loading="lazy">
                     </div>
                </div>
                <div class="banner banner-email row align-items-center py-md-0 justify-content-md-between justify-content-center px-4 w-100 mx-0 mt-5">
@@ -346,45 +350,114 @@
           </div>
           <div class="content-container">
                <div class="marquee-container w-100">
-                    <div class="marquee">
-                         <div class="marquee__item">
-                              <p>Общественное объединение “Белорусский республиканский союз молодежы”</p>
-                         </div>
-                         <div class="marquee__item">
-                              <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
-                              <p>
-                                   Директива Президента Республики Беларусь 31 декабря 2010 г.  № 4
-                              </p>
-                         </div>
-                         <div class="marquee__item">
-                              <img src="./img/marquee/Belta.png" alt="Belta">
-                              <p>
-                                   БелТа
-                              </p>
-                         </div>
-                         <div class="marquee__item">
-                              <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
-                              <p>
-                                   Поддержка малого предпринимательства в Республике Беларусь
-                              </p>
-                         </div>
-                         <div class="marquee__item">
-                              <img src="./img/marquee/Nodo.png" alt="Nodo">
-                              <p>
-                                   Азбука безопастности
-                              </p>
-                         </div>
-                         <div class="marquee__item">
-                              <img src="./img/marquee/Bird.png" alt="Bird">
-                              <p>
-                                   Детский правовой сайт
-                              </p>
-                         </div>
-                         <div class="marquee__item">
-                              <img src="./img/marquee/BFFS.png" alt="BFFS">
-                              <p>
-                                   Белорусский фонд финансовой поддержки предпринимателей
-                              </p>
+                    <div class="swiper swiper-marquee marquee">
+                         <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <p>Общественное объединение “Белорусский республиканский союз молодежи”</p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
+                                        <p>
+                                             Директива Президента Республики Беларусь 31 декабря 2010 г.  № 4
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Belta.png" alt="Belta">
+                                        <p>
+                                             БелТа
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
+                                        <p>
+                                             Поддержка малого предпринимательства в Республике Беларусь
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Nodo.png" alt="Nodo">
+                                        <p>
+                                             Азбука безопасности
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Bird.png" alt="Bird">
+                                        <p>
+                                             Детский правовой сайт
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/BFFS.png" alt="BFFS">
+                                        <p>
+                                             Белорусский фонд финансовой поддержки предпринимателей
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <p>Общественное объединение “Белорусский республиканский союз молодежи”</p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
+                                        <p>
+                                             Директива Президента Республики Беларусь 31 декабря 2010 г.  № 4
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Belta.png" alt="Belta">
+                                        <p>
+                                             БелТа
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Belarus_gerb.png" alt="Belarus_gerb">
+                                        <p>
+                                             Поддержка малого предпринимательства в Республике Беларусь
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Nodo.png" alt="Nodo">
+                                        <p>
+                                             Азбука безопасности
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/Bird.png" alt="Bird">
+                                        <p>
+                                             Детский правовой сайт
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="marquee__item">
+                                        <img src="./img/marquee/BFFS.png" alt="BFFS">
+                                        <p>
+                                             Белорусский фонд финансовой поддержки предпринимателей
+                                        </p>
+                                   </div>
+                              </div>
                          </div>
                     </div>
                </div>

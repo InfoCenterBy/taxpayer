@@ -55,15 +55,16 @@
      }
      img{
           opacity:  0.6;
-          mix-blend-mode:multiply;
-          // filter: grayscale(100%);
+          // mix-blend-mode:multiply;
+          filter: brightness(0) invert(1);
           cursor: pointer;
           transition: $transition-main-3;
+          max-width: 173px;
           @media #{$mouse-device} {
                &:hover{
                     // filter: grayscale(0%);
                     opacity:  1;
-                    mix-blend-mode: normal;
+                    filter: none;
                }
           }
      }

@@ -61,9 +61,9 @@ main .content-container:first-child{
 }
 
 main .content-container.news-container{
-     padding: 0 .75rem !important;
+     // padding: 0 .75rem !important;
      @media #{$ui-tablet} {
-          padding: 0 0 !important;
+          // padding: 0 0 !important;
      }
 }
 

@@ -68,7 +68,7 @@
                font-weight: 600;
           }
      }
-     &__link:not(:has(.bi-search)){
+     &__link:not(.header-search){
           @media #{$ui-tablet} {
                display: none;
           }

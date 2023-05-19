@@ -19,6 +19,15 @@
      background-color: $color-background-sky-blue-light;
 }
 
+.blog-item.full-blog{
+     background-color: $color-blue-accent-tr-2;
+     @media #{$mouse-device} {
+          &:hover{
+               background-color: $color-sky-blue;
+          }
+     }
+}
+
 .blog-item, .blog-item.blog-unread{
      @media #{$mouse-device} {
           &:hover{

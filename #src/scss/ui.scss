@@ -124,7 +124,7 @@
 .user-header{
      background-color: rgba(201, 235, 255, 0.6);
      border-bottom: 1px solid rgba(5, 86, 135, 0.2);
-     padding: 1rem 3.125rem;
+     padding: 1rem 0;
      color: $color-blue-accent;
      display: flex;
      @media #{$ui-tablet} {
