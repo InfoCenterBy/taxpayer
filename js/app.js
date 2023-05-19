@@ -179,6 +179,55 @@ const swiperNewsContent = new Swiper('.swiper-news-content', {
      watchOverflow: true,
 });
 
+const swiperMarqueee = new Swiper('.swiper-marquee', {
+     // Optional parameters
+     direction: 'horizontal',
+     // loop: true,
+     // cssMode: true,
+     slidesPerView: 7,
+     // Navigation arrows
+     // watchOverflow: true,
+     speed: 1500,
+     autoplay: {
+          delay: 0,
+          pauseOnMouseEnter: true,
+     },
+     loop: true,
+     breakpoints: {
+          // when window width is >= 320px
+          300: {
+               slidesPerView: 2,
+          },
+          320: {
+               slidesPerView: 2,
+          },
+          // when window width is >= 480px
+          480: {
+               slidesPerView: 2,
+          },
+          // when window width is >= 640px
+          640: {
+               slidesPerView: 3,
+          },
+          800: {
+               slidesPerView: 4,
+          },
+          1000: {
+               slidesPerView: 5,
+          },
+          1200: {
+               slidesPerView: 6,
+          },
+     },
+});
+
+// $('.swiper-marquee').on('mouseenter', function(e){
+//      swiperMarqueee.stopAutoplay();
+// })
+// $('.swiper-marqueer').on('mouseleave', function(e){
+//      swiperMarqueee.startAutoplay();
+// })
+
 let phoneMask = IMask(
      document.getElementById('tel'), {
           mask: '+{375}(00)000 00 00'

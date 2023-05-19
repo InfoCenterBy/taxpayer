@@ -1,3 +1,9 @@
+.contact-links a {
+  font-family: "Gilroy-Light", "Arial", sans-serif;
+  font-weight: 600;
+  color: #055687;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .contact-links a.color-bg-blue-black:hover {
     background-color: #051620;
