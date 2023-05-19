@@ -329,10 +329,6 @@ main .content-container:first-child {
   margin-top: 2.5rem;
 }
 
-main .content-container.news-container {
-  padding: 0 0.75rem !important;
-}
-
 a:hover {
   color: #055687;
   -webkit-transition: all ease-out 0.3s;
@@ -1948,10 +1944,6 @@ body:has(.overlay.show) {
 
   main .content-container:first-child {
     margin-top: 1.25rem;
-  }
-
-  main .content-container.news-container {
-    padding: 0 0 !important;
   }
 
   .user-header {
