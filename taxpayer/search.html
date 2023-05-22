@@ -63,21 +63,28 @@
           <a href="./forum.html" class="header__link">Форум</a>
 
           <a href="https://www.facebook.com/groups/1080010765442829/about/" target="_blank" class="header__link header__icon"><i class="bi bi-facebook"></i></a>
-          <!-- data-bs-toggle="modal" data-bs-target="#searchModal" type="button" -->
-          <a class="header__link header__icon header-search" href="./search.html"><i class="bi bi-search"></i></a>
+          <a class="header__link header__icon header-search" " data-bs-toggle="modal" data-bs-target="#searchModal" type="button"><i class="bi bi-search"></i></a>
           <div class="burger">
                <span></span>
           </div>
      </div>
 </header>
-
+<div class="modal fade modal-search" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+     <div class="modal-dialog d-flex justify-content-center">
+          <div class="modal-content px-0">
+               <div class="modal-header search-header py-0">
+                    <div class="d-flex flex-column flex-md-row justify-content-between w-100 px-4  py-3">
+                         <input type="text" name="" id="" class="search-header__input w-100 pe-2 my-2" placeholder="Начните писать">
+                         <a class="search-btn my-2" href="./search.html">Поиск</a>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+          </div>
+     </div>
+</div>
 <nav class="mobile-menu">
      <ul class="mobile-list">
           <li>
-               <!-- href="./about-main.html" -->
-               <!-- data-bs-target="#menuAbout"
-               aria-controls="menuAbout"
-               data-bs-toggle="collapse"   -->
                <a 
                     aria-expanded="true" 
                     href="./about-main.html">
@@ -99,6 +106,8 @@
      </a>
 </nav>
 <div class="overlay"></div>
+
+
      <main>
           <section class="content-container news-content">
                <div class="breadcrumbs">

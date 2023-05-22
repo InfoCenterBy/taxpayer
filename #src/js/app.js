@@ -1,12 +1,9 @@
 
-document.querySelectorAll('.advantages-card').forEach((el) => {
+document.querySelectorAll('.adv-card-1').forEach((el) => {
      let personaPic = el.getElementsByClassName('advantages-card__pic');
-     let persona = el.getElementsByClassName('advantages-card__img');
      let text = el.getElementsByClassName('advantages-card__text');
-     let subText = el.getElementsByClassName('advantages-card__sub-text');
 
      const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
-     // const tweenClick = gsap.timeline({repeat: 0, repeatDelay: 1, reversed: true})
 
      let hover = 
      tween.to(
@@ -26,7 +23,6 @@ document.querySelectorAll('.advantages-card').forEach((el) => {
                ease: 'expo.Out',
                width: '211px',
                onStart: () => {
-                    // text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
                     tween.to(
                          text[0],
                          {
@@ -66,30 +62,193 @@ document.querySelectorAll('.advantages-card').forEach((el) => {
      }
 });
 
-// const menu = document.querySelector('.menu');
-// const btn = menu.querySelector('.nav-tgl');
-// btn.addEventListener('click', (evt) => {
-//      menu.classList.toggle('active');
-// });
 
-// document.addEventListener(
-//      "DOMContentLoaded", () => {
-//           const menu = new Mmenu( "#menu", {
-//                slidingSubmenus: false,
-//                language: null,
-//           }, {
-//                classNames: {
-//                     selected: "selected",
-//                },
-//                offCanvas: {
-//                          position: "right-front",
-//                          page: {
-//                                    selector: "#page"
-//                               },
-//                     }
-//           });
-//      }
-// );
+document.querySelectorAll('.adv-card-2').forEach((el) => {
+     let personaPic = el.getElementsByClassName('advantages-card__pic');
+     let text = el.getElementsByClassName('advantages-card__text');
+
+     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+
+     let hover = 
+     tween.to(
+          personaPic,
+          {
+               duration: 0.5, 
+               // xPercent: -110,
+               yPercent: 15,
+               ease: 'expo.inOut',
+          },
+     )
+     tween.to(
+          text,
+          {
+               duration: 0.5, 
+               ease: 'expo.Out',
+               onStart: () => {
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.Out',
+                              opacity: 0,
+                         },
+                         '-=.7'
+                    )
+               },
+               onComplete: () => {
+                    text[0].textContent = 
+                    'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.in',
+                              opacity: 1,
+                         },
+                         // '-=.6'
+                    )
+               },
+               onReverseComplete: () => {
+                    text[0].textContent = 'Участвуйте в принятии решений об изменениях законодательства';
+               },
+          },
+          '-=.5'
+     )
+
+     $(el).hover(makeHover, makeHover);
+
+     function makeHover() {
+          if (window.innerWidth > 620) {
+               hover.reversed() ? hover.play() : hover.reverse();
+          }
+     }
+});
+
+document.querySelectorAll('.adv-card-3').forEach((el) => {
+     let personaPic = el.getElementsByClassName('advantages-card__pic');
+     let text = el.getElementsByClassName('advantages-card__text');
+
+     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+
+     let hover = 
+     tween.to(
+          personaPic,
+          {
+               duration: 0.5, 
+               xPercent: -90,
+               yPercent: 10,
+               ease: 'expo.inOut',
+          },
+     )
+     tween.to(
+          text,
+          {
+               duration: 0.5, 
+               xPercent: 130,
+               ease: 'expo.Out',
+               onStart: () => {
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.Out',
+                              opacity: 0,
+                         },
+                         '-=.7'
+                    )
+               },
+               onComplete: () => {
+                    text[0].textContent = 
+                    'Ассоциация налогоплательщиков является членом общественно- консультативных комитетов при ряде государственных органов и может представлять интересы плательщиков по различным вопросам деятельности.';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.in',
+                              opacity: 1,
+                              width: '500px',
+                         },
+                         // '-=.6'
+                    )
+               },
+               onReverseComplete: () => {
+                    text[0].textContent = 'Взаимодействуйте с государственными органами';
+               },
+          },
+          '-=.5'
+     )
+
+     $(el).hover(makeHover, makeHover);
+
+     function makeHover() {
+          if (window.innerWidth > 620) {
+               hover.reversed() ? hover.play() : hover.reverse();
+          }
+     }
+});
+
+document.querySelectorAll('.adv-card-4').forEach((el) => {
+     let personaPic = el.getElementsByClassName('advantages-card__pic');
+     let text = el.getElementsByClassName('advantages-card__text');
+
+     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+
+     let hover = 
+     tween.to(
+          personaPic,
+          {
+               duration: 0.5, 
+               xPercent: -170,
+               yPercent: 20,
+               ease: 'expo.inOut',
+          },
+     )
+     tween.to(
+          text,
+          {
+               duration: 0.5, 
+               xPercent: 60,
+               ease: 'expo.Out',
+               width: '211px',
+               onStart: () => {
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.Out',
+                              opacity: 0,
+                         },
+                         '-=.7'
+                    )
+               },
+               onComplete: () => {
+                    text[0].textContent = 
+                    'Ассоциация рассматривает на экспертном совете, возникающие в правоприменительной практике  вопросы налогообложения, а при невозможности разрешения - запрос направляется в Министерство по налогам и сборам Республики Беларусь для рассмотрения позиции Ассоциации в данном вопросе.';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.in',
+                              opacity: 1,
+                         },
+                         // '-=.6'
+                    )
+               },
+               onReverseComplete: () => {
+                    text[0].textContent = 'Обретайте экспертную поддержку';
+               },
+          },
+          '-=.5'
+     )
+
+     $(el).hover(makeHover, makeHover);
+
+     function makeHover() {
+          if (window.innerWidth > 620) {
+               hover.reversed() ? hover.play() : hover.reverse();
+          }
+     }
+});
 
 
 

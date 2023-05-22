@@ -43,7 +43,7 @@
 }
 
 .news-item {
-     display: block;
+     display: flex;
      border-radius: 10px;
      overflow: hidden;
      color: $color-black;
@@ -51,6 +51,9 @@
      background-color: $color-background-gray-tr-4;
      transition: $transition-main-3;
      padding-bottom: 1rem;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 100%;
      @media #{$mouse-device} {
           &:hover{
                background-color: $color-background-sky-blue;

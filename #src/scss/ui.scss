@@ -54,20 +54,31 @@
           color: $color-black;
           flex-direction: column;
           .advantages-card__pic{
-               max-width: 364px;
+               max-width: 100%;
+          }
+          .advantages-card__text{
+               height: 100px;
           }
      }
      &.adv-card-3{
+          padding: 2rem 0 0 2rem;
           background-color: $color-blue-accent;
+
           .advantages-card__pic{
-               max-width: 359px;
+               // max-width: 359px;
           }
      }
      &.adv-card-4{
+          padding: 2rem 0 0 2rem;
+
           background-color: $color-blue-black;
           color: $color-white;
           .advantages-card__pic{
                max-width: 193px;
+               height: 100%;
+          }
+          .advantages-card__text{
+               width: 100% !important;
           }
      }
      &.adv-card-5{
@@ -259,6 +270,12 @@
      align-items: center;
      justify-content: space-between;
      border-bottom: none;
+     @media #{$ui-tablet} {
+          align-items: start;
+          .btn-close{
+               margin-top: 1rem;
+          }
+     }
 }
 
 .modal-content {
@@ -267,23 +284,6 @@
      background-color: $color-white-main;
      border: none;
      font-family: $font-family-regular;
-}
-
-.modal-fullscreen .modal-content{
-     height: auto;
-}
-
-.modal-dialog:has(.search-header){
-     max-width: 100%;
-     max-height: 6.875rem;
-}
-
-.modal.fade.show{
-     .modal-dialog:has(.search-header){
-          display: flex;
-          align-items: center;
-     }
-     
 }
 
 .btn-adv-enter{
@@ -352,4 +352,8 @@
                color: #BABABA;
           }
      }
+}
+
+.modal.modal-search{
+     --bs-modal-width: 100%;
 }
