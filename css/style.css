@@ -390,7 +390,11 @@ a:hover {
 }
 
 .advantages-card.adv-card-2 .advantages-card__pic {
-  max-width: 364px;
+  max-width: 100%;
+}
+
+.advantages-card.adv-card-2 .advantages-card__text {
+  height: 100px;
 }
 
 .advantages-card.adv-card-3 {
@@ -602,24 +606,6 @@ a:hover {
   font-family: "Gilroy-Regular", "Arial";
 }
 
-.modal-fullscreen .modal-content {
-  height: auto;
-}
-
-.modal-dialog:has(.search-header) {
-  max-width: 100%;
-  max-height: 6.875rem;
-}
-
-.modal.fade.show .modal-dialog:has(.search-header) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .btn-adv-enter {
   color: #041E2F;
   background-color: rgba(227, 227, 227, 0.4);
@@ -694,6 +680,10 @@ a:hover {
 
 #enterForm .modal-body ::placeholder {
   color: #BABABA;
+}
+
+.modal.modal-search {
+  --bs-modal-width: 100%;
 }
 
 .header {
@@ -1470,7 +1460,9 @@ body:has(.overlay.show) {
 }
 
 .news-item {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 10px;
   overflow: hidden;
   color: #041E2F;
@@ -1480,6 +1472,14 @@ body:has(.overlay.show) {
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   padding-bottom: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .news-item__prev {
@@ -1952,6 +1952,16 @@ body:has(.overlay.show) {
 
   .btn-tr {
     padding: 0.75rem 2.5rem;
+  }
+
+  .search-header.modal-header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .search-header.modal-header .btn-close {
+    margin-top: 1rem;
   }
 
   .text-clamp-6 {
