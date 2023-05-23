@@ -1,128 +1,92 @@
 
-document.querySelectorAll('.adv-card-1').forEach((el) => {
-     let personaPic = el.getElementsByClassName('advantages-card__pic');
-     let text = el.getElementsByClassName('advantages-card__text');
+// const adv1 = document.querySelector(".adv-card-1");
+// const adv2 = document.querySelector(".adv-card-2");
+// const adv3 = document.querySelector(".adv-card-3");
+// const adv4 = document.querySelector(".adv-card-4");
+// const adv5 = document.querySelector(".adv-card-5");
 
-     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
 
-     let hover = 
-     tween.to(
-          personaPic,
-          {
-               duration: 0.5, 
-               xPercent: -110,
-               yPercent: 20,
-               ease: 'expo.inOut',
-          },
-     )
-     tween.to(
-          text,
-          {
-               duration: 0.5, 
-               xPercent: 100,
-               ease: 'expo.Out',
-               width: '211px',
-               onStart: () => {
-                    tween.to(
-                         text[0],
-                         {
-                              duration: 0.3,
-                              ease: 'expo.Out',
-                              opacity: 0,
-                         },
-                         '-=.7'
-                    )
-               },
-               onComplete: () => {
-                    text[0].textContent = 
-                    ' Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
-                    tween.to(
-                         text[0],
-                         {
-                              duration: 0.3,
-                              ease: 'expo.in',
-                              opacity: 1,
-                         },
-                         // '-=.6'
-                    )
-               },
-               onReverseComplete: () => {
-                    text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
-               },
-          },
-          '-=.5'
-     )
+// $(advCard).hover(() => {
+//      console.log(advCard);
+//      switch(advCard.classList){
+//           case 'adv-card-1':
+//                console.log('yes')
+//                break;
+//      }
+//      group.classList.toggle("reorder");
+//      console.log(this)
+//      const text = document.querySelector(".adv-card-1 .advantages-card__text")
+//      if($('.adv-card-1').hasClass('reorder')){
+//           text.textContent = 'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.'
+//      }
+//      else{
+//           text.textContent = 'Получайте всю налоговую информацию самыми первыми'
+//      }
+// });
 
-     $(el).hover(makeHover, makeHover);
 
-     function makeHover() {
-          if (window.innerWidth > 620) {
-               hover.reversed() ? hover.play() : hover.reverse();
+const advCard = document.querySelectorAll('.advantages-card')
+
+
+advCard.forEach((el)=>{
+     let innerText = el.getElementsByClassName('advantages-card__text')[0]
+     // console.log('innerTest', innerText[0].textContent)
+     function changeText () {
+          switch(true){
+               case el.classList.contains('adv-card-1'):
+                    el.classList.toggle("reorder")
+                    if(el.classList.contains('reorder')){
+                         innerText.textContent = 'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.'
+                    }
+                    else{
+                         innerText.textContent = 'Получайте всю налоговую информацию самыми первыми'
+                    }
+               break;
+               case el.classList.contains('adv-card-2'):
+                    el.classList.toggle("reorder")
+                    if(el.classList.contains('reorder')){
+                         innerText.textContent = 'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.'
+                    }
+                    else{
+                         innerText.textContent = 'Участвуйте в принятии решений об изменениях законодательства'
+                    }
+               break;
+               case el.classList.contains('adv-card-3'):
+                    el.classList.toggle("reorder")
+                    if(el.classList.contains('reorder')){
+                         innerText.textContent = 'Ассоциация налогоплательщиков является членом общественно- консультативных комитетов при ряде государственных органов и может представлять интересы плательщиков по различным вопросам деятельности.'
+                    }
+                    else{
+                         innerText.textContent = 'Взаимодействуйте с государственными органами'
+                    }
+               break;
+               case el.classList.contains('adv-card-4'):
+                    el.classList.toggle("reorder")
+                    if(el.classList.contains('reorder')){
+                         innerText.textContent = 'Ассоциация рассматривает на экспертном совете, возникающие в правоприменительной практике  вопросы налогообложения, а при невозможности разрешения - запрос направляется в Министерство по налогам и сборам Республики Беларусь для рассмотрения позиции Ассоциации в данном вопросе.'
+                    }
+                    else{
+                         innerText.textContent = 'Обретайте экспертную поддержку'
+                    }
+               break;
+               case el.classList.contains('adv-card-5'):
+                    el.classList.toggle("reorder")
+                    if(el.classList.contains('reorder')){
+                         innerText.textContent = 'Ассоциация в целях недискриминации и защиты интересов налогоплательщиков при обнаружении неправомерных решений подчиненных инспекций МНС вправе обратиться в Министерство для пересмотра Министерством подчиненных инспекций МНС по существу.'
+                    }
+                    else{
+                         innerText.textContent = 'Обеспечьте защиту своих прав и интересов'
+                    }
+               break;
           }
      }
-});
-
-
-document.querySelectorAll('.adv-card-2').forEach((el) => {
-     let personaPic = el.getElementsByClassName('advantages-card__pic');
-     let text = el.getElementsByClassName('advantages-card__text');
-
-     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
-
-     let hover = 
-     tween.to(
-          personaPic,
-          {
-               duration: 0.5, 
-               // xPercent: -110,
-               yPercent: 15,
-               ease: 'expo.inOut',
-          },
-     )
-     tween.to(
-          text,
-          {
-               duration: 0.5, 
-               ease: 'expo.Out',
-               onStart: () => {
-                    tween.to(
-                         text[0],
-                         {
-                              duration: 0.3,
-                              ease: 'expo.Out',
-                              opacity: 0,
-                         },
-                         '-=.7'
-                    )
-               },
-               onComplete: () => {
-                    text[0].textContent = 
-                    'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
-                    tween.to(
-                         text[0],
-                         {
-                              duration: 0.3,
-                              ease: 'expo.in',
-                              opacity: 1,
-                         },
-                         // '-=.6'
-                    )
-               },
-               onReverseComplete: () => {
-                    text[0].textContent = 'Участвуйте в принятии решений об изменениях законодательства';
-               },
-          },
-          '-=.5'
-     )
-
-     $(el).hover(makeHover, makeHover);
-
-     function makeHover() {
-          if (window.innerWidth > 620) {
-               hover.reversed() ? hover.play() : hover.reverse();
-          }
+     if ($(window).width() > 620) {
+          $(el).hover(changeText)
      }
-});
+     else{
+          $(el).on( "click", changeText)
+     }
+})
 
 
 
