@@ -1,65 +1,106 @@
 
-document.querySelectorAll('.adv-card-1').forEach((el) => {
-     let personaPic = el.getElementsByClassName('advantages-card__pic');
-     let text = el.getElementsByClassName('advantages-card__text');
+gsap.registerPlugin(Flip);
+// document.querySelectorAll('.adv-card-1').forEach((el) => {
+//      let personaPic = el.getElementsByClassName('advantages-card__pic');
+//      let text = el.getElementsByClassName('advantages-card__text');
 
-     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+//      const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+//      // let hover = 
+//      // tween.to(
+//      //      el,
+//      //      {
+//      //           duration: 0.5, 
+//      //           ease: 'expo.inOut',
+//      //           flexDirection: 'column',
+//      //      }
+//      // )
+//      // tween.to(
+//      //      personaPic,
+//      //      {
+//      //           duration: 0.5, 
+//      //           xPercent: -110,
+//      //           yPercent: 20,
+//      //           ease: 'expo.inOut',
+//      //      },
+//      // )
+//      // tween.to(
+//      //      text,
+//      //      {
+//      //           duration: 0.5, 
+//      //           xPercent: 100,
+//      //           ease: 'expo.Out',
+//      //           // width: '211px',
+//      //           onStart: () => {
+//      //                tween.to(
+//      //                     text[0],
+//      //                     {
+//      //                          duration: 0.3,
+//      //                          ease: 'expo.Out',
+//      //                          opacity: 0,
+//      //                     },
+//      //                     '-=.7'
+//      //                )
+//      //           },
+//      //           onComplete: () => {
+//      //                text[0].textContent = 
+//      //                ' Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
+//      //                tween.to(
+//      //                     text[0],
+//      //                     {
+//      //                          duration: 0.3,
+//      //                          ease: 'expo.in',
+//      //                          opacity: 1,
+//      //                     },
+//      //                     // '-=.6'
+//      //                )
+//      //           },
+//      //           onReverseComplete: () => {
+//      //                text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
+//      //           },
+//      //      },
+//      //      '-=.5'
+//      // )
+     
+//      $(el).hover(makeHover, makeHover);
 
-     let hover = 
-     tween.to(
-          personaPic,
-          {
-               duration: 0.5, 
-               xPercent: -110,
-               yPercent: 20,
-               ease: 'expo.inOut',
-          },
-     )
-     tween.to(
-          text,
-          {
-               duration: 0.5, 
-               xPercent: 100,
-               ease: 'expo.Out',
-               width: '211px',
-               onStart: () => {
-                    tween.to(
-                         text[0],
-                         {
-                              duration: 0.3,
-                              ease: 'expo.Out',
-                              opacity: 0,
-                         },
-                         '-=.7'
-                    )
-               },
-               onComplete: () => {
-                    text[0].textContent = 
-                    ' Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
-                    tween.to(
-                         text[0],
-                         {
-                              duration: 0.3,
-                              ease: 'expo.in',
-                              opacity: 1,
-                         },
-                         // '-=.6'
-                    )
-               },
-               onReverseComplete: () => {
-                    text[0].textContent = 'Получайте всю налоговую информацию самыми первыми';
-               },
-          },
-          '-=.5'
-     )
+//      function makeHover() {
+//           // if (window.innerWidth > 620) {
+//           //      hover.reversed() ? hover.play() : hover.reverse();
+//           // }
+//           const state = Flip.getState(".adv-card-1, .box");
+//           console.log(state);
+     
+//           el.classList.toggle("reorder");
+     
+//      Flip.from(state, {
+//           absolute: true,
+//           duration: 0.5, 
+//           stagger: 0.1,
+//           ease: "power1.inOut"
+//      });
+//      }
+// });
+const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+const group = document.querySelector(".adv-card-1");
 
-     $(el).hover(makeHover, makeHover);
-
-     function makeHover() {
-          if (window.innerWidth > 620) {
-               hover.reversed() ? hover.play() : hover.reverse();
-          }
+$('.adv-card-1').hover(() => {
+     const state = Flip.getState(".adv-card-1, .box");
+     // console.log(state);
+     group.classList.toggle("reorder");
+     const text = document.querySelector(".adv-card-1 .advantages-card__text")
+     if($('.adv-card-1').hasClass('reorder')){
+          text.textContent = 'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.'
      }
+     else{
+          text.textContent = 'Получайте всю налоговую информацию самыми первыми'
+     }
+     Flip.from(state, {
+          absolute: true, 
+          duration: 0.5, 
+          stagger: 0.1,
+          ease: "power1.inOut",
+          
+     });
 });
 
 
@@ -144,7 +185,7 @@ document.querySelectorAll('.adv-card-3').forEach((el) => {
           text,
           {
                duration: 0.5, 
-               xPercent: 130,
+               xPercent: 100,
                ease: 'expo.Out',
                onStart: () => {
                     tween.to(
@@ -166,7 +207,6 @@ document.querySelectorAll('.adv-card-3').forEach((el) => {
                               duration: 0.3,
                               ease: 'expo.in',
                               opacity: 1,
-                              width: '500px',
                          },
                          // '-=.6'
                     )
@@ -198,7 +238,7 @@ document.querySelectorAll('.adv-card-4').forEach((el) => {
           personaPic,
           {
                duration: 0.5, 
-               xPercent: -170,
+               xPercent: 0,
                yPercent: 20,
                ease: 'expo.inOut',
           },
@@ -207,7 +247,7 @@ document.querySelectorAll('.adv-card-4').forEach((el) => {
           text,
           {
                duration: 0.5, 
-               xPercent: 60,
+               xPercent: 0,
                ease: 'expo.Out',
                width: '211px',
                onStart: () => {
@@ -240,6 +280,61 @@ document.querySelectorAll('.adv-card-4').forEach((el) => {
           },
           '-=.5'
      )
+
+     $(el).hover(makeHover, makeHover);
+
+     function makeHover() {
+          if (window.innerWidth > 620) {
+               hover.reversed() ? hover.play() : hover.reverse();
+          }
+     }
+});
+
+document.querySelectorAll('.adv-card-5').forEach((el) => {
+     let personaPic = el.getElementsByClassName('advantages-card__pic');
+     let text = el.getElementsByClassName('advantages-card__text');
+
+     const tween = gsap.timeline({ repeat: 0, repeatDelay: 1, reversed: true });
+
+     let hover = 
+     
+     tween.to(
+          text,
+          {
+               duration: 0.5, 
+               xPercent: 0,
+               ease: 'expo.Out',
+               onStart: () => {
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.Out',
+                              opacity: 0,
+                         },
+                         '-=.7'
+                    )
+               },
+               onComplete: () => {
+                    text[0].textContent = 
+                    'Министерство по налогам и сборам Республики Беларусь привлекает членов Ассоциации к разработке актов налогового законодательства и включает в рабочие группы для их обсуждения.';
+                    tween.to(
+                         text[0],
+                         {
+                              duration: 0.3,
+                              ease: 'expo.in',
+                              opacity: 1,
+                         },
+                         // '-=.6'
+                    )
+               },
+               onReverseComplete: () => {
+                    text[0].textContent = 'Участвуйте в принятии решений об изменениях законодательства';
+               },
+          },
+          '-=.5'
+     )
+     
 
      $(el).hover(makeHover, makeHover);
 

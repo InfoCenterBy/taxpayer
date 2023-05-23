@@ -17,7 +17,21 @@
 
 .advantages {
 }
-
+.adv-card-1{
+     padding: 1.875rem 0 0 1.875rem;
+     background-color: $color-blue-accent;
+     display: flex;
+     flex-direction: row;
+     position: relative;
+     width: 100%;
+     .advantages-card__pic{
+     }
+     .advantages-card__text{
+     }
+}
+.adv-card-1.reorder {
+     flex-direction: row-reverse;
+}
 .advantages-card {
      border-radius: 1.25rem;
      // max-width: 438px;
@@ -25,29 +39,16 @@
      height: 260px;
      display: flex;
      flex-direction: row;
-     align-items: flex-start;
      color: $color-white;
      overflow: hidden;
      cursor: pointer;
-     &, & *{
-          transition: $transition-main-3;
-     }
      &__img{
           
      }
      &__pic{
           width: 100%;
      }
-     &.adv-card-1{
-          padding: 1.875rem .8125rem .5625rem 1.875rem;
-          background-color: $color-blue-accent;
-          .advantages-card__pic{
-               // background-image: url('/img/svg/Persona-1.svg');
-               // width: 221px;
-               // height: 229px;
-               max-width: 221px;
-          }
-     }
+
      &.adv-card-2{
           padding: 2rem 2rem 0 2rem;
           background-color: $color-bg-gray;
@@ -65,7 +66,10 @@
           background-color: $color-blue-accent;
 
           .advantages-card__pic{
-               // max-width: 359px;
+          }
+
+          .advantages-card__text{
+               width: 10% !important;
           }
      }
      &.adv-card-4{
@@ -82,10 +86,16 @@
           }
      }
      &.adv-card-5{
+          padding: 2rem 0 0 2rem;
           background-color: $color-background-sky-blue;
           color: $color-blue-accent;
+          display: flex;
+          flex-direction: column;
           .advantages-card__pic{
                max-width: 326px;
+          }
+          .advantages-card__text{
+               height: 300px !important;
           }
      }
      &__pic{
