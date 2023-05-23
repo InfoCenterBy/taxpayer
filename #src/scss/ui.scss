@@ -15,26 +15,8 @@
      }
 }
 
-.advantages {
-}
-.adv-card-1{
-     padding: 1.875rem 0 0 1.875rem;
-     background-color: $color-blue-accent;
-     display: flex;
-     flex-direction: row;
-     position: relative;
-     width: 100%;
-     .advantages-card__pic{
-     }
-     .advantages-card__text{
-     }
-}
-.adv-card-1.reorder {
-     flex-direction: row-reverse;
-}
 .advantages-card {
      border-radius: 1.25rem;
-     // max-width: 438px;
      width: 100%;
      height: 260px;
      display: flex;
@@ -42,72 +24,179 @@
      color: $color-white;
      overflow: hidden;
      cursor: pointer;
-     &__img{
-          
+     background-repeat: no-repeat;
+     &, & *{
+          transition: all ease-in-out .4s;
      }
-     &__pic{
+     @media #{$ui-mobile} {
+          font-size: .875rem;
+     }
+     &.adv-card-1{
+          padding: 1.875rem 0 0 1.875rem;
+          background-color: $color-blue-accent;
+          display: flex;
+          flex-direction: row;
           width: 100%;
+          background-image: url('./../img/svg/Persona-1.svg');
+          background-position: 100% 100%;
+          .advantages-card__text{
+               max-width: 60%;
+          }
+          @media screen and (max-width: 590px) {
+               background-position: 100% 210%;
+          }
      }
-
+     &.adv-card-1.reorder {
+          flex-direction: row-reverse;
+          background-position: -50% 230%;
+          .advantages-card__text{
+               max-width: 70%;
+          }
+          @media screen and (max-width: 1200px) {
+               background-position: -80% 230%;
+          }
+          @media screen and (max-width: 992px) {
+               background-position: -10% 170%;
+          }
+          @media screen and (max-width: 590px) {
+               background-position: -10% 380%;
+               .advantages-card__text{
+                    max-width: 90%;
+               }
+          }
+     }
      &.adv-card-2{
           padding: 2rem 2rem 0 2rem;
           background-color: $color-bg-gray;
           color: $color-black;
           flex-direction: column;
-          .advantages-card__pic{
+          background-image: url('./../img/svg/Persona-2.svg');
+          background-position: 50% 100%;
+          .advantages-card__text{
+               width: 100%;
+          }
+          @media screen and (max-width: 992px) {
+               background-position: 100% 100%;
+          }
+     }
+     &.adv-card-2.reorder {
+          background-position: 50% 150%;
+          .advantages-card__text{
                max-width: 100%;
           }
-          .advantages-card__text{
-               height: 100px;
+          @media screen and (max-width: 992px) {
+               background-position: 0% 140%;
           }
      }
      &.adv-card-3{
-          padding: 2rem 0 0 2rem;
+          padding: 2rem 2rem 0 2rem;
           background-color: $color-blue-accent;
-
-          .advantages-card__pic{
-          }
-
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          background-image: url('./../img/svg/Persona-3.svg');
+          background-position: 100% 100%;
           .advantages-card__text{
-               width: 10% !important;
+               max-width: 60%;
+          }
+          
+     }
+     &.adv-card-3.reorder {
+          flex-direction: row-reverse;
+          background-position: -340% 200%;
+          .advantages-card__text{
+               max-width: 70%;
+          }
+          @media screen and (max-width: 1200px) {
+               background-position: -120% 350%;
+               .advantages-card__text{
+                    max-width: 100%;
+               }
+          }
+          @media screen and (max-width: 992px) {
+               background-position: 0% 210%;
+          }
+          @media screen and (max-width: 590px) {
+               background-position: 30% 310%;
           }
      }
      &.adv-card-4{
-          padding: 2rem 0 0 2rem;
-
+          padding: 2rem 2rem 0 2rem;
           background-color: $color-blue-black;
           color: $color-white;
-          .advantages-card__pic{
-               max-width: 193px;
-               height: 100%;
-          }
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          background-image: url('./../img/svg/Persona-4.svg');
+          background-position: 100% 100%;
           .advantages-card__text{
-               width: 100% !important;
+               max-width: 60%;
+          }
+     }
+     &.adv-card-4.reorder {
+          flex-direction: row-reverse;
+          background-position: -20% 320%;
+          .advantages-card__text{
+               max-width: 70%;
+          }
+          @media screen and (max-width: 992px) {
+               background-position: 0% 320%;
+          }
+          @media screen and (max-width: 590px) {
+               .advantages-card__text{
+                    max-width: 80%;
+               }
+               background-position: -20% 360%;
+          }
+          @media screen and (max-width: 505px) {
+               background-position: -30% 360%;
+          }
+          @media screen and (max-width: 460px) {
+               background-position: -60% 360%;
+          }
+          @media screen and (max-width: 380px) {
+               background-position: -100% 360%;
           }
      }
      &.adv-card-5{
-          padding: 2rem 0 0 2rem;
+          padding: 2rem 2rem 0 2rem;
           background-color: $color-background-sky-blue;
           color: $color-blue-accent;
           display: flex;
-          flex-direction: column;
-          .advantages-card__pic{
-               max-width: 326px;
-          }
+          flex-direction: row;
+          width: 100%;
+          background-image: url('./../img/svg/Persona-5.svg');
+          background-position: 100% 100%;
           .advantages-card__text{
-               height: 300px !important;
+               max-width: 60%;
+          }
+          @media screen and (max-width: 1200px) {
+               background-position: 100% 140%;
+          }
+          @media screen and (max-width: 590px) {
+               .advantages-card__text{
+                    max-width: 100%;
+               }
           }
      }
-     &__pic{
-          height: 100%;
-          background-repeat: no-repeat;
-          background-size: contain;
-     }
-	&__text {
-          // width: 232px;
-     }
-     &__sub-text{
-          display: none;
+     &.adv-card-5.reorder {
+          flex-direction: row-reverse;
+          background-position: -20% 320%;
+          .advantages-card__text{
+               max-width: 70%;
+          }
+          @media screen and (max-width: 1200px) {
+               background-position: -20% 360%;
+          }
+          @media screen and (max-width: 992px) {
+               background-position: 0% 250%;
+          }
+          @media screen and (max-width: 590px) {
+               .advantages-card__text{
+                    max-width: 100%;
+               }
+               background-position: 0% 340%;
+          }
      }
 }
 
