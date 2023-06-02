@@ -21,9 +21,9 @@
 
 .advantages-card,
 .advantages-card * {
-  -webkit-transition: all ease-out 0.3s;
-  -o-transition: all ease-out 0.3s;
-  transition: all ease-out 0.3s;
+  -webkit-transition: all ease-in-out 0.4s;
+  -o-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
 }
 
 .advantages-card.adv-card-1 {
@@ -379,15 +379,18 @@
   -webkit-box-orient: vertical;
 }
 
-#enterForm .modal-header {
+.modal#enterForm .modal-header,
+.modal#modalSuccsess .modal-header {
   border-bottom: none;
 }
 
-#enterForm .modal-body {
+.modal#enterForm .modal-body,
+.modal#modalSuccsess .modal-body {
   padding-bottom: 1.875rem;
 }
 
-#enterForm .modal-body input:not([type=checkbox]) {
+.modal#enterForm .modal-body input:not([type=checkbox]),
+.modal#modalSuccsess .modal-body input:not([type=checkbox]) {
   width: 100%;
   padding: 0.8125rem 0.625rem;
   color: #041E2F;
@@ -396,32 +399,36 @@
   margin-top: 0.375rem;
 }
 
-#enterForm .modal-body input::-webkit-outer-spin-button,
-#enterForm .modal-body input::-webkit-inner-spin-button {
+.modal#enterForm .modal-body input::-webkit-outer-spin-button,
+.modal#enterForm .modal-body input::-webkit-inner-spin-button,
+.modal#modalSuccsess .modal-body input::-webkit-outer-spin-button,
+.modal#modalSuccsess .modal-body input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-#enterForm .modal-body input[type=number] {
+.modal#enterForm .modal-body input[type=number],
+.modal#modalSuccsess .modal-body input[type=number] {
   -moz-appearance: textfield;
 }
 
-#enterForm .modal-body ::-webkit-input-placeholder {
+.modal#enterForm .modal-body ::-webkit-input-placeholder, .modal#modalSuccsess .modal-body ::-webkit-input-placeholder {
   color: #BABABA;
 }
 
-#enterForm .modal-body ::-moz-placeholder {
+.modal#enterForm .modal-body ::-moz-placeholder, .modal#modalSuccsess .modal-body ::-moz-placeholder {
   color: #BABABA;
 }
 
-#enterForm .modal-body :-ms-input-placeholder {
+.modal#enterForm .modal-body :-ms-input-placeholder, .modal#modalSuccsess .modal-body :-ms-input-placeholder {
   color: #BABABA;
 }
 
-#enterForm .modal-body ::-ms-input-placeholder {
+.modal#enterForm .modal-body ::-ms-input-placeholder, .modal#modalSuccsess .modal-body ::-ms-input-placeholder {
   color: #BABABA;
 }
 
-#enterForm .modal-body ::placeholder {
+.modal#enterForm .modal-body ::placeholder,
+.modal#modalSuccsess .modal-body ::placeholder {
   color: #BABABA;
 }
 
