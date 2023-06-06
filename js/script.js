@@ -122,7 +122,10 @@ const swiperEvent = new Swiper('.swiper-event', {
      // Optional parameters
      direction: 'horizontal',
      loop: true,
-     cssMode: true,
+     autoplay: {
+          delay: 200,
+     },
+     // cssMode: true,
      slidesPerView: 3,
      spaceBetween: 18,
      // Navigation arrows
@@ -130,7 +133,7 @@ const swiperEvent = new Swiper('.swiper-event', {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
      },
-     watchOverflow: true,
+     // watchOverflow: true,
      breakpoints: {
           // when window width is >= 320px
           320: {
@@ -148,9 +151,7 @@ const swiperEvent = new Swiper('.swiper-event', {
                spaceBetween: 18
           }
      },
-     autoplay: {
-          delay: 3000,
-     },
+     
 });
 
 const sortBtn = document.querySelector("#sort-btn")
@@ -229,3 +230,8 @@ let phoneMask = IMask(
      document.getElementById('tel'), {
           mask: '+{375}(00)000 00 00'
 });
+
+let emailSend = $('.banner-email__input-error input')
+if(emailSend){
+     emailSend.attr('placeholder','Данные введены неверно')
+}

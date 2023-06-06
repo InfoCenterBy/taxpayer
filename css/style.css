@@ -1367,6 +1367,30 @@ body:has(.overlay.show) {
   cursor: pointer;
 }
 
+.banner-email__input-error {
+  border: 1px solid #ff0000;
+}
+
+.banner-email__input-error ::-webkit-input-placeholder {
+  color: #ff0000;
+}
+
+.banner-email__input-error ::-moz-placeholder {
+  color: #ff0000;
+}
+
+.banner-email__input-error :-ms-input-placeholder {
+  color: #ff0000;
+}
+
+.banner-email__input-error ::-ms-input-placeholder {
+  color: #ff0000;
+}
+
+.banner-email__input-error ::placeholder {
+  color: #ff0000;
+}
+
 .swiper:not(.swiper-news-content, .swiper-marquee) {
   min-width: 100%;
   width: 100%;
