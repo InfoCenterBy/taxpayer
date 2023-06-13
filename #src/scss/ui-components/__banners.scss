@@ -103,4 +103,10 @@
                cursor: pointer;
           }
      }
+     &__input-error{
+          border: 1px solid #ff0000;
+          ::placeholder{
+               color: #ff0000;
+          }
+     }
 }

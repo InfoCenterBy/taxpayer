@@ -1,0 +1,136 @@
+<!-- cookie -->
+<div class="cookies mb-3 container fixed-bottom m-auto">
+     <div class="alert alert-dismissible fade show" role="alert" id="cookiesAlert">
+          <div class="text-center d-flex flex-column w-100 align-items-center flex-md-row">
+               <div class="cookies-main">
+                    <span class="me-4">
+                         Мы используем файлы cookies для обеспечения удобства пользователей сайта и
+                         повышения качества его функционирования.
+                         <a type="button" data-bs-toggle="modal" data-bs-target="#cookieModal">
+                              Настроить cookies
+                         </a>
+                    </span>
+               </div>
+               <div
+                    class="cookies-close d-flex flex-column justify-content-lg-end flex-sm-row mt-2 mt-md-0 w-100">
+                    <a class="button me-4 mt-lg-0 mt-md-2 w-100 my-1 my-md-0" data-bs-dismiss="alert"
+                         aria-label="Close">Принять все</a>
+                    <a class="button me-4 mt-lg-0 mt-md-2 w-100 my-1 my-md-0" data-bs-dismiss="alert"
+                         aria-label="Close">Отклонить все</a>
+               </div>
+          </div>
+     </div>
+
+     <!-- cookie modal -->
+
+</div>
+<div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+               <div class="modal-header d-flex align-items-start  border-bottom-0">
+                    <h5 class="modal-title ms-0 ps-2 fw-bold" id="cookieModalLabel">
+                         Мы используем файлы cookies!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                         aria-label="Close"></button>
+               </div>
+               <div class="modal-body px-4 pb-4 pt-0">
+                    <p>Мы используем файлы cookies для обеспечения удобства пользователей сайта и
+                         повышения качества его функционирования.</p>
+                    <div id="accordion">
+                         <div id="cookieAccordion">
+                              <div class="item-accordion">
+                                   <h4 id="headingСookie-1">
+                                        <button class="item-accordion__button d-flex align-items-center"
+                                             type="button" data-bs-toggle="collapse"
+                                             data-bs-target="#cookie-1" aria-expanded="true"
+                                             aria-controls="cookie-1">
+                                             <span class="item-accordion__button_icon me-2 me-md-4"></span>
+                                             <span class="item-accordion__button_text">
+                                                  Технические (обязательные)</span>
+                                        </button>
+                                        <div class="form-check form-switch">
+                                             <input class="form-check-input" type="checkbox" role="switch"
+                                                  id="#cookieCheck-1" checked disabled>
+                                        </div>
+                                   </h4>
+                                   <div id="cookie-1" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingСookie-1" data-bs-parent="#cookieAccordion"
+                                        style="">
+                                        <div class="item-accordion__body">
+                                             Являются необходимыми для бесперебойного и надежного
+                                             функционирования сайта. Отключение данного типа файлов куки
+                                             может привести к ограничению в доступе к определенным
+                                             функциональным возможностям сайта, хранятся не более 1 года.
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="item-accordion">
+                                   <h4 id="headingСookie-2">
+                                        <button
+                                             class="item-accordion__button d-flex align-items-center collapsed"
+                                             type="button" data-bs-toggle="collapse"
+                                             data-bs-target="#cookie-2" aria-expanded="false"
+                                             aria-controls="cookie-2">
+                                             <span class="item-accordion__button_icon me-2 me-md-4"></span>
+                                             <span class="item-accordion__button_text">Функциональные</span>
+                                        </button>
+                                        <div class="form-check form-switch" id="form-switch">
+                                             <input class="form-check-input" type="checkbox" role="switch"
+                                                  id="#cookieCheck-2">
+                                        </div>
+                                   </h4>
+                                   <div id="cookie-2" class="accordion-collapse collapse"
+                                        aria-labelledby="headingСookie-2" data-bs-parent="#cookieAccordion"
+                                        style="">
+                                        <div class="item-accordion__body">
+                                             Позволяют обеспечить индивидуальный опыт использования сайта,
+                                             сохраняются в памяти устройства в течение определенного периода
+                                             времени и отвечают за личные предпочтения пользователя,
+                                             установленные в браузере, хранятся не более 1 года.
+                                        </div>
+                                   </div>
+                              </div>
+                         <div class="item-accordion">
+                              <h4 id="headingСookie-3">
+                                   <button
+                                        class="item-accordion__button d-flex align-items-center collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cookie-3" aria-expanded="false"
+                                        aria-controls="cookie-3">
+                                        <span class="item-accordion__button_icon me-2 me-md-4"></span>
+                                        <span class="item-accordion__button_text">Статистические</span>
+                                   </button>
+                                   <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                             id="#cookieCheck-1">
+                                   </div>
+                              </h4>
+                              <div id="cookie-3" class="accordion-collapse collapse"
+                                   aria-labelledby="headingСookie-3" data-bs-parent="#cookieAccordion"
+                                   style="">
+                                   <div class="item-accordion__body">
+                                        Нужны для отслеживания страниц и разделов сайта, посещаемых
+                                        пользователем, а также для выявления возможных ошибок в работе
+                                        сайта. Информация, собираемая данным видом куки, является
+                                        анонимной и необходима для эффективного поддержания работы и
+                                        обновления сайта, хранятся не более 1 года.
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+                    <div class="cookies-close d-flex flex-column flex-lg-row mt-3">
+                         <a class="button" data-bs-dismiss="alert" aria-label="Close">Принять все</a>
+                         <a class="button ms-lg-3 my-lg-0 my-3" data-bs-dismiss="alert"
+                              aria-label="Close">Отклонить
+                              все</a>
+                         <a class="button ms-lg-auto" data-bs-dismiss="alert"
+                              aria-label="Close">Сохранить
+                              настройки</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
